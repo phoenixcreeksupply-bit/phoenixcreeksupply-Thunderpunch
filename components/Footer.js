@@ -9,8 +9,9 @@ export default function Footer() {
           <a href="/(site)/legal/privacy">Privacy</a>
           <a href="/(site)/legal/terms">Terms</a>
           <a href="/(site)/legal/disclaimer">Disclaimer</a>
-          <a href="/(site)/legal/returns">Returns Policy</a></li>
-          <a href="/(site)/legal/dmca">DMCA Notice</a></li>
+          <li><a href="/legal/returns">Returns Policy</a></li>
+<li><a href="/legal/dmca">DMCA Notice</a></li>
+
 
         </nav>
       </div>
