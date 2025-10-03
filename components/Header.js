@@ -1,14 +1,20 @@
+import { AFFILIATE_LINKS } from "@/config/links";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-20">
-      <nav className="mx-auto max-w-6xl flex items-center justify-between p-4">
-        <a href="/" className="font-bold text-xl tracking-wide">Phoenix Creek Supply</a>
-        <div className="flex gap-4">
-          <a href="/(site)/digital-kits" className="btn">Digital Kits</a>
-          <a href="/(site)/gear" className="btn">Gear</a>
-          <a href="/(site)/blog" className="btn">Guides</a>
-        </div>
+    <header className="flex justify-between items-center p-4 bg-black bg-opacity-50">
+      <a
+        href={AFFILIATE_LINKS.trailPack}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white font-bold text-lg hover:text-yellow-400"
+      >
+        Basic Trail Pack
+      </a>
+      <nav className="space-x-4">
+        <a href="/digital-kits" className="text-white hover:text-yellow-400">Digital Kits</a>
+        <a href="/gear" className="text-white hover:text-yellow-400">Gear</a>
+        <a href="/guides" className="text-white hover:text-yellow-400">Guides</a>
       </nav>
     </header>
   );
