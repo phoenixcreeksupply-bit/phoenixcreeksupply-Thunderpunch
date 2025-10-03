@@ -1,4 +1,4 @@
-import { AFFILIATE_LINKS } from "@/config/links";
+import { AFFILIATE_LINKS } from "/config/links";
 
 export default function Header() {
   return (
