@@ -4,7 +4,14 @@
 @tailwind utilities;
 
 :root { color-scheme: dark; }
-body { @apply bg-gray-950 text-white; }
+/* styles/globals.css */
+body {
+  margin: 0;
+  background: url('/images/home-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
 a { @apply underline underline-offset-4; }
 .btn { @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-semibold bg-white text-black hover:bg-gray-200 transition; }
 .btn-dark { @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-semibold bg-black/70 text-white hover:bg-black transition; }
