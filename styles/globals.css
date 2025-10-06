@@ -1,17 +1,34 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root { color-scheme: dark; }
+
+/* Ensure full height for background scaling */
+html, body, #__next {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 /* styles/globals.css */
 body {
   margin: 0;
-  background: url('/images/home-bg.jpg') no-repeat center center fixed;
+  background-image: url('/images/home-bg.jpg'); /* your image path kept */
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
+/* Mobile browsers handle fixed backgrounds poorly — adjust below 768px */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+}
 
+/* Your existing custom styles preserved */
 a { @apply underline underline-offset-4; }
 .btn { @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-semibold bg-white text-black hover:bg-gray-200 transition; }
 .btn-dark { @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-semibold bg-black/70 text-white hover:bg-black transition; }
