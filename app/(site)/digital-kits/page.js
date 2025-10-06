@@ -1,10 +1,30 @@
-
 export const metadata = { title: "Digital Kits | Phoenix Creek Supply" };
 
 const kits = [
-  { title: "OMAD Power Plan", description: "One meal a day, 10 weeks, power results.", price: "$19", href: "https://gumroad.com/l/your-omad-sku" },
-  { title: "Montana Prospecting Starter Pack", description: "Checklist, field notes, and tool picks.", price: "$15", href: "https://gumroad.com/l/your-prospecting-sku" },
-  { title: "Modern Stoic Journal", description: "Daily discipline for builders and earners.", price: "$9", href: "https://gumroad.com/l/your-stoic-sku" }
+  { 
+    title: "AI Legacy Framework", 
+    description: "Your complete system for discipline, growth, and automation.", 
+    price: "$19", 
+    href: "https://phoenixcreeksupply.gumroad.com/l/lbyt" 
+  },
+  { 
+    title: "Modern Stoic Field Guide", 
+    description: "A digital guide for rugged stoics — tools, discipline, and philosophy.", 
+    price: "$15", 
+    href: "https://phoenixcreeksupply.gumroad.com/l/gnqvw" 
+  },
+  { 
+    title: "Montana Prospecting Starter Pack", 
+    description: "Checklist, field notes, and tool picks.", 
+    price: "$15", 
+    href: "#" // placeholder until you drop the live SKU
+  },
+  { 
+    title: "OMAD Power Plan", 
+    description: "One meal a day, 10 weeks, power results.", 
+    price: "$19", 
+    href: "#" // placeholder until you drop the live SKU
+  }
 ];
 
 export default function Page() {
@@ -18,7 +38,14 @@ export default function Page() {
             <p className="mt-2 text-gray-300">{k.description}</p>
             <div className="mt-4 flex items-center justify-between">
               <span className="text-sm text-gray-400">{k.price}</span>
-              <a href={k.href} target="_blank" rel="nofollow sponsored noopener" className="btn">Get Kit</a>
+              <a 
+                href={k.href} 
+                target="_blank" 
+                rel="nofollow sponsored noopener" 
+                className="btn"
+              >
+                Get Kit
+              </a>
             </div>
           </div>
         ))}
