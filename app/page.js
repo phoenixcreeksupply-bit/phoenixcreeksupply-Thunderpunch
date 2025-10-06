@@ -24,6 +24,7 @@ export default function Home() {
           <a href="/(site)/blog" className="btn-dark">Field Guides</a>
         </div>
         <p className="mt-10 italic text-gray-300">Coming Soon…</p>
+        <script async data-uid="ad04769687" src="https://phoenixcreeksupply-com.kit.com/ad04769687/index.js"></script>
       </section>
       <Footer />
     </main>
