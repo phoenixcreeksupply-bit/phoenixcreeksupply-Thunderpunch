@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
               Field Guides
             </a>
             <a
-              href="https://www.amazon.com/dp/YOUR-ASIN-HERE?tag=phoenixcreeksupply-20"
+              href="https://www.amazon.com/hz/wishlist/ls/7Z7QI47C28HP?ref_=wl_share&tag=phoenixcreeksupply-20"
               target="_blank"
               rel="noopener noreferrer"
               className="px-3 py-1 rounded-lg font-semibold bg-yellow-400 text-black hover:bg-yellow-500 transition"
