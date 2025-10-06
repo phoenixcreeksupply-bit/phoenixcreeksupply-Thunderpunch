@@ -1,4 +1,5 @@
 
+import Script from "next/script";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -21,10 +22,17 @@ export default function Home() {
         <div className="mt-8 flex flex-wrap gap-4 justify-center">
           <a href="/(site)/digital-kits" className="btn-dark">Digital Kits</a>
           <a href="/(site)/gear" className="btn-dark">Tools & Gear</a>
-          <a href="/(site)/blog" className="btn-dark">Field Guides</a>
+          <a href="/(site)/field-guides" className="btn-dark">Field Guides</a>
         </div>
         <p className="mt-10 italic text-gray-300">Coming Soon…</p>
-        <script async data-uid="ad04769687" src="https://phoenixcreeksupply-com.kit.com/ad04769687/index.js"></script>
+
+        {/* ConvertKit form embed */}
+        <div className="mt-6 w-full max-w-md mx-auto" id="convertkit-form"></div>
+        <Script
+          async
+          data-uid="ad04769687"
+          src="https://phoenixcreeksupply-com.kit.com/ad04769687/index.js"
+        />
       </section>
       <Footer />
     </main>
