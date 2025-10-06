@@ -1,10 +1,11 @@
+
 // app/layout.js
-import './globals.css'
+import '../styles/globals.css';
 
 export const metadata = {
   title: 'Phoenix Creek Supply',
   description: 'Rugged tools for the modern Stoic',
-}
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -35,5 +36,5 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
       </body>
     </html>
-  )
+  );
 }
