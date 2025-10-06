@@ -1,31 +1,29 @@
-export const metadata = { title: "Thanks | Phoenix Creek Supply" };
+export const metadata = { title: "You're In | Phoenix Creek Supply" };
 
-export default function ThanksPage() {
+export default function Thanks() {
   return (
-    <div className="relative h-screen w-full">
-      {/* Background */}
-      <img
-        src="/images/home-bg.jpg"
-        alt="Phoenix Creek background"
-        className="absolute inset-0 w-full h-full object-cover"
+    <main className="relative min-h-screen w-full">
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/images/home-bg.jpg')" }}
       />
-      <div className="absolute inset-0 bg-black/70" />
+      <div className="absolute inset-0 bg-black/60" />
 
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-24">
-        <h1 className="text-5xl font-bold text-white mb-4">You’re In</h1>
-        <p className="text-lg text-gray-200 max-w-xl">
-          Welcome to the Phoenix Creek Supply line.  
-          Updates, kits, and hard-won lessons are on their way.  
+      <section className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-6">
+        <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg">
+          You’re In
+        </h1>
+        <p className="mt-4 text-lg md:text-2xl text-gray-200">
+          Welcome to the Supply Line. Forge your edge — updates and drops are on the way.
         </p>
-
         <a
           href="/"
-          className="mt-8 px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-500 transition"
+          className="mt-8 btn-dark"
         >
           Return Home
         </a>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
+
