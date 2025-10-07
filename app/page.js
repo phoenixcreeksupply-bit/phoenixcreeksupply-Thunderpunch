@@ -1,12 +1,17 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+export const metadata = { title: "Phoenix Creek Supply" };
 
-export default function Home() {
+const CK_FORM_ID = "8637121"; // ConvertKit Form ID
+
+export default function HomePage() {
   return (
     <main
       className="relative flex flex-col min-h-screen w-full bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/images/home-bg.jpg')" }}
     >
+      <div className="absolute inset-0 bg-black/60" />
+
+      <Header />
+
       {/* Hero Section */}
       <section className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6">
         <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg">
@@ -17,11 +22,16 @@ export default function Home() {
         </p>
 
         {/* Navigation */}
-        <p className="mt-10 italic text-gray-300">Coming Soon…Have a look around!</p>
+        <div className="mt-8 flex flex-wrap gap-4 justify-center">
+          <a href="/(site)/digital-kits" className="btn-dark">Digital Kits</a>
+          <a href="/(site)/gear" className="btn-dark">Tools &amp; Gear</a>
+          <a href="/(site)/field-guides" className="btn-dark">Field Guides</a>
+        </div>
+        <p className="mt-10 italic text-gray-300">Coming Soon…</p>
 
-        {/* PCS-styled ConvertKit form */}
+        {/* ConvertKit Opt-In Form */}
         <form
-          action="https://app.convertkit.com/forms/8637121/subscriptions"
+          action={`https://app.convertkit.com/forms/${CK_FORM_ID}/subscriptions`}
           method="post"
           className="mt-8 w-full max-w-md flex"
         >
@@ -31,6 +41,7 @@ export default function Home() {
             placeholder="Enter your email"
             required
             className="flex-1 px-4 py-2 rounded-l-lg text-black"
+            aria-label="Email address"
           />
           <button
             type="submit"
@@ -39,14 +50,12 @@ export default function Home() {
             IYKYK
           </button>
         </form>
-        <p className="text-xs text-gray-400 mt-3">
-          Hard-won lessons. New kits. No spam.
-        </p>
-      </section>
 
-      {/* Footer (About / Legal / etc.) */}
-      <Footer />
-    </main>
+        {/* Footer */}
+        <p className="text-xs text-gray-400 mt-3">
+          No spam. Unsubscribe anytime.
+        </p>
+      </div>
+    </div>
   );
 }
-
