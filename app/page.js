@@ -7,10 +7,6 @@ export default function Home() {
       className="relative flex flex-col min-h-screen w-full bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/images/home-bg.jpg')" }}
     >
-      <div className="absolute inset-0 bg-black/60" />
-
-      <Header />
-
       {/* Hero Section */}
       <section className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6">
         <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg">
