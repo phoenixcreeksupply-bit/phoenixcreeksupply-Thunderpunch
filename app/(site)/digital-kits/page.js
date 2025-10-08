@@ -5,7 +5,7 @@ const kits = [
     title: "AI Legacy Framework", 
     description: "Your complete system for discipline, growth, and automation.", 
     price: "$19", 
-    href: "https://phoenixcreeksupply.gumroad.com/l/lbyt" 
+    href: "https://phoenixcreeksupply.gumroad.com/l/lbytr" 
   },
   { 
     title: "Modern Stoic Field Guide", 
