@@ -36,7 +36,7 @@ export default function Home() {
             type="submit"
             className="px-4 py-2 bg-yellow-400 text-black font-semibold rounded-r-lg hover:bg-yellow-500 transition"
           >
-            Forge Your Edge
+            IYKYK
           </button>
         </form>
         <p className="text-xs text-gray-400 mt-3">
