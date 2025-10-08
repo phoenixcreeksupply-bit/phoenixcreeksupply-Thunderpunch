@@ -17,7 +17,7 @@ export default function Home() {
         </p>
 
         {/* Navigation */}
-        <p className="mt-10 italic text-gray-300">Coming Soon…</p>
+        <p className="mt-10 italic text-gray-300">Coming Soon…Have a look around!</p>
 
         {/* PCS-styled ConvertKit form */}
         <form
