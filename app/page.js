@@ -55,7 +55,7 @@ export default function HomePage() {
         <p className="text-xs text-gray-400 mt-3">
           No spam. Unsubscribe anytime.
         </p>
-      </div>
-    </div>
+        </section>
+    </main>
   );
 }
