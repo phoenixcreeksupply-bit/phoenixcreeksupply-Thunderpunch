@@ -10,7 +10,7 @@ Effective Date: October 2025
 All products sold through Phoenix Creek Supply, including digital downloads, guides, templates, and media files, are non-refundable due to their immediate, downloadable nature.
 
 Please review product descriptions carefully before purchase.
-If you experience a technical issue with access or file delivery, contact our support team at monroe@phoenixcreeksupply.com
+If you experience a technical issue with access or file delivery, contact our support team at clarity@phoenixcreeksupply.com
  within 7 days of purchase, and we’ll ensure you receive the correct working files.
 
 By completing your purchase, you acknowledge and agree to this policy. monroe@phoenixcreeksupply.com clarity@phoenixcreeksupply.com</p>
