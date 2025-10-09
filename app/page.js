@@ -10,7 +10,7 @@ export default function HomePage() {
     >
       <div className="absolute inset-0 bg-black/60" />
 
-      <Header />
+  {/* Header removed to avoid prerender error */}
 
       {/* Hero Section */}
       <section className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6">
