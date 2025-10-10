@@ -14,19 +14,12 @@ html, body, #__next {
 /* styles/globals.css */
 body {
   margin: 0;
-  background-image: url('/images/home-bg.jpg'); /* your image path kept */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
+  /* background moved to page-level components to avoid stacking duplicates */
+  background: none;
 }
 
-/* Mobile browsers handle fixed backgrounds poorly — adjust below 768px */
-@media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-  }
-}
+/* Mobile browsers handle fixed backgrounds poorly — if you add a global fixed
+   background in the future, consider changing attachment on small screens. */
 
 /* Your existing custom styles preserved */
 a { @apply underline underline-offset-4; }
