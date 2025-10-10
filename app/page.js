@@ -18,16 +18,12 @@ export default function HomePage() {
           Phoenix Creek Supply
         </h1>
         <p className="mt-4 text-lg md:text-2xl text-gray-200">
-          Rugged tools for the modern Stoic
+          Lead yourself, Live with Intent.
         </p>
 
         {/* Navigation */}
-        <div className="mt-8 flex flex-wrap gap-4 justify-center">
-          <a href="/(site)/digital-kits" className="btn-dark">Digital Kits</a>
-          <a href="/(site)/gear" className="btn-dark">Tools &amp; Gear</a>
-          <a href="/(site)/field-guides" className="btn-dark">Field Guides</a>
-        </div>
-        <p className="mt-10 italic text-gray-300">Coming Soon…</p>
+       
+        <p className="mt-10 italic text-gray-300">Coming Soon… Have a suggestion? clarity@phoenixcreeksupply.com</p>
 
         {/* ConvertKit Opt-In Form */}
         <form
