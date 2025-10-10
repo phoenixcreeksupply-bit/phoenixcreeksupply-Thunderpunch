@@ -2,6 +2,7 @@
 // app/layout.js
 import '../styles/globals.css';
 import TokenButton from '../components/TokenButton';
+import Footer from '../components/Footer';
 
 export const metadata = {
   title: 'Phoenix Creek Supply',
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
         <main>{children}</main>
+        <Footer />
         {/* Floating PCS Token referral button */}
         <TokenButton />
       </body>
