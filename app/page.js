@@ -39,7 +39,7 @@ export default function HomePage() {
           <input
             type="email"
             name="email_address"
-            placeholder="Enter your email"
+            placeholder="Level up here!"
             required
             className="flex-1 px-4 py-2 rounded-l-lg text-black"
             aria-label="Email address"
@@ -54,7 +54,7 @@ export default function HomePage() {
 
         {/* Footer */}
         <p className="text-xs text-gray-400 mt-3">
-          No spam. Unsubscribe anytime.
+          No spam. First 100/PCS Elite. Unsubscribe anytime.
         </p>
         </section>
     </main>
