@@ -18,8 +18,8 @@ export default function MoonshotButton({ href }) {
   }
 
   return (
-    <button onClick={handleClick} className="btn-dark">
-      Limited Buy In
+    <button onClick={handleClick} className="inline-flex items-center justify-center p-0 w-auto h-auto bg-transparent rounded-lg shadow-none">
+      <img src="/images/PCSmoonToken.jpg" alt="Buy PCS Token on Moonshot" className="w-48 h-auto rounded-md" />
     </button>
   );
 }
