@@ -15,10 +15,10 @@ If you experience a technical issue with access or file delivery, contact our su
 
 By completing your purchase, you acknowledge and agree to this policy. monroe@phoenixcreeksupply.com clarity@phoenixcreeksupply.com</p>
         <nav className="flex gap-4">
-          <a href="/(site)/legal/affiliate">Affiliate</a>
-          <a href="/(site)/legal/privacy">Privacy</a>
-          <a href="/(site)/legal/terms">Terms</a>
-          <a href="/(site)/legal/disclaimer">Disclaimer</a>
+          <a href="/legal/affiliate">Affiliate</a>
+          <a href="/legal/privacy">Privacy</a>
+          <a href="//legal/terms">Terms</a>
+          <a href="/legal/disclaimer">Disclaimer</a>
           <li><a href="/legal/returns">Returns Policy</a></li>
           <li><a href="/legal/dmca">DMCA Notice</a></li>
 
