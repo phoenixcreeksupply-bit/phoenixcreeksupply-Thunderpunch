@@ -1,3 +1,5 @@
+import MoonshotButton from "../components/MoonshotButton";
+
 export const metadata = { title: "Phoenix Creek Supply" };
 
 const CK_FORM_ID = "8637121"; // ConvertKit Form ID
@@ -22,7 +24,10 @@ export default function HomePage() {
         </p>
 
         {/* Navigation */}
-       
+        <div className="mt-8 flex flex-wrap gap-4 justify-center">
+          {/* Client-side button that records analytics then opens Moonshot */}
+          <MoonshotButton href="https://moonshot.com/ubgcjEpaApLjpMjyrP3GCcbpoehEcp47qUWSdTjmoon?ref=28SVAj" />
+        </div>
         <p className="mt-10 italic text-gray-300">Coming Soon… Have a suggestion? clarity@phoenixcreeksupply.com</p>
 
         {/* ConvertKit Opt-In Form */}
