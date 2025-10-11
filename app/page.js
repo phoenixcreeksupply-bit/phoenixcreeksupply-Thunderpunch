@@ -16,6 +16,7 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6">
+        <p className="text-xs text-gray-300 mb-4">Impact-Site-Verification: 90b9f5d4-2b2c-463a-9014-e2afee91eb32</p>
         <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg">
           Phoenix Creek Supply
         </h1>
