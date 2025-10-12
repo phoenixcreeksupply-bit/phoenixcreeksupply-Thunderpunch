@@ -22,9 +22,6 @@ export default function RootLayout({ children }) {
             <a href="/digital-kits" className="text-white hover:underline">
               Digital Kits
             </a>
-            <a href="https://phoenixcreeksupply.gumroad.com/l/cgdlmg" target="_blank" rel="noopener noreferrer" className="text-white hover:underline">
-              OMAD Kit
-            </a>
             <a href="/gear" className="text-white hover:underline">
               Tools & Gear
             </a>
