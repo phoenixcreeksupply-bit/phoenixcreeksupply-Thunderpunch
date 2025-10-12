@@ -4,24 +4,24 @@ const kits = [
   { 
     title: "AI Legacy Framework", 
     description: "Your complete system for discipline, growth, and automation.", 
-    price: "$19", 
+    price: "$25", 
     href: "https://phoenixcreeksupply.gumroad.com/l/lbytr" 
   },
   { 
     title: "Modern Stoic Field Guide", 
     description: "A digital guide for rugged stoics — tools, discipline, and philosophy.", 
-    price: "$15", 
+    price: "$17", 
     href: "https://phoenixcreeksupply.gumroad.com/l/gnqvw" 
   },
   { 
     title: "Montana Prospecting Starter Pack", 
     description: "Checklist, field notes, and tool picks.", 
-    price: "$15", 
+    price: "$20", 
     href: "#" // placeholder until you drop the live SKU
   },
   { 
     title: "OMAD Power Plan", 
-    description: "One meal a day, 10 weeks, power results.", 
+    description: "One meal a day, 10 weeks, powerful results.", 
     price: "$19", 
     href: "https://phoenixcreeksupply.gumroad.com/l/cgdlmg"
   }
