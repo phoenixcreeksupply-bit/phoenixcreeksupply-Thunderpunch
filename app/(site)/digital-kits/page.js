@@ -23,7 +23,7 @@ const kits = [
     title: "OMAD Power Plan", 
     description: "One meal a day, 10 weeks, power results.", 
     price: "$19", 
-    href: "#" // placeholder until you drop the live SKU
+    href: "https://phoenixcreeksupply.gumroad.com/l/cgdlmg"
   }
 ];
 
