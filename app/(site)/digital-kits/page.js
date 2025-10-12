@@ -10,14 +10,14 @@ const kits = [
   { 
     title: "Modern Stoic Field Guide", 
     description: "A digital guide for rugged stoics — tools, discipline, and philosophy.", 
-    price: "$17", 
-    href: "https://phoenixcreeksupply.gumroad.com/l/gnqvw" 
+    price: "$17",
+    href: "https://phoenixcreeksupply.gumroad.com/l/gnqvw"
   },
   { 
     title: "Montana Prospecting Starter Pack", 
     description: "Checklist, field notes, and tool picks.", 
-    price: "$20", 
-    href: "#" // placeholder until you drop the live SKU
+    price: "$20",
+    href: "https://phoenixcreeksupply.gumroad.com/l/pqrul"
   },
   { 
     title: "OMAD Power Plan", 
