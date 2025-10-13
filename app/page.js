@@ -42,7 +42,7 @@ export default function HomePage() {
           <input
             type="email"
             name="email_address"
-            placeholder="Level up here!"
+            placeholder="Make thy presence known!"
             required
             className="flex-1 px-4 py-2 rounded-l-lg text-black"
             aria-label="Email address"
@@ -51,7 +51,7 @@ export default function HomePage() {
             type="submit"
             className="px-4 py-2 bg-yellow-400 text-black font-semibold rounded-r-lg hover:bg-yellow-500 transition"
           >
-            IYKYK
+            Step Forth
           </button>
         </form>
 
