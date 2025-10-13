@@ -22,9 +22,11 @@ export default function RootLayout({ children }) {
             <a href="/digital-kits" className="text-white hover:underline">
               Digital Kits
             </a>
+            {/* Blog link temporarily hidden until content is ready
             <a href="/blog" className="text-white hover:underline">
               Blog
             </a>
+            */}
             <a href="/gear" className="text-white hover:underline">
               Tools & Gear
             </a>
