@@ -3,6 +3,7 @@
 import '../styles/globals.css';
 import TokenButton from '../components/TokenButton';
 import StashButton from '../components/StashButton';
+import MoonshotHeaderButton from '../components/MoonshotHeaderButton';
 import Footer from '../components/Footer';
 
 export const metadata = {
@@ -16,7 +17,23 @@ export default function RootLayout({ children }) {
       <head />
       <body>
         <header className="flex justify-between items-center p-4 bg-black/70">
-          <h1 className="text-2xl font-bold text-white">Phoenix Creek Supply</h1>
+          <div className="flex items-center">
+            {/* Header buttons replace the title */}
+            {/* Token (server-safe) */}
+            <a
+              href="https://freebitco.in/?r=37252628"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="PCS referral"
+              className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/90 shadow-sm hover:scale-105 transition mr-2"
+            >
+              <img src="/images/pcs-token.jpg" alt="PCS Token" className="w-6 h-6" />
+            </a>
+            {/* Moonshot client button */}
+            <MoonshotHeaderButton />
+            {/* Stash small icon */}
+            <StashButton />
+          </div>
           <nav className="space-x-6">
             <a href="/digital-kits" className="text-white hover:underline">
               Digital Kits
@@ -40,8 +57,7 @@ export default function RootLayout({ children }) {
             >
               Basic Trail Pack
             </a>
-            {/* Stash referral button (small icon) placed under Basic Trail Pack visually */}
-            <StashButton />
+            {/* (Stash button moved to header left with other buttons) */}
           </nav>
         </header>
         <main>{children}</main>
