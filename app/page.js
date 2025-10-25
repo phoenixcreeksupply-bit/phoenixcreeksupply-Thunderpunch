@@ -28,7 +28,7 @@ export default function HomePage() {
           {/* Client-side button that records analytics then opens Moonshot */}
           <MoonshotButton href="https://moonshot.com/ubgcjEpaApLjpMjyrP3GCcbpoehEcp47qUWSdTjmoon?ref=28SVAj" />
         </div>
-        <p className="mt-10 italic text-gray-300">Coming Soon… Have a suggestion? clarity@phoenixcreeksupply.com</p>
+        <p className="mt-10 italic text-gray-300">Striking Ground Soon.…Content Request? clarity@phoenixcreeksupply.com</p>
 
         {/* ConvertKit Opt-In Form */}
         <form
