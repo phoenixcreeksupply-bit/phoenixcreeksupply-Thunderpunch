@@ -29,7 +29,8 @@ const kits = [
 
 export default function Page() {
   return (
-    <div className="mx-auto max-w-6xl px-6 py-16">
+    <main className="relative w-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/images/campsitenohatchet.jpg')" }}>
+      <div className="mx-auto max-w-6xl px-6 py-16">
       <h1 className="text-4xl font-bold mb-8">Digital Kits</h1>
       <div className="grid md:grid-cols-3 gap-6">
         {kits.map(k => (
@@ -51,6 +52,7 @@ export default function Page() {
         ))}
       </div>
       <p className="text-xs text-gray-400 mt-6">Links open Gumroad checkout.</p>
-    </div>
+      </div>
+    </main>
   );
 }

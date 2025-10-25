@@ -24,7 +24,7 @@ export default function StashButton({ href = 'https://get.stash.com/r/50c5cr30f5
       rel="noopener noreferrer sponsored"
       className="inline-flex items-center justify-center ml-3 px-2 py-1 rounded-lg bg-white/90 text-black hover:bg-gray-200 transition"
     >
-      <img src="/images/monroe-scorpion.jpg" alt="Stash" className="w-6 h-6 rounded-full" />
+      <img src="/images/COin2.jpg" alt="Stash" className="w-6 h-6 rounded-full" />
     </a>
   );
 }
