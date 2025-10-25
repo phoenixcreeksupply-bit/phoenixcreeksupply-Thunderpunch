@@ -8,17 +8,14 @@ export default function HomePage() {
   return (
     <main
       className="relative flex flex-col min-h-screen w-full bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/images/home-bg.jpg')" }}
+      style={{ backgroundImage: "url('/images/home-bg5.jpg')" }}
     >
       <div className="absolute inset-0 bg-black/60" />
 
   {/* Header removed to avoid prerender error */}
 
       {/* Hero Section */}
-      <section className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6">
-  <p className="text-xs text-gray-300 mb-4">Impact-Site-Verification: 5d661df9-36be-449c-8b1e-96e2fe65f83d</p>
-  {/* Duplicate verification string (screen-reader-only) as requested */}
-  <p className="sr-only">Impact-Site-Verification: 5d661df9-36be-449c-8b1e-96e2fe65f83d</p>
+    <section className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6">
         <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg">
           Phoenix Creek Supply
         </h1>

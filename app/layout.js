@@ -2,6 +2,7 @@
 // app/layout.js
 import '../styles/globals.css';
 import TokenButton from '../components/TokenButton';
+import StashButton from '../components/StashButton';
 import Footer from '../components/Footer';
 
 export const metadata = {
@@ -12,9 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="impact-site-verification" content="5d661df9-36be-449c-8b1e-96e2fe65f83d" />
-      </head>
+      <head />
       <body>
         <header className="flex justify-between items-center p-4 bg-black/70">
           <h1 className="text-2xl font-bold text-white">Phoenix Creek Supply</h1>
@@ -41,6 +40,8 @@ export default function RootLayout({ children }) {
             >
               Basic Trail Pack
             </a>
+            {/* Stash referral button (small icon) placed under Basic Trail Pack visually */}
+            <StashButton />
           </nav>
         </header>
         <main>{children}</main>
