@@ -25,6 +25,12 @@ const kits = [
     price: "$19", 
     href: "https://phoenixcreeksupply.gumroad.com/l/cgdlmg"
   }
+  ,{ 
+    title: "Claim Scout Service",
+    description: "Get a professional-grade claim map built for your prospecting or exploration needs.",
+    price: "$79",
+    href: "https://phoenixcreeksupply.gumroad.com/l/vbxwz"
+  }
 ];
 
 export default function Page() {
