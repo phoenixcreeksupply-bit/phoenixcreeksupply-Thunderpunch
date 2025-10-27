@@ -94,6 +94,39 @@ const affiliates = [
       }
     ]
   }
+  ,
+  {
+    slug: 'muck-boot',
+    name: "Muck Boot Company",
+    category: 'Footwear & Outdoor',
+    description: 'Rugged, waterproof boots and footwear built for wet and muddy conditions — great for prospecting, hunting, and heavy outdoor work.',
+    // add the provided logo to public/images as 'muck-boot-logo.jpg'
+    logo: '/images/muck-boot-logo.jpg',
+    features: [
+      'Waterproof construction',
+      'Insulated options for cold weather',
+      'Durable outsoles for rough terrain'
+    ],
+    // add the provided tkqlhce click URL for Muck Boot and a local banner creative
+    links: [
+      {
+        label: 'Shop Muck Boot',
+        displayLabel: 'Shop Muck Boot',
+        href: 'https://www.tkqlhce.com/click-101573160-17122530'
+      },
+      {
+        label: 'Muck Banner 300x600',
+        href: 'https://www.tkqlhce.com/click-101573160-17122530',
+        // local creative image you attached; save as public/images/muck-boot-banner-300x600.jpg
+        creative: {
+          source: 'local',
+          url: '/images/muck-boot-banner-300x600.jpg',
+          width: 300,
+          height: 600
+        }
+      }
+    ]
+  }
 ];
 
 export default affiliates;
