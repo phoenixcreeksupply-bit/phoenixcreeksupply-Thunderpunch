@@ -19,16 +19,7 @@ export default function RootLayout({ children }) {
         <header className="flex justify-between items-center p-4 bg-black/70">
           <div className="flex items-center">
             {/* Header buttons replace the title */}
-            {/* Token (server-safe) */}
-            <a
-              href="https://freebitco.in/?r=37252628"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="PCS referral"
-              className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/90 shadow-sm hover:scale-105 transition mr-2"
-            >
-              <img src="/images/pcs-token.jpg" alt="PCS Token" className="w-6 h-6" />
-            </a>
+            {/* Token (server-safe) is rendered as a floating button at the bottom-right via TokenButton */}
             {/* Moonshot client button */}
             <MoonshotHeaderButton />
             {/* Stash small icon */}

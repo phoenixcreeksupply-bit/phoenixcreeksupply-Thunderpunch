@@ -40,19 +40,24 @@ const affiliates = [
       }
       ,
       {
-        label: 'Shop XKG Wind-Defender Bib Pant (tkqlhce)',
+        label: 'Shop XKG Wind-Defender Bib Pant',
         href: 'https://www.tkqlhce.com/click-101573160-15780347'
       },
       {
-        label: 'Shop XKG Wind-Defender Bib Pant (dpbolvw)',
+        label: 'Shop XKG Wind-Defender Bib Pant',
         href: 'https://www.dpbolvw.net/click-101573160-15780347',
         pixel: 'https://www.lduhtrp.net/image-101573160-15780347'
       }
       ,
       {
-        label: '3-Days Only - 50% OFF XKG Ridge Pant (kqzyfj)',
+        label: '3-Days Only - 50% OFF XKG Ridge Pant',
         href: 'https://www.kqzyfj.com/click-101573160-16972766',
         pixel: 'https://www.tqlkg.com/image-101573160-16972766'
+      }
+      ,
+      {
+        label: 'Shop King Camo (evergreen)',
+        href: 'https://www.dpbolvw.net/click-101573160-15784057'
       }
     ]
   }

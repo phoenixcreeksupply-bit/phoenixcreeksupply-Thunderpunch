@@ -17,6 +17,9 @@ export default function AffiliateVisitButton({ href, affiliate, label = 'Visit A
     window.open(href, '_blank', 'noopener,noreferrer');
   }
 
+  // remove parenthetical codes from the visible label (e.g. "(tkqlhce)")
+  const displayLabel = (label || 'Visit Affiliate').replace(/\s*\([^)]*\)\s*/g, '').trim();
+
   return (
     <>
       <button
@@ -24,7 +27,7 @@ export default function AffiliateVisitButton({ href, affiliate, label = 'Visit A
         aria-label={`Visit affiliate ${affiliate}`}
         className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-yellow-400 text-black font-semibold hover:bg-yellow-500 transition"
       >
-        {label}
+        {displayLabel}
       </button>
       {/* pixel image for affiliate tracking if provided (1x1) */}
       {pixel ? <img src={pixel} alt="" width="1" height="1" className="sr-only" /> : null}

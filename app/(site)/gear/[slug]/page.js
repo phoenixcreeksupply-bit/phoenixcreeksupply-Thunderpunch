@@ -1,5 +1,6 @@
 import affiliates from '../affiliates';
 import AffiliateVisitButton from '../../../../components/AffiliateVisitButton';
+import AffiliateOffers from '../../../../components/AffiliateOffers';
 import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {
@@ -33,17 +34,17 @@ export default function AffiliatePage({ params }) {
           )}
 
           <div className="flex flex-wrap gap-3">
-            {/* Render each provided affiliate link as a tracked button with optional pixel */}
+            {/* Render primary CTA and collapse additional offers into a small menu */}
             {affiliate.links && affiliate.links.length > 0 ? (
-              affiliate.links.map((l, idx) => (
-                <AffiliateVisitButton
-                  key={idx}
-                  href={l.href}
-                  affiliate={affiliate.slug}
-                  label={l.label}
-                  pixel={l.pixel}
-                />
-              ))
+                <>
+                  <AffiliateOffers links={affiliate.links} affiliate={affiliate.slug} />
+                  {/* render impression pixels for all links server-side so impressions fire even when links are hidden */}
+                  {affiliate.links.map((l, i) =>
+                    l.pixel ? (
+                      <img key={i} src={l.pixel} alt="" width="1" height="1" className="sr-only" />
+                    ) : null
+                  )}
+                </>
             ) : (
               <AffiliateVisitButton href={affiliate.href} affiliate={affiliate.slug} />
             )}
