@@ -100,27 +100,29 @@ const affiliates = [
     name: "Muck Boot Company",
     category: 'Footwear & Outdoor',
     description: 'Rugged, waterproof boots and footwear built for wet and muddy conditions — great for prospecting, hunting, and heavy outdoor work.',
-    // add the provided logo to public/images as 'muck-boot-logo.jpg'
-    logo: '/images/muck-boot-logo.jpg',
+  // use the uploaded Muck logo image (saved in public/images)
+  logo: '/images/MuckBootLogo.jpg',
     features: [
       'Waterproof construction',
       'Insulated options for cold weather',
       'Durable outsoles for rough terrain'
     ],
-    // add the provided tkqlhce click URL for Muck Boot and a local banner creative
+    // only tracked links for Muck Boot — merchant direct URLs removed per request
     links: [
       {
-        label: 'Shop Muck Boot',
-        displayLabel: 'Shop Muck Boot',
-        href: 'https://www.tkqlhce.com/click-101573160-17122530'
+        label: 'Shop Muck (kqzyfj)',
+        displayLabel: 'Shop Muck',
+        href: 'https://www.kqzyfj.com/click-101573160-17142980',
+        // make this the default primary CTA so users see the tracked commission link first
+        primary: true
       },
       {
-        label: 'Muck Banner 300x600',
-        href: 'https://www.tkqlhce.com/click-101573160-17122530',
-        // local creative image you attached; save as public/images/muck-boot-banner-300x600.jpg
+        label: 'Muck Banner 300x600 (kqzyfj)',
+        // banner click should also use the tracked click URL so impressions/clicks attribute correctly
+        href: 'https://www.kqzyfj.com/click-101573160-17142980',
         creative: {
           source: 'local',
-          url: '/images/muck-boot-banner-300x600.jpg',
+          url: '/images/BoneCollectorMuck.jpg',
           width: 300,
           height: 600
         }
