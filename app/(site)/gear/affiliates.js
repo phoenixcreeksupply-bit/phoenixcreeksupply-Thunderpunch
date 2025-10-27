@@ -117,7 +117,7 @@ const affiliates = [
         primary: true
       },
       {
-        label: 'Muck Banner 300x600 (kqzyfj)',
+        label: 'Bone Collector (kqzyfj)',
         // banner click should also use the tracked click URL so impressions/clicks attribute correctly
         href: 'https://www.kqzyfj.com/click-101573160-17142980',
         creative: {
