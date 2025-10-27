@@ -37,7 +37,11 @@ export default function AffiliatePage({ params }) {
             {/* Render primary CTA and collapse additional offers into a small menu */}
             {affiliate.links && affiliate.links.length > 0 ? (
                 <>
-                  <AffiliateOffers links={affiliate.links} affiliate={affiliate.slug} />
+                  <AffiliateOffers
+                    links={affiliate.links}
+                    affiliate={affiliate.slug}
+                    preferredHosts={affiliate.preferred || affiliate.preferredHosts}
+                  />
                   {/* render impression pixels for all links server-side so impressions fire even when links are hidden */}
                   {affiliate.links.map((l, i) =>
                     l.pixel ? (

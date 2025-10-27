@@ -20,7 +20,14 @@ export default function Gear() {
             <Link key={a.slug} href={`/gear/${a.slug}`} className="block group rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:scale-[1.01] transform transition p-4">
               <div className="w-full h-40 relative rounded-md overflow-hidden mb-4 bg-gray-800">
                 {a.logo ? (
-                  <img src={a.logo} alt={a.name} className="w-full h-full object-cover" />
+                  // If the logo is an SVG (often a small wordmark), center and contain it so it displays legibly
+                  a.logo.endsWith('.svg') ? (
+                    <div className="w-full h-full flex items-center justify-center bg-gray-800">
+                      <img src={a.logo} alt={a.name} className="max-w-[70%] max-h-[70%] object-contain" />
+                    </div>
+                  ) : (
+                    <img src={a.logo} alt={a.name} className="w-full h-full object-cover" />
+                  )
                 ) : (
                   <div className="w-full h-full flex items-center justify-center text-gray-500">No image</div>
                 )}

@@ -3,14 +3,15 @@
 import { useState, useRef, useEffect } from 'react';
 import AffiliateVisitButton from './AffiliateVisitButton';
 
-export default function AffiliateOffers({ links = [], affiliate }) {
+export default function AffiliateOffers({ links = [], affiliate, preferredHosts: preferredProp }) {
   const [open, setOpen] = useState(false);
   const menuRef = useRef(null);
   const itemRefs = useRef([]);
 
   // preferred host order — choose the primary link by known hosts if present
-  // dpbolvw is treated as the evergreen/primary network when available
-  const preferredHosts = ['dpbolvw.net', 'tkqlhce.com', 'kqzyfj.com'];
+  // allow per-affiliate override via `preferredProp`; otherwise use sensible default
+  const DEFAULT_PREFERRED_HOSTS = ['dpbolvw.net', 'tkqlhce.com', 'kqzyfj.com'];
+  const preferredHosts = Array.isArray(preferredProp) && preferredProp.length > 0 ? preferredProp : DEFAULT_PREFERRED_HOSTS;
 
   useEffect(() => {
     function onDoc(e) {
@@ -23,15 +24,18 @@ export default function AffiliateOffers({ links = [], affiliate }) {
 
   if (!links || links.length === 0) return null;
 
-  // pick primary link by preferred host order if available, otherwise first
-  let primaryIndex = 0;
-  for (const host of preferredHosts) {
-    const idx = links.findIndex(l => l.href && l.href.includes(host));
-    if (idx !== -1) {
-      primaryIndex = idx;
-      break;
+  // respect an explicit primary flag first, then preferred host order, otherwise first
+  let primaryIndex = links.findIndex(l => l.primary === true);
+  if (primaryIndex === -1) {
+    for (const host of preferredHosts) {
+      const idx = links.findIndex(l => l.href && l.href.includes(host));
+      if (idx !== -1) {
+        primaryIndex = idx;
+        break;
+      }
     }
   }
+  if (primaryIndex === -1) primaryIndex = 0;
 
   const primary = links[primaryIndex];
   const rest = links.filter((_, i) => i !== primaryIndex);
@@ -66,7 +70,7 @@ export default function AffiliateOffers({ links = [], affiliate }) {
 
   return (
     <div className="flex items-center gap-3">
-      <AffiliateVisitButton href={primary.href} affiliate={affiliate} label={primary.label} pixel={primary.pixel} />
+  <AffiliateVisitButton href={primary.href} affiliate={affiliate} label={primary.displayLabel ?? primary.label} pixel={primary.pixel} />
 
       {rest.length > 0 && (
         <div className="relative" ref={menuRef}>
@@ -92,7 +96,7 @@ export default function AffiliateOffers({ links = [], affiliate }) {
                       <AffiliateVisitButton
                         href={l.href}
                         affiliate={affiliate}
-                        label={l.label}
+                        label={l.displayLabel ?? l.label}
                         pixel={l.pixel}
                       />
                       {/* expose the button for keyboard focus management */}

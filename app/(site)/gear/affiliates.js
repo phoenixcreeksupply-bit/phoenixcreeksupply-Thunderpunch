@@ -16,6 +16,8 @@ const affiliates = [
       'Fast shipping options',
       'Closeout and clearance deals'
     ],
+    // preferred host order for primary selection (dpbolvw preferred first)
+    preferred: ['dpbolvw.net', 'tkqlhce.com'],
     // multiple tracked links from the affiliate package
     links: [
       {
@@ -56,8 +58,20 @@ const affiliates = [
       }
       ,
       {
+        label: 'King Camo - Holiday Gift Guide',
+        href: 'https://www.jdoqocy.com/click-101573160-16993510'
+      }
+      ,
+      {
+        label: 'Shop XKG Ridge Pant',
+        href: 'https://www.kqzyfj.com/click-101573160-16993510'
+      }
+      ,
+      {
         label: 'Shop King Camo (evergreen)',
-        href: 'https://www.dpbolvw.net/click-101573160-15784057'
+        displayLabel: 'Shop King Camo',
+        href: 'https://www.dpbolvw.net/click-101573160-15784057',
+        primary: true
       }
     ]
   }
