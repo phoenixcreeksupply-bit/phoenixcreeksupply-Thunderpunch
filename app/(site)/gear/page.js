@@ -2,6 +2,7 @@ export const metadata = { title: "Tools & Gear | Phoenix Creek Supply" };
 
 import affiliates from './affiliates';
 import Link from 'next/link';
+import AffiliateLogo from '../../../components/AffiliateLogo';
 
 export default function Gear() {
   return (
@@ -19,18 +20,15 @@ export default function Gear() {
           {affiliates.map(a => (
             <Link key={a.slug} href={`/gear/${a.slug}`} className="block group rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:scale-[1.01] transform transition p-4">
               <div className="w-full h-40 relative rounded-md overflow-hidden mb-4 bg-gray-800">
-                {a.logo ? (
-                  // If the logo is an SVG (often a small wordmark), center and contain it so it displays legibly
-                  a.logo.endsWith('.svg') ? (
-                    <div className="w-full h-full flex items-center justify-center bg-gray-800">
-                      <img src={a.logo} alt={a.name} className="max-w-[70%] max-h-[70%] object-contain" />
-                    </div>
-                  ) : (
-                    <img src={a.logo} alt={a.name} className="w-full h-full object-cover" />
-                  )
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-gray-500">No image</div>
-                )}
+                <AffiliateLogo
+                  logo={a.logo}
+                  creative={
+                    // prefer first creative link if present
+                    (a.links && a.links.find(l => l.creative && l.creative.url) && a.links.find(l => l.creative && l.creative.url).creative) || null
+                  }
+                  alt={a.name}
+                  className={a.logo && a.logo.endsWith('.svg') ? 'h-full' : 'w-full h-full object-cover'}
+                />
                 <div className="absolute bottom-3 right-3 bg-yellow-400 text-black px-3 py-1 rounded-md text-sm font-semibold">Shop</div>
               </div>
 

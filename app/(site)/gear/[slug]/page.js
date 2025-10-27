@@ -1,6 +1,7 @@
 import affiliates from '../affiliates';
 import AffiliateVisitButton from '../../../../components/AffiliateVisitButton';
 import AffiliateOffers from '../../../../components/AffiliateOffers';
+import AffiliateLogo from '../../../../components/AffiliateLogo';
 import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {
@@ -16,9 +17,14 @@ export default function AffiliatePage({ params }) {
     <div className="mx-auto max-w-6xl px-6 py-16">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         <div className="md:col-span-1">
-          {affiliate.logo && (
-            <img src={affiliate.logo} alt={affiliate.name} className="w-full h-64 object-cover rounded-md shadow-lg" />
-          )}
+          <AffiliateLogo
+            logo={affiliate.logo}
+            creative={
+              (affiliate.links && affiliate.links.find(l => l.creative && l.creative.url) && affiliate.links.find(l => l.creative && l.creative.url).creative) || null
+            }
+            alt={affiliate.name}
+            className="w-full h-64 rounded-md shadow-lg"
+          />
         </div>
 
         <div className="md:col-span-2">

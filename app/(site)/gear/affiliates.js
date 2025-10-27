@@ -9,8 +9,9 @@ const affiliates = [
     description: 'Durable, field-ready camouflage and outdoor apparel built for serious prospectors and hunters.',
     // primary href (Shop)
     href: 'https://www.tkqlhce.com/click-101573160-15774549',
-  // local logo (placeholder). Original external logo: https://www.ftjcfx.com/image-101573160-15778348
-  logo: '/images/king-camo-logo.svg',
+  // local logo (replace with the provided JPG). Please add the provided file to public/images/
+  // Filename expected: public/images/king-camo-banner-400x262.jpg
+  logo: '/images/king-camo-banner-400x262.jpg',
     features: [
       'Field-ready fabrics and patterns',
       'Fast shipping options',
@@ -60,6 +61,24 @@ const affiliates = [
       {
         label: 'King Camo - Holiday Gift Guide',
         href: 'https://www.jdoqocy.com/click-101573160-16993510'
+      }
+      ,
+      {
+        label: 'Kings Logo 400x262 (Banner)',
+        href: 'https://www.dpbolvw.net/click-101573160-15784073',
+        // Creative metadata — CJ creative JSON (requires CJ authentication to fetch).
+        // Frontend can use this URL or you can replace with a direct image asset in /public/images.
+        creative: {
+          source: 'cj-json',
+          url: 'https://members.cj.com/member/7418368/publisher/links/search/publisher/linkcreative/15784073.json',
+          width: 400,
+          height: 262
+        }
+      }
+      ,
+      {
+        label: 'Shop XKG Summit 2P Tent',
+        href: 'https://www.tkqlhce.com/click-101573160-17122530'
       }
       ,
       {
