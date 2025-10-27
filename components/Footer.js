@@ -17,6 +17,7 @@ By completing your purchase, you acknowledge and agree to this policy. monroe@ph
         <nav className="flex gap-4">
           <a href="/legal/affiliate">Affiliate</a>
           <a href="/legal/privacy">Privacy</a>
+          <a href="/contact">Contact</a>
           <a href="//legal/terms">Terms</a>
           <a href="/legal/disclaimer">Disclaimer</a>
           <li><a href="/legal/returns">Returns Policy</a></li>
