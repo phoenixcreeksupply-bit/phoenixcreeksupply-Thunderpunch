@@ -24,7 +24,7 @@ export default function AboutPage() {
         </header>
 
         <article className="space-y-6">
-          <h2 className="text-2xl font-semibold text-amber-400">The Man Who Should9dve Broken</h2>
+          <h2 className="text-2xl font-semibold text-amber-400">The Man Who Should've Broken</h2>
           <p>
             He wasn't supposed to make it this far. By all accounts — life had thrown enough at Monroe to break most men twice over.
             But pain, for him, was never the ending. It was the forge.
