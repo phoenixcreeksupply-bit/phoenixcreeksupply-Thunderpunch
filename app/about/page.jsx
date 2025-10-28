@@ -71,7 +71,7 @@ export default function AboutPage() {
             Monroe isn't selling gear — he's sharing proof that the old code still works:
           </p>
           <ul className="list-disc list-inside">
-            <li>Patience IS virtue.</li>
+            <li>Patience IS a virtue.</li>
             <li>Discipline your Mind.</li>
             <li>Work harder.</li>
             <li>Stand taller.</li>
