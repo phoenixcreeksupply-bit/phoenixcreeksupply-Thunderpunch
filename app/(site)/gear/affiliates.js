@@ -96,6 +96,39 @@ const affiliates = [
   }
   ,
   {
+    slug: 'durango',
+    name: 'Durango',
+    category: 'Footwear & Outdoor',
+    description: 'Durango — built for every mile. Rugged harness boots and footwear engineered for long days on and off the trail.',
+  // Use existing Durango image in public/images (uploaded earlier). Update if you want a different creative.
+  // encode spaces in filename so the image URL is safe in rendered HTML
+  logo: '/images/Durango%20Moto%20Boots.jpg',
+    features: [
+      'Durable harness construction',
+      'Comfort for long wear',
+      'Leather and engineered soles'
+    ],
+    links: [
+      {
+        label: 'Shop Durango (jdoqocy)',
+        displayLabel: 'Shop Durango',
+        href: 'https://www.jdoqocy.com/click-101573160-17170523',
+        primary: true
+      },
+      {
+        label: 'Durango Banner 728x90 (creative)',
+        href: 'https://www.jdoqocy.com/click-101573160-17170523',
+        creative: {
+          source: 'local',
+          url: '/images/Durango%20Moto%20Boots.jpg',
+          width: 728,
+          height: 90
+        }
+      }
+    ]
+  }
+  ,
+  {
     slug: 'muck-boot',
     name: "Muck Boot Company",
     category: 'Footwear & Outdoor',

@@ -1,0 +1,93 @@
+import React from 'react';
+
+export const metadata = {
+  title: 'About | Phoenix Creek Supply',
+  description: 'About Monroe and the mission of Phoenix Creek Supply.',
+};
+
+export default function AboutPage() {
+  return (
+    <section
+      className="about-monroe text-gray-100 py-16 px-8"
+      // use a clearer, permanent path for the about background (served by a route alias)
+      style={{
+        backgroundImage: "url('/images/about-bg-clean.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+      }}
+    >
+      <div className="max-w-4xl mx-auto space-y-16 backdrop-blur-sm bg-black/40 rounded-2xl p-8 shadow-2xl">
+
+        <header className="text-center space-y-2">
+          <h1 className="text-4xl font-bold tracking-wide uppercase">About Monroe & The Mission</h1>
+          <p className="text-sm text-gray-400">Phoenix Creek Supply</p>
+        </header>
+
+        <article className="space-y-6">
+          <h2 className="text-2xl font-semibold text-amber-400">The Man Who Should9dve Broken</h2>
+          <p>
+            He wasn9t supposed to make it this far. By all accounts — life had thrown enough at Monroe to break most men twice over.
+            But pain, for him, was never the ending. It was the forge.
+          </p>
+          <p>
+            He learned early that discipline isn9t built in comfort — it9s carved out of loss, failure, and long nights where no one9s coming to help.
+            So he stopped waiting for easy days. He built his strength in the storm instead.
+          </p>
+          <p>
+            There was a time he should9ve stayed down — when every hit landed, every door closed, and even the ground felt like it wanted to keep him.
+            But somewhere between the blood and the dirt, he made the decision that changed everything:
+            <strong className="text-amber-300">to get up anyway.</strong>
+            Even broken. Even when the world had already written him off.
+            He rose without applause, without promise — because that9s what real men do when they9ve got nothing left but fight.
+          </p>
+        </article>
+
+        <article className="space-y-6">
+          <h2 className="text-2xl font-semibold text-amber-400">Forged From the Wild</h2>
+          <p>
+            Monroe didn9t create Phoenix Creek Supply to chase profit or trend.
+            He built it as a rebellion against the soft world — a reminder that grit still matters.
+            That a man can build something real with his hands, his word, and his will.
+          </p>
+          <p>
+            Every tool, every map, every claim that bears the PCS mark stands for that principle:
+            <strong className="uppercase tracking-wide"> Earn it. Test it. Own it.</strong>
+          </p>
+        </article>
+
+        <article className="space-y-6">
+          <h2 className="text-2xl font-semibold text-amber-400">Where Signal Dies, Legacy Begins</h2>
+          <p>
+            He9s the kind of man who walks where the signal dies — where there9s no applause, no shortcuts, no excuses.
+            The kind who carries his name like a weight, not a slogan.
+            He doesn9t talk about legacy; he <em>builds</em> it.
+            One ridge, one creek, one cut of earth at a time.
+          </p>
+        </article>
+
+        <article className="space-y-6">
+          <h2 className="text-2xl font-semibold text-amber-400">The Code Lives Here</h2>
+          <p>
+            Monroe isn9t selling gear — he9s sharing proof that the old code still works:
+          </p>
+          <ul className="list-disc list-inside">
+            <li>Work harder.</li>
+            <li>Stand taller.</li>
+            <li>Keep your word.</li>
+            <li>Leave something worth remembering.</li>
+          </ul>
+          <p className="font-semibold">
+            Because some men break under pressure. <br />
+            <span className="text-amber-300">Monroe built a company out of it.</span>
+          </p>
+        </article>
+
+        <footer className="text-center pt-10 border-t border-gray-700">
+          <p className="uppercase tracking-wide font-semibold">Phoenix Creek Supply</p>
+          <p className="italic text-gray-400">Built in the wild. Run by the code.</p>
+        </footer>
+
+      </div>
+    </section>
+  );
+}
