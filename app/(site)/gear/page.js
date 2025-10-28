@@ -27,7 +27,7 @@ export default function Gear() {
                     (a.links && a.links.find(l => l.creative && l.creative.url) && a.links.find(l => l.creative && l.creative.url).creative) || null
                   }
                   alt={a.name}
-                  className={a.logo && a.logo.endsWith('.svg') ? 'h-full' : 'w-full h-full object-cover'}
+                  className={a.logo && a.logo.endsWith('.svg') ? 'h-full' : 'w-full h-full'}
                 />
                 <div className="absolute bottom-3 right-3 bg-yellow-400 text-black px-3 py-1 rounded-md text-sm font-semibold">Shop</div>
               </div>

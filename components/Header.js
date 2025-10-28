@@ -12,9 +12,11 @@ export default function Header() {
         Basic Trail Pack
       </a>
       <nav className="space-x-4">
+        <a href="/about" className="text-white hover:text-yellow-400">About</a>
         <a href="/digital-kits" className="text-white hover:text-yellow-400">Digital Kits</a>
         <a href="/gear" className="text-white hover:text-yellow-400">Gear</a>
         <a href="/guides" className="text-white hover:text-yellow-400">Guides</a>
+        <a href="/contact" className="text-white hover:text-yellow-400">Contact</a>
       </nav>
     </header>
   );

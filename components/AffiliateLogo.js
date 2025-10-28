@@ -52,7 +52,10 @@ export default function AffiliateLogo({ logo, creative, alt = '', className = ''
   }
 
   if (src) {
-    return <img src={src} alt={alt} className={className} onError={() => setFailed(true)} />;
+    // Ensure raster images preserve aspect ratio instead of stretching to fit container
+    // by adding object-contain and centering while preserving any passed classes.
+    const safeClass = `${className ? className + ' ' : ''}object-contain object-center`;
+    return <img src={src} alt={alt} className={safeClass} onError={() => setFailed(true)} />;
   }
 
   return (
