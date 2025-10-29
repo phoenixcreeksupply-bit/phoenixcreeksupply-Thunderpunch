@@ -203,8 +203,8 @@ const affiliates = [
     name: 'Georgia Boot',
     category: 'Footwear & Work',
     description: 'Rugged work boots built for tough jobs — slip-resistant, durable, and comfortable for long days.',
-    // local creative placeholder — upload the provided banner to public/images/georgia-boot-300x250.jpg
-    logo: '/images/georgia-boot-300x250.jpg',
+  // local creative placeholder — normalized filename used in public/images
+  logo: '/images/georgia-boot-300x250.jpg',
     features: [
       'Work-grade construction',
       'Slip-resistant outsoles',
@@ -223,6 +223,7 @@ const affiliates = [
         href: 'https://www.jdoqocy.com/click-101573160-15736465',
         creative: {
           source: 'local',
+          // point to the uploaded image (normalized filename)
           url: '/images/georgia-boot-300x250.jpg',
           width: 300,
           height: 250
