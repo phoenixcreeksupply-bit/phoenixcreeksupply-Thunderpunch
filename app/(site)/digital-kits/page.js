@@ -1,5 +1,9 @@
 export const metadata = { title: "Digital Kits | Phoenix Creek Supply" };
 
+// Toggle this to 'true' (build-time env) to show the Claim Scout Service card
+// without editing code. Use NEXT_PUBLIC_SHOW_CLAIM_SERVICE=true
+const SHOW_CLAIM = process.env.NEXT_PUBLIC_SHOW_CLAIM_SERVICE === 'true';
+
 const kits = [
   { 
     title: "AI Legacy Framework", 
@@ -29,7 +33,10 @@ const kits = [
     title: "Claim Scout Service",
     description: "Get a professional-grade claim map built for your prospecting or exploration needs.",
     price: "$79",
-    href: "https://phoenixcreeksupply.gumroad.com/l/vbxwz"
+    href: "https://phoenixcreeksupply.gumroad.com/l/vbxwz",
+    // Hidden by default. Control visibility with NEXT_PUBLIC_SHOW_CLAIM_SERVICE env var.
+    // Do NOT delete this entry unless you want it permanently removed.
+    hidden: true
   }
 ];
 
@@ -39,7 +46,7 @@ export default function Page() {
       <div className="mx-auto max-w-6xl px-6 py-16">
       <h1 className="text-4xl font-bold mb-8">Digital Kits</h1>
       <div className="grid md:grid-cols-3 gap-6">
-        {kits.map(k => (
+        {kits.filter(k => !k.hidden || SHOW_CLAIM).map(k => (
           <div key={k.title} className="card">
             <h2 className="text-xl font-semibold">{k.title}</h2>
             <p className="mt-2 text-gray-300">{k.description}</p>
