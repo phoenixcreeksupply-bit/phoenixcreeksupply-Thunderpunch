@@ -129,6 +129,41 @@ const affiliates = [
   }
   ,
   {
+    slug: 'rocky',
+    name: 'Rocky',
+    category: 'Footwear & Tactical',
+    description: 'Rocky tactical and work boots — rugged footwear built for long days and demanding conditions.',
+    // homepage tracked link (kqzyfj)
+    href: 'https://www.kqzyfj.com/click-101573160-15489688',
+    // local creative placeholder. Upload the provided Rocky banner to public/images/rocky-banner-300x250.jpg
+    logo: '/images/rocky-banner-300x250.jpg',
+    features: [
+      'Durable tactical construction',
+      'All-day comfort',
+      'Slip-resistant outsoles'
+    ],
+    links: [
+      {
+        label: 'Shop Rocky (kqzyfj)',
+        displayLabel: 'Shop Rocky',
+        href: 'https://www.kqzyfj.com/click-101573160-15489688',
+        // Explicit primary so this tracked shop link is the visible CTA by default
+        primary: true
+      },
+      {
+        label: 'Rocky Banner 300x250 (creative)',
+        href: 'https://www.kqzyfj.com/click-101573160-15489688',
+        creative: {
+          source: 'local',
+          url: '/images/rocky-banner-300x250.jpg',
+          width: 300,
+          height: 250
+        }
+      }
+    ]
+  }
+  ,
+  {
     slug: 'muck-boot',
     name: "Muck Boot Company",
     category: 'Footwear & Outdoor',
@@ -158,6 +193,39 @@ const affiliates = [
           url: '/images/BoneCollectorMuck.jpg',
           width: 300,
           height: 600
+        }
+      }
+    ]
+  }
+  ,
+  {
+    slug: 'georgia-boot',
+    name: 'Georgia Boot',
+    category: 'Footwear & Work',
+    description: 'Rugged work boots built for tough jobs — slip-resistant, durable, and comfortable for long days.',
+    // local creative placeholder — upload the provided banner to public/images/georgia-boot-300x250.jpg
+    logo: '/images/georgia-boot-300x250.jpg',
+    features: [
+      'Work-grade construction',
+      'Slip-resistant outsoles',
+      'All-day comfort'
+    ],
+    links: [
+      {
+        label: 'Shop Georgia Boot',
+        displayLabel: 'Shop Georgia Boot',
+        href: 'https://www.jdoqocy.com/click-101573160-15736465',
+        primary: true,
+        pixel: 'https://www.ftjcfx.com/image-101573160-15736465'
+      },
+      {
+        label: 'Georgia Boot Banner 300x250 (creative)',
+        href: 'https://www.jdoqocy.com/click-101573160-15736465',
+        creative: {
+          source: 'local',
+          url: '/images/georgia-boot-300x250.jpg',
+          width: 300,
+          height: 250
         }
       }
     ]
