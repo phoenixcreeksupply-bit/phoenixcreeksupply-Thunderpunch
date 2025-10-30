@@ -9,9 +9,9 @@ export default function AboutPage() {
   return (
     <section
       className="about-monroe text-gray-100 py-16 px-8"
-      // use a clearer, permanent path for the about background (served by a route alias)
+      // Use the uploaded Monroe image as the about background
       style={{
-        backgroundImage: "url('/images/about-bg-clean.jpg')",
+        backgroundImage: "url('/images/Monroe1.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
       }}
