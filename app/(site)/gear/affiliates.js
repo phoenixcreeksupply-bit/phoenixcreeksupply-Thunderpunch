@@ -233,4 +233,27 @@ const affiliates = [
   }
 ];
 
+// Added affiliate: Cigars International (tracked link + impression pixel)
+affiliates.push({
+  slug: 'cigars-international',
+  name: 'Cigars International',
+  category: 'Tobacco & Accessories',
+  description: 'Cigars, humidors, and accessories — premium tobacco for enthusiasts.',
+  href: 'https://www.anrdoezrs.net/click-101573160-15735448',
+  // Local logo (existing upload found; use that filename)
+  logo: '/images/CigarsInt.png',
+  links: [
+    {
+      label: 'Shop Cigars International',
+      displayLabel: 'Shop Cigars International',
+      href: 'https://www.anrdoezrs.net/click-101573160-15735448',
+      primary: true,
+      pixel: 'https://www.lduhtrp.net/image-101573160-15735448'
+    }
+  ]
+});
+
+// If you upload the provided logo, place it at: public/images/cigars-international.png
+// and the site will use it automatically. Optionally update the creative size below.
+
 export default affiliates;
