@@ -16,7 +16,7 @@ export default function AboutPage() {
         backgroundPosition: 'center center',
       }}
     >
-      <div className="max-w-4xl mx-auto space-y-16 backdrop-blur-sm bg-black/40 rounded-2xl p-8 shadow-2xl">
+  <div className="max-w-4xl mx-auto space-y-16 backdrop-blur-sm bg-black/20 rounded-2xl p-8 shadow-2xl">
 
         <header className="text-center space-y-2">
           <h1 className="text-4xl font-bold tracking-wide uppercase">About Monroe & The Mission</h1>
