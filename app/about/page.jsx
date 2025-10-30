@@ -17,7 +17,7 @@ export default function AboutPage() {
       }}
     >
       <div
-        className="max-w-4xl mx-auto space-y-16 backdrop-blur-sm bg-transparent rounded-2xl p-8 shadow-2xl"
+        className="max-w-4xl mx-auto space-y-16 bg-transparent rounded-2xl p-8 shadow-2xl"
         style={{ textShadow: '0 1px 3px rgba(0,0,0,0.9)' }}
       >
 
