@@ -53,18 +53,12 @@ const affiliates = [
       }
       ,
       {
-        label: '3-Days Only - 50% OFF XKG Ridge Pant',
-        href: 'https://www.kqzyfj.com/click-101573160-16972766',
-        pixel: 'https://www.tqlkg.com/image-101573160-16972766'
-      }
-      ,
-      {
         label: 'King Camo - Holiday Gift Guide',
         href: 'https://www.jdoqocy.com/click-101573160-16993510'
       }
       ,
       {
-        label: 'Kings Logo 400x262 (Banner)',
+        label: 'New',
         href: 'https://www.dpbolvw.net/click-101573160-15784073',
         // Creative metadata — CJ creative JSON (requires CJ authentication to fetch).
         // Frontend can use this URL or you can replace with a direct image asset in /public/images.
@@ -116,7 +110,7 @@ const affiliates = [
         primary: true
       },
       {
-        label: 'Durango Banner 728x90 (creative)',
+        label: 'New',
         href: 'https://www.jdoqocy.com/click-101573160-17170523',
         creative: {
           source: 'local',
@@ -151,7 +145,7 @@ const affiliates = [
         primary: true
       },
       {
-        label: 'Rocky Banner 300x250 (creative)',
+        label: 'New',
         href: 'https://www.kqzyfj.com/click-101573160-15489688',
         creative: {
           source: 'local',
@@ -219,7 +213,7 @@ const affiliates = [
         pixel: 'https://www.ftjcfx.com/image-101573160-15736465'
       },
       {
-        label: 'Georgia Boot Banner 300x250 (creative)',
+        label: 'New',
         href: 'https://www.jdoqocy.com/click-101573160-15736465',
         creative: {
           source: 'local',
