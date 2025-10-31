@@ -21,13 +21,9 @@ const affiliates = [
     preferred: ['dpbolvw.net', 'tkqlhce.com'],
     // multiple tracked links from the affiliate package
     links: [
+           
       {
-        label: 'Shop King Camo',
-        href: 'https://www.tkqlhce.com/click-101573160-15774549',
-        pixel: 'https://www.ftjcfx.com/image-101573160-15774549'
-      },
-      {
-        label: 'Free Shipping ($200+)',
+        label: 'Free Shipping $200+',
         href: 'https://www.dpbolvw.net/click-101573160-15778345',
         pixel: 'https://www.ftjcfx.com/image-101573160-15778345'
       },
@@ -37,21 +33,10 @@ const affiliates = [
         pixel: 'https://www.ftjcfx.com/image-101573160-15778347'
       },
       {
-        label: 'King Camo Home',
-        href: 'https://www.jdoqocy.com/click-101573160-15778348',
-        pixel: 'https://www.ftjcfx.com/image-101573160-15778348'
-      }
-      ,
-      {
-        label: 'Shop XKG Wind-Defender Bib Pant',
-        href: 'https://www.tkqlhce.com/click-101573160-15780347'
-      },
-      {
         label: 'Shop XKG Wind-Defender Bib Pant',
         href: 'https://www.dpbolvw.net/click-101573160-15780347',
         pixel: 'https://www.lduhtrp.net/image-101573160-15780347'
-      }
-      ,
+      },
       {
         label: 'King Camo - Holiday Gift Guide',
         href: 'https://www.jdoqocy.com/click-101573160-16993510'
