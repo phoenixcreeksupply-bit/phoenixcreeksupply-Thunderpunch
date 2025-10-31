@@ -253,6 +253,41 @@ affiliates.push({
   ]
 });
 
+// Added affiliate: Groundluxe (grounding/fitted bed sheet)
+affiliates.push({
+  slug: 'groundluxe',
+  name: 'Groundluxe',
+  category: 'Home & Wellness',
+  description: 'Groundluxe fitted grounding bed sheet — organic cotton with grounding technology.',
+  href: 'https://www.dpbolvw.net/click-101573160-17165115',
+  // point to the uploaded image (present in public/images)
+  logo: '/images/groundluxe-fitted-sheet.png',
+  features: [
+    'Organic cotton',
+    'Grounding / earthing technology',
+    'Machine washable'
+  ],
+  links: [
+    {
+      label: 'Shop Groundluxe Fitted Sheet',
+      displayLabel: 'Shop Groundluxe',
+      href: 'https://www.dpbolvw.net/click-101573160-17165115',
+      primary: true,
+      pixel: 'https://www.lduhtrp.net/image-101573160-17165115'
+    },
+    {
+      label: 'Groundluxe Banner (creative)',
+      href: 'https://www.dpbolvw.net/click-101573160-17165115',
+        creative: {
+        source: 'local',
+        url: '/images/groundluxe-fitted-sheet.png',
+        width: 342,
+        height: 340
+      }
+    }
+  ]
+});
+
 // If you upload the provided logo, place it at: public/images/cigars-international.png
 // and the site will use it automatically. Optionally update the creative size below.
 
