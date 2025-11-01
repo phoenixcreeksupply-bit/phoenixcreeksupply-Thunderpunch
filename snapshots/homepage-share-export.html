@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Export Homepage Share Image — Phoenix Creek Supply</title>
+  <style>
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:#0b1220;color:#e6eef8;padding:24px}
+    .box{max-width:980px;margin:0 auto;background:#071018;padding:18px;border-radius:10px}
+    button{background:#0ea5a5;color:#04202a;border:none;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer}
+    img.preview{width:100%;max-width:900px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);margin-top:12px}
+    .note{color:#98a6bf;font-size:13px;margin-top:8px}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Homepage Share Image — Export</h1>
+    <p class="note">Click the button to generate a JPG from the embedded SVG and download it. The generated JPG is 1200×630 with high quality.</p>
+
+    <!-- Inline SVG (same content as public/brand/PCS-share.svg) -->
+    <div id="svgHolder">
+      <!-- SVG begins -->
+      <svg id="shareSVG" xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+        <defs>
+          <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0%" stop-color="#0f1724" />
+            <stop offset="60%" stop-color="#04202a" />
+            <stop offset="100%" stop-color="#083047" />
+          </linearGradient>
+        </defs>
+        <rect width="1200" height="630" fill="url(#bg)" />
+        <g opacity="0.12" transform="translate(0,60)" fill="#bfe6d8">
+          <path d="M0 420 C200 320 400 360 600 420 C800 480 1000 400 1200 420 L1200 630 L0 630 Z" />
+        </g>
+        <g transform="translate(72,120)" fill="none" stroke="#e6f9f1" stroke-width="3">
+          <path d="M0 240 C120 180 260 210 420 240 C560 265 760 245 980 180" stroke-opacity="0.9" />
+          <circle cx="1020" cy="190" r="8" fill="#fef3c7" stroke="none" />
+        </g>
+        <text x="80" y="220" fill="#e6eef8" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="56">Phoenix Creek Supply</text>
+        <text x="80" y="270" fill="#cbd8e6" font-family="Inter, Arial, sans-serif" font-weight="500" font-size="20">Practical gear, guides, and digital kits for prospectors</text>
+        <g transform="translate(80,320)" fill="#e6eef8" font-family="Inter, Arial, sans-serif" font-size="14">
+          <rect x="0" y="-24" width="220" height="36" rx="8" fill="#0ea5a5" />
+          <text x="16" y="0" fill="#04202a" font-weight="700">Shop gear</text>
+          <rect x="240" y="-24" width="300" height="36" rx="8" fill="#f59e0b" />
+          <text x="256" y="0" fill="#071018" font-weight="700">Field guides & digital kits</text>
+        </g>
+        <g transform="translate(760,160)">
+          <rect x="0" y="0" width="320" height="200" rx="12" fill="#04202a" opacity="0.85" />
+          <rect x="14" y="14" width="292" height="172" rx="8" fill="#083047" />
+          <text x="26" y="70" fill="#9fb8ff" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Digital Kits</text>
+          <text x="26" y="100" fill="#cbd8e6" font-family="Inter, Arial, sans-serif" font-size="14">AI Legacy • Stoic Guide • Prospecting Pack</text>
+        </g>
+        <text x="80" y="590" fill="#7f98b3" font-family="Inter, Arial, sans-serif" font-size="12">phoenixcreeksupply.com</text>
+      </svg>
+      <!-- SVG ends -->
+    </div>
+
+    <div style="margin-top:16px">
+      <button id="downloadBtn">Download JPG (1200×630)</button>
+    </div>
+
+    <div id="preview" style="margin-top:18px"></div>
+
+    <p class="note">If your browser blocks automatic downloads, right-click the preview image and choose "Save image as..." after generating.</p>
+  </div>
+
+  <script>
+    const btn = document.getElementById('downloadBtn');
+    const svgEl = document.getElementById('shareSVG');
+    const preview = document.getElementById('preview');
+
+    function svgToDataURL(svg) {
+      const serializer = new XMLSerializer();
+      const svgString = serializer.serializeToString(svg);
+      const encoded = encodeURIComponent(svgString);
+      return 'data:image/svg+xml;charset=utf-8,' + encoded;
+    }
+
+    btn.addEventListener('click', async () => {
+      const url = svgToDataURL(svgEl);
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = 1200; canvas.height = 630;
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#071018';
+        ctx.fillRect(0,0,canvas.width,canvas.height);
+        ctx.drawImage(img, 0, 0);
+        // create jpeg
+        const jpegData = canvas.toDataURL('image/jpeg', 0.92);
+        // show preview
+        const outImg = new Image();
+        outImg.className = 'preview';
+        outImg.src = jpegData;
+        preview.innerHTML = '';
+        preview.appendChild(outImg);
+        // trigger download
+        const a = document.createElement('a');
+        a.href = jpegData;
+        a.download = 'phoenixcreeksupply-homepage-1200x630.jpg';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      };
+      img.onerror = (e) => { alert('Could not render SVG to image: ' + e); };
+      img.src = url;
+    });
+  </script>
+</body>
+</html>
