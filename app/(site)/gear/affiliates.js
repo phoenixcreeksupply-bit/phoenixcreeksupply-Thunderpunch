@@ -1,9 +1,10 @@
 // Central list of affiliates. Add entries here as the program grows.
 // Each affiliate should include: slug (url part), name, description, href (external affiliate link), and optional logo path.
 
-// Build-time toggle: set NEXT_PUBLIC_MUCK_SALE=true to make the flash sale link the primary CTA for Muck Boot.
-// This is evaluated at build time (Next.js) so change the env var and redeploy to flip the CTA.
+// Build-time toggles: set these env vars to make flash sale links the primary CTA for specific affiliates.
+// These are evaluated at build time (Next.js) so change the env var and redeploy to flip the CTA.
 const SHOW_MUCK_SALE = process.env.NEXT_PUBLIC_MUCK_SALE === 'true';
+const SHOW_ROCKY_SALE = process.env.NEXT_PUBLIC_ROCKY_SALE === 'true';
 
 const affiliates = [
   {
@@ -126,12 +127,21 @@ const affiliates = [
       'Slip-resistant outsoles'
     ],
     links: [
+      // Flash sale link for Rocky — becomes primary when NEXT_PUBLIC_ROCKY_SALE=true
+      {
+        label: 'Flash Sale - Rocky Boots',
+        displayLabel: 'Flash Sale - Rocky Boots',
+        href: 'https://www.kqzyfj.com/click-101573160-17175339',
+        // 1x1 impression pixel
+        pixel: 'https://www.tqlkg.com/image-101573160-17175339',
+        primary: SHOW_ROCKY_SALE
+      },
+      // Evergreen link — primary when no flash sale is active
       {
         label: 'Shop Rocky (kqzyfj)',
         displayLabel: 'Shop Rocky',
         href: 'https://www.kqzyfj.com/click-101573160-15489688',
-        // Explicit primary so this tracked shop link is the visible CTA by default
-        primary: true
+        primary: !SHOW_ROCKY_SALE
       },
       {
         label: 'New',
