@@ -7,7 +7,7 @@ export default function AdminPromos() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState(null);
-  const [password, setPassword] = useState('');
+  
 
   useEffect(() => {
     fetch('/api/affiliate-preferences')
@@ -30,11 +30,9 @@ export default function AdminPromos() {
     setSaving(true);
     setError(null);
     try {
-      const headers = { 'Content-Type': 'application/json' };
-      if (password) headers['x-admin-password'] = password;
       const res = await fetch('/api/affiliate-preferences', {
         method: 'POST',
-        headers,
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(prefs),
       });
       if (!res.ok) throw new Error('Save failed');
@@ -68,10 +66,7 @@ export default function AdminPromos() {
         ))}
       </div>
 
-      <div className="mt-4">
-        <label className="block text-sm text-gray-200 mb-2">Admin password (required if configured)</label>
-        <input type="password" value={password} onChange={e => setPassword(e.target.value)} className="w-full p-2 rounded bg-white/5 border border-white/10 text-sm" />
-      </div>
+      {/* Password input hidden while solo-founder mode is active (ADMIN_PASSWORD not configured) */}
 
       {error && <div className="text-red-400 mt-3">{error}</div>}
 
