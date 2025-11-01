@@ -1,6 +1,10 @@
 // Central list of affiliates. Add entries here as the program grows.
 // Each affiliate should include: slug (url part), name, description, href (external affiliate link), and optional logo path.
 
+// Build-time toggle: set NEXT_PUBLIC_MUCK_SALE=true to make the flash sale link the primary CTA for Muck Boot.
+// This is evaluated at build time (Next.js) so change the env var and redeploy to flip the CTA.
+const SHOW_MUCK_SALE = process.env.NEXT_PUBLIC_MUCK_SALE === 'true';
+
 const affiliates = [
   {
     slug: 'king-camo',
@@ -156,12 +160,22 @@ const affiliates = [
     ],
     // only tracked links for Muck Boot — merchant direct URLs removed per request
     links: [
+      // Flash sale link (dpbolvw) — becomes primary when SHOW_MUCK_SALE is true
       {
-        label: 'Shop Muck (kqzyfj)',
-        displayLabel: 'Ends Sunday!Affiliate Exclusive: 20% off sitewide ',
-        href="https://www.dpbolvw.net/click-101573160-14323207">',
-        // make this the default primary CTA so users see the tracked commission link first
-        primary: true
+        label: 'Flash Sale - Shop Muck',
+        displayLabel: 'Flash Sale - Shop Muck',
+        href: 'https://www.dpbolvw.net/click-101573160-14323207',
+        // 1x1 impression pixel supplied by user
+        pixel: 'https://www.awltovhc.com/image-101573160-14323207',
+        // primary only when the sale toggle is enabled at build time
+        primary: SHOW_MUCK_SALE
+      },
+      // Evergreen (kqzyfj) — primary when sale toggle is not enabled
+      {
+  label: 'Shop Muck (kqzyfj)',
+  displayLabel: 'Shop Muck',
+  href: 'https://www.kqzyfj.com/click-101573160-17142980',
+  primary: !SHOW_MUCK_SALE
       },
       {
         label: 'Bone Collector (kqzyfj)',

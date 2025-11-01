@@ -5,6 +5,7 @@ import AffiliateVisitButton from './AffiliateVisitButton';
 
 export default function AffiliateOffers({ links = [], affiliate, preferredHosts: preferredProp }) {
   const [open, setOpen] = useState(false);
+  const [overrideIndex, setOverrideIndex] = useState(null);
   const menuRef = useRef(null);
   const itemRefs = useRef([]);
 
@@ -37,10 +38,50 @@ export default function AffiliateOffers({ links = [], affiliate, preferredHosts:
   }
   if (primaryIndex === -1) primaryIndex = 0;
 
-  const primary = links[primaryIndex];
+  // allow runtime overrides (query param or server-provided preference)
+  const primary = links[overrideIndex ?? primaryIndex];
   const rest = links.filter((_, i) => i !== primaryIndex);
 
   useEffect(() => {
+    // runtime preference logic (client-side only):
+    // 1. Query param `primaryHref` takes highest precedence (exact match)
+    // 2. Query param `primaryHost` next (match host substring)
+    // 3. Fallback: fetch /api/affiliate-preferences which returns { "affiliate-slug": "href" }
+    // This allows instant runtime switching (no rebuild) via URL query or a small server-side mapping.
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const primaryHref = params.get('primaryHref');
+      const primaryHost = params.get('primaryHost');
+      if (primaryHref) {
+        const idx = links.findIndex(l => l.href === primaryHref);
+        if (idx !== -1) {
+          setOverrideIndex(idx);
+          return;
+        }
+      }
+      if (primaryHost) {
+        const idx = links.findIndex(l => l.href && l.href.includes(primaryHost));
+        if (idx !== -1) {
+          setOverrideIndex(idx);
+          return;
+        }
+      }
+      // fetch server mapping as a fallback
+      fetch('/api/affiliate-preferences')
+        .then(r => r.ok ? r.json() : {})
+        .then(data => {
+          if (!data) return;
+          const preferred = data && data[affiliate];
+          if (preferred) {
+            const idx = links.findIndex(l => l.href === preferred);
+            if (idx !== -1) setOverrideIndex(idx);
+          }
+        })
+        .catch(() => {});
+    } catch (e) {
+      // ignore in SSR or when window is not available
+    }
+
     if (open && itemRefs.current[0]) {
       // focus first menu item for keyboard navigation
       itemRefs.current[0].focus();
