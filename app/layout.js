@@ -1,6 +1,8 @@
 
 // app/layout.js
 import '../styles/globals.css';
+import TokenButton from '../components/TokenButton';
+import StashButton from '../components/StashButton';
 import Footer from '../components/Footer';
 
 export const metadata = {
@@ -34,6 +36,8 @@ export default function RootLayout({ children }) {
           <div className="flex items-center">
             {/* Site title/logo area */}
             <a href="/" className="text-white font-bold text-lg">Phoenix Creek Supply</a>
+            {/* Stash small icon */}
+            <StashButton />
           </div>
           <nav className="space-x-6">
             <a href="/digital-kits" className="text-white hover:underline">
