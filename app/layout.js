@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
               Tools & Gear
             </a>
             <a
-              href="/out/field-guides"
+              href="https://www.jdoqocy.com/click-101573160-15735849"
               target="_blank"
               rel="noopener noreferrer sponsored"
               className="text-white hover:underline"
