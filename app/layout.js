@@ -1,14 +1,28 @@
 
 // app/layout.js
 import '../styles/globals.css';
-import TokenButton from '../components/TokenButton';
-import StashButton from '../components/StashButton';
-import MoonshotHeaderButton from '../components/MoonshotHeaderButton';
 import Footer from '../components/Footer';
 
 export const metadata = {
-  title: 'Phoenix Creek Supply',
-  description: 'Rugged tools for the modern Stoic',
+  title: 'Phoenix Creek Supply | Lead Yourself, Live With Intent',
+  description:
+    'Phoenix Creek Supply — rugged tools, digital kits, and gear built for those who lead themselves and live with intent.',
+  openGraph: {
+    type: 'website',
+    url: 'https://www.phoenixcreeksupply.com/',
+    title: 'Phoenix Creek Supply',
+    description: 'Lead Yourself. Live With Intent. Precision. Discipline. Legacy.',
+    images: [
+      {
+        url: 'https://www.phoenixcreeksupply.com/brand/PCS-share.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -18,12 +32,8 @@ export default function RootLayout({ children }) {
       <body>
         <header className="flex justify-between items-center p-4 bg-black/70">
           <div className="flex items-center">
-            {/* Header buttons replace the title */}
-            {/* Token (server-safe) is rendered as a floating button at the bottom-right via TokenButton */}
-            {/* Moonshot client button */}
-            <MoonshotHeaderButton />
-            {/* Stash small icon */}
-            <StashButton />
+            {/* Site title/logo area */}
+            <a href="/" className="text-white font-bold text-lg">Phoenix Creek Supply</a>
           </div>
           <nav className="space-x-6">
             <a href="/digital-kits" className="text-white hover:underline">
@@ -52,9 +62,7 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
         <main>{children}</main>
-        <Footer />
-        {/* Floating PCS Token referral button */}
-        <TokenButton />
+  <Footer />
       </body>
     </html>
   );

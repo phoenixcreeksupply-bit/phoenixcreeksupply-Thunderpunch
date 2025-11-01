@@ -54,7 +54,7 @@ export default function HomePage() {
 
         {/* Footer */}
         <p className="text-xs text-gray-400 mt-3">
-          No spam. PCS Tokens. Unsubscribe anytime.
+          No spam. Unsubscribe anytime.
         </p>
         </section>
     </main>
