@@ -1,6 +1,6 @@
 "use client";
 
-export default function StashButton({ href = 'https://get.stash.com/r/50c5cr30f50cb-MNXV8C57' }) {
+export default function StashButton({ href = 'https://freebitco.in/?r=37252628' }) {
   async function handleClick(e) {
     e.preventDefault();
     try {
