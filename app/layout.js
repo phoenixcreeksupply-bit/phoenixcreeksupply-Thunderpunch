@@ -51,7 +51,12 @@ export default function RootLayout({ children }) {
             <a href="/gear" className="text-white hover:underline">
               Tools & Gear
             </a>
-            <a href="/field-guides" className="text-white hover:underline">
+            <a
+              href="/out/field-guides"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="text-white hover:underline"
+            >
               Field Guides
             </a>
             <a
