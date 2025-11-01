@@ -13,7 +13,7 @@ export const metadata = {
     type: 'website',
     url: 'https://www.phoenixcreeksupply.com/',
     title: 'Phoenix Creek Supply',
-    description: 'Lead Yourself. Live With Intent. Precision. Discipline. Legacy.',
+    description: 'Lead Yourself. Live With Intent.',
     images: [
       {
         url: 'https://www.phoenixcreeksupply.com/brand/PCS-share.jpg',
