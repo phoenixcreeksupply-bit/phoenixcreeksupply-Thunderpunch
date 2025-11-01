@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
               Tools & Gear
             </a>
             <a href="/field-guides" className="text-white hover:underline">
-              Field Guides
+              For the Ear
             </a>
             <a
               href="https://www.amazon.com/hz/wishlist/ls/7Z7QI47C28HP?ref_=wl_share&tag=phoenixcreeksupply-20"
