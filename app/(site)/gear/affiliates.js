@@ -158,8 +158,8 @@ const affiliates = [
     links: [
       {
         label: 'Shop Muck (kqzyfj)',
-        displayLabel: 'Shop Muck',
-        href: 'https://www.kqzyfj.com/click-101573160-17142980',
+        displayLabel: 'Ends Sunday!Affiliate Exclusive: 20% off sitewide ',
+        href="https://www.dpbolvw.net/click-101573160-14323207">',
         // make this the default primary CTA so users see the tracked commission link first
         primary: true
       },
