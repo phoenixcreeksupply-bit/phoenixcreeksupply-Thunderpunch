@@ -1,0 +1,15 @@
+{
+  "name": "Phoenix Creek Supply",
+  "url": "https://www.phoenixcreeksupply.com",
+  "description": "Practical gear, guides, and digital kits for prospectors and outdoorsmen.",
+  "preview_image": "/brand/PCS-share.jpg",
+  "preview_image_note": "Placeholder path; actual image file may need to be added to public/brand/PCS-share.jpg",
+  "build_status": "local build: success (verified)",
+  "last_commit": "06e0786",
+  "generated_at": "2025-11-01T00:00:00Z",
+  "snapshots": [
+    "snapshots/digital-kits.html",
+    "snapshots/affiliates.html"
+  ],
+  "notes": "This site-card is intended for internal use. For production impression tracking, use external analytics or a persistent DB; local file logs are ephemeral on serverless platforms."
+}
