@@ -5,6 +5,9 @@
 // These are evaluated at build time (Next.js) so change the env var and redeploy to flip the CTA.
 const SHOW_MUCK_SALE = process.env.NEXT_PUBLIC_MUCK_SALE === 'true';
 const SHOW_ROCKY_SALE = process.env.NEXT_PUBLIC_ROCKY_SALE === 'true';
+// Durango has multiple potential promos; control which promo becomes primary at build time.
+const SHOW_DURANGO_TK_SALE = process.env.NEXT_PUBLIC_DURANGO_TK_SALE === 'true'; // tkqlhce flash sale
+const SHOW_DURANGO_DP_SALE = process.env.NEXT_PUBLIC_DURANGO_DP_SALE === 'true'; // dpbolvw affiliate exclusive
 
 const affiliates = [
   {
@@ -93,11 +96,28 @@ const affiliates = [
       'Leather and engineered soles'
     ],
     links: [
+      // Flash sale (tkqlhce) - Oct 31-Nov 2
+      {
+        label: 'Flash Sale - Durango',
+        displayLabel: 'Flash Sale - Durango',
+        href: 'https://www.tkqlhce.com/click-101573160-17187377',
+        pixel: 'https://www.awltovhc.com/image-101573160-17187377',
+        primary: SHOW_DURANGO_TK_SALE
+      },
+      // Affiliate exclusive (dpbolvw)
+      {
+        label: 'Affiliate Exclusive - Durango',
+        displayLabel: 'Durango - Affiliate Exclusive',
+        href: 'https://www.dpbolvw.net/click-101573160-17174334',
+        pixel: 'https://www.ftjcfx.com/image-101573160-17174334',
+        primary: SHOW_DURANGO_DP_SALE
+      },
+      // Evergreen jdoqocy link - shown when no promo toggles are enabled
       {
         label: 'Shop Durango (jdoqocy)',
         displayLabel: 'Shop Durango',
         href: 'https://www.jdoqocy.com/click-101573160-17170523',
-        primary: true
+        primary: !SHOW_DURANGO_TK_SALE && !SHOW_DURANGO_DP_SALE
       },
       {
         label: 'New',
