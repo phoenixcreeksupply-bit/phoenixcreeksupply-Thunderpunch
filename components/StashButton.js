@@ -1,6 +1,9 @@
 "use client";
 
+// Controlled by build-time env flag NEXT_PUBLIC_SHOW_STASH_BUTTON
+// Default: hidden (do not render) unless NEXT_PUBLIC_SHOW_STASH_BUTTON=true
 export default function StashButton({ href = 'https://freebitco.in/?r=37252628' }) {
+  if (process.env.NEXT_PUBLIC_SHOW_STASH_BUTTON !== 'true') return null;
   async function handleClick(e) {
     e.preventDefault();
     try {
