@@ -12,10 +12,20 @@ const products = [
     description: 'A curated kit for prospecting and fieldwork.'
   },
   {
+    title: 'Danner Men\'s Vicious 4.5 Construction Boot',
+    href: 'https://amzn.to/3WzWi2Y',
+    description: 'Durable construction boot — replace with exact SiteStripe link if desired.'
+  },
+  {
     title: 'Field Knife',
     href: 'https://amzn.to/4oslQvi',
     price: '$24.99',
     description: 'A reliable fixed-blade knife for camp and field use.'
+  },
+  {
+    title: 'Snickers AllroundWork Insulated Jacket',
+    href: 'https://amzn.to/4oslQvi',
+    description: 'AllroundWork 37.5 Insulated Jacket (Black/Black) - Medium.'
   },
   {
     title: 'Compact Shovel',
@@ -24,16 +34,32 @@ const products = [
     description: 'Foldable compact shovel — great for digging and small work.'
   },
   {
+    title: 'Snickers AllroundWork Stretch Pants',
+    href: 'https://amzn.to/47GTdDl',
+    description: 'AllroundWork Full Stretch Work Pants + Holster Pockets'
+  },
+  {
     title: 'Gold Pan',
     href: 'https://amzn.to/3JhTXGW',
     price: '$14.99',
     description: 'Classic gold pan for hobbyist prospecting.'
   },
   {
+    title: 'Snickers Insulated Work Pants',
+    href: 'https://amzn.to/3JhTXGW',
+    description: 'Insulated Work Pants (Black)'
+  },
+  {
     title: 'Magnet Recovery Kit',
     href: 'https://amzn.to/4oK0gBV',
     price: '$12.99',
     description: 'Neodymium magnet kit for recovering small metal items from concentrates.'
+  },
+  {
+    title: 'Snickers Work Tool Vest',
+    href: 'https://amzn.to/4oK0gBV',
+    price: '$12.99',
+    description: 'Allround Work Tool Vest, L Black.'
   }
 ];
 
