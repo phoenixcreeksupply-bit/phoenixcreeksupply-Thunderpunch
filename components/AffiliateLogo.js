@@ -42,7 +42,9 @@ export default function AffiliateLogo({ logo, creative, alt = '', className = ''
     }
   }, [src, failed, creative, triedCreative]);
 
-  if (src && src.endsWith && src.endsWith('.svg')) {
+  // By default treat SVGs like raster creatives (fill container) unless
+  // the caller explicitly requests svgCenter (true) for small wordmark svgs.
+  if (src && src.endsWith && src.endsWith('.svg') && svgCenter) {
     // small svg wordmarks look better centered and contained
     return (
       <div className={"w-full h-full flex items-center justify-center bg-gray-800 " + className}>

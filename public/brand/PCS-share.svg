@@ -36,7 +36,7 @@
     <rect x="0" y="-24" width="220" height="36" rx="8" fill="#0ea5a5" />
     <text x="16" y="0" fill="#04202a" font-weight="700">Shop gear</text>
     <rect x="240" y="-24" width="300" height="36" rx="8" fill="#f59e0b" />
-    <text x="256" y="0" fill="#071018" font-weight="700">Field guides & digital kits</text>
+  <text x="256" y="0" fill="#071018" font-weight="700">Field guides &amp; digital kits</text>
   </g>
 
   <!-- Right column visual (placeholder crate) -->
