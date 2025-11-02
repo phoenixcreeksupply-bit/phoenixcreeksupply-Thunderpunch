@@ -16,8 +16,8 @@ export default function Header() {
         <a href="/digital-kits" className="text-white hover:text-yellow-400">Digital Kits</a>
         <a href="/gear" className="text-white hover:text-yellow-400">Gear</a>
         <a href="/guides" className="text-white hover:text-yellow-400">Guides</a>
-        {/* Hidden Monroe's Specials image-button. It's hidden by default - remove the `hidden` class to show or replace with an env-based toggle. */}
-        <a href="/monroes-specials" className="hidden" aria-hidden="true">
+        {/* Monroe's Specials image-button. Visible by default now; change to an env-based toggle if you want to hide it later. */}
+        <a href="/monroes-specials" className="inline-block">
           <img src="/images/monroe-button.jpg" alt="Monroe's specials" className="inline-block h-8" />
         </a>
         <a href="/contact" className="text-white hover:text-yellow-400">Contact</a>
