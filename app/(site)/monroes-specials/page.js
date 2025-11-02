@@ -6,15 +6,10 @@ export const metadata = { title: "Monroe's Specials | Phoenix Creek Supply" };
 
 const products = [
   {
-    title: 'Example Prospecting Kit',
+    title: 'Prospecting Kit',
     href: 'https://amzn.to/3WzWi2Y',
     price: '$39.99',
     description: 'A curated kit for prospecting and fieldwork.'
-  },
-  {
-    title: 'Danner Men\'s Vicious 4.5 Construction Boot',
-    href: 'https://amzn.to/3WzWi2Y',
-    description: 'Durable construction boot — replace with exact SiteStripe link if desired.'
   },
   {
     title: 'Field Knife',
@@ -23,20 +18,10 @@ const products = [
     description: 'A reliable fixed-blade knife for camp and field use.'
   },
   {
-    title: 'Snickers AllroundWork Insulated Jacket',
-    href: 'https://amzn.to/4oslQvi',
-    description: 'AllroundWork 37.5 Insulated Jacket (Black/Black) - Medium.'
-  },
-  {
     title: 'Compact Shovel',
     href: 'https://amzn.to/47GTdDl',
     price: '$29.99',
     description: 'Foldable compact shovel — great for digging and small work.'
-  },
-  {
-    title: 'Snickers AllroundWork Stretch Pants',
-    href: 'https://amzn.to/47GTdDl',
-    description: 'AllroundWork Full Stretch Work Pants + Holster Pockets'
   },
   {
     title: 'Gold Pan',
@@ -45,21 +30,10 @@ const products = [
     description: 'Classic gold pan for hobbyist prospecting.'
   },
   {
-    title: 'Snickers Insulated Work Pants',
-    href: 'https://amzn.to/3JhTXGW',
-    description: 'Insulated Work Pants (Black)'
-  },
-  {
     title: 'Magnet Recovery Kit',
     href: 'https://amzn.to/4oK0gBV',
     price: '$12.99',
     description: 'Neodymium magnet kit for recovering small metal items from concentrates.'
-  },
-  {
-    title: 'Snickers Work Tool Vest',
-    href: 'https://amzn.to/4oK0gBV',
-    price: '$12.99',
-    description: 'Allround Work Tool Vest, L Black.'
   }
 ];
 
