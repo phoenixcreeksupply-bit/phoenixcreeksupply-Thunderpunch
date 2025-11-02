@@ -3,6 +3,7 @@
 import '../styles/globals.css';
 import TokenButton from '../components/TokenButton';
 import StashButton from '../components/StashButton';
+import MonroeMenu from '../components/MonroeMenu';
 import Footer from '../components/Footer';
 
 export const metadata = {
@@ -33,11 +34,13 @@ export default function RootLayout({ children }) {
       <head />
       <body>
         <header className="flex justify-between items-center p-4 bg-black/70">
-          <div className="flex items-center">
+          <div className="flex items-center space-x-3">
             {/* Site title/logo area */}
             <a href="/" className="text-white font-bold text-lg">Phoenix Creek Supply</a>
             {/* Stash small icon */}
             <StashButton />
+            {/* Monroe coin dropdown/menu */}
+            <MonroeMenu />
           </div>
           <nav className="space-x-6">
             <a href="/digital-kits" className="text-white hover:underline">
