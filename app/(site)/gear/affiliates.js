@@ -314,4 +314,37 @@ affiliates.push({
 // If you upload the provided logo, place it at: public/images/cigars-international.png
 // and the site will use it automatically. Optionally update the creative size below.
 
+// Added affiliate from user-provided anchor/image snippet
+// ActionHeat affiliate (user supplied creative) — rename and point to local asset
+affiliates.push({
+  slug: 'actionheat',
+  name: 'ActionHeat',
+  category: 'Apparel & Heated Gear',
+  description: 'Battery-heated apparel and cold-weather gear. Tracked click + impression pixel provided by user.',
+  href: 'https://www.anrdoezrs.net/click-101573160-15379347',
+  // Prefer a local asset in public/images — upload a high-quality JPG/PNG and update the filename if desired.
+  logo: '/images/actionheat-300x250.svg',
+  features: [
+    'Battery heated jackets & vests',
+    'Designed for cold-weather work and recreation',
+    'Shop now deals'
+  ],
+  links: [
+    {
+      label: 'Shop ActionHeat (tracked)',
+      displayLabel: 'Shop ActionHeat',
+      href: 'https://www.anrdoezrs.net/click-101573160-15379347',
+      primary: true,
+      // Impression pixel (image-based)
+      pixel: 'https://www.lduhtrp.net/image-101573160-15379347',
+      creative: {
+        source: 'local',
+        url: '/images/actionheat-300x250.svg',
+        width: 300,
+        height: 250
+      }
+    }
+  ]
+});
+
 export default affiliates;
