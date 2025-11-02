@@ -322,8 +322,9 @@ affiliates.push({
   category: 'Apparel & Heated Gear',
   description: 'Battery-heated apparel and cold-weather gear. Tracked click + impression pixel provided by user.',
   href: 'https://www.anrdoezrs.net/click-101573160-15379347',
-  // Prefer a local asset in public/images — upload a high-quality JPG/PNG and update the filename if desired.
-  logo: '/images/actionheat-300x250.svg',
+  // Prefer a local raster asset in public/images — upload the provided JPG/PNG to this path.
+  // Place the provided ad image at: public/images/actionheat-300x250.jpg
+  logo: '/images/actionheat-300x250.jpg',
   features: [
     'Battery heated jackets & vests',
     'Designed for cold-weather work and recreation',
@@ -339,7 +340,7 @@ affiliates.push({
       pixel: 'https://www.lduhtrp.net/image-101573160-15379347',
       creative: {
         source: 'local',
-        url: '/images/actionheat-300x250.svg',
+        url: '/images/actionheat-300x250.jpg',
         width: 300,
         height: 250
       }
