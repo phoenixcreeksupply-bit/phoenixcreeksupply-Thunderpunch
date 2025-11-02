@@ -6,34 +6,29 @@ export const metadata = { title: "Monroe's Specials | Phoenix Creek Supply" };
 
 const products = [
   {
-    title: "Example Prospecting Kit",
+    title: "Danner Men's Vicious 4.5" Construction Boot",
     href: "https://amzn.to/3WzWi2Y",
-    price: "$39.99",
-    description: "A curated kit for prospecting and fieldwork."
   },
   {
-    title: "Field Knife",
+    title: "Snickers Workwear",
     href: "https://amzn.to/4oslQvi",
-    price: "$24.99",
-    description: "A reliable fixed-blade knife for camp and field use."
+    description: "AllroundWork 37.5 Insulated Jacket (Black/Black) - Medium."
   },
   {
-    title: "Compact Shovel",
+    title: "Snickers Allround WorkPants",
     href: "https://amzn.to/47GTdDl",
-    price: "$29.99",
-    description: "Foldable compact shovel — great for digging and small work."
+    description: "AllroundWork Full Stretch Work Pants + Holster Pockets Black/Black"
   },
   {
-    title: "Gold Pan",
+    title: "Snickers Workwear",
     href: "https://amzn.to/3JhTXGW",
-    price: "$14.99",
-    description: "Classic gold pan for hobbyist prospecting."
+    description: "Insulated Work Pants Black/Black."
   },
   {
-    title: "Magnet Recovery Kit",
+    title: "Snickers Workwear",
     href: "https://amzn.to/4oK0gBV",
     price: "$12.99",
-    description: "Neodymium magnet kit for recovering small metal items from concentrates."
+    description: "Allround Work Tool Vest, L Black."
   }
 ];
 
