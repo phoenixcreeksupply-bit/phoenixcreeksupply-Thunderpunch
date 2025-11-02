@@ -15,9 +15,10 @@ export default function Header() {
       <nav className="space-x-4 flex items-center">
         <a href="/about" className="text-white hover:text-yellow-400">About</a>
         <a href="/digital-kits" className="text-white hover:text-yellow-400">Digital Kits</a>
-        <a href="/gear" className="text-white hover:text-yellow-400">Gear</a>
-        <a href="/guides" className="text-white hover:text-yellow-400">Guides</a>
-        <MonroeMenu />
+  <a href="/gear" className="text-white hover:text-yellow-400">Gear</a>
+  <a href="/guides" className="text-white hover:text-yellow-400">Guides</a>
+  <a href="/monroes-specials" className="text-white hover:text-yellow-400">Monroe's Specials</a>
+  <MonroeMenu />
         <a href="/contact" className="text-white hover:text-yellow-400">Contact</a>
       </nav>
     </header>
