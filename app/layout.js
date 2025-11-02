@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
               rel="noopener noreferrer sponsored"
               className="text-white hover:underline"
             >
-              For the Ear
+              Audio Books
             </a>
             <a
               href="https://www.amazon.com/hz/wishlist/ls/7Z7QI47C28HP?ref_=wl_share&tag=phoenixcreeksupply-20"
