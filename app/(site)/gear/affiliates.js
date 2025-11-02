@@ -51,7 +51,7 @@ const affiliates = [
       }
       ,
       {
-        label: 'New',
+        label: 'New Arrivals',
         href: 'https://www.dpbolvw.net/click-101573160-15784073',
         // Creative metadata — CJ creative JSON (requires CJ authentication to fetch).
         // Frontend can use this URL or you can replace with a direct image asset in /public/images.
@@ -120,7 +120,7 @@ const affiliates = [
         primary: !SHOW_DURANGO_TK_SALE && !SHOW_DURANGO_DP_SALE
       },
       {
-        label: 'New',
+        label: 'New Arrivals',
         href: 'https://www.jdoqocy.com/click-101573160-17170523',
         creative: {
           source: 'local',
@@ -164,7 +164,7 @@ const affiliates = [
         primary: !SHOW_ROCKY_SALE
       },
       {
-        label: 'New',
+        label: 'New Arrivals',
         href: 'https://www.kqzyfj.com/click-101573160-15489688',
         creative: {
           source: 'local',
@@ -242,7 +242,7 @@ const affiliates = [
         pixel: 'https://www.ftjcfx.com/image-101573160-15736465'
       },
       {
-        label: 'New',
+        label: 'New Arrivals',
         href: 'https://www.jdoqocy.com/click-101573160-15736465',
         creative: {
           source: 'local',
@@ -299,7 +299,7 @@ affiliates.push({
       pixel: 'https://www.lduhtrp.net/image-101573160-17165115'
     },
     {
-      label: 'Groundluxe Banner (creative)',
+      label: 'New Arrivals',
       href: 'https://www.dpbolvw.net/click-101573160-17165115',
         creative: {
         source: 'local',
@@ -320,7 +320,7 @@ affiliates.push({
   slug: 'actionheat',
   name: 'ActionHeat',
   category: 'Apparel & Heated Gear',
-  description: 'Battery-heated apparel and cold-weather gear. Tracked click + impression pixel provided by user.',
+  description: 'Battery-heated apparel and cold-weather gear.',
   href: 'https://www.anrdoezrs.net/click-101573160-15379347',
   // Prefer a local raster asset in public/images — upload the provided JPG/PNG to this path.
   // Place the provided ad image at: public/images/actionheat-300x250.jpg
