@@ -320,7 +320,7 @@ affiliates.push({
   slug: 'actionheat',
   name: 'ActionHeat',
   category: 'Apparel & Heated Gear',
-  description: 'Battery-heated apparel and cold-weather gear. Tracked click + impression pixel provided by user.',
+  description: 'Battery-heated apparel and cold-weather gear.',
   href: 'https://www.anrdoezrs.net/click-101573160-15379347',
   // Prefer a local raster asset in public/images — upload the provided JPG/PNG to this path.
   // Place the provided ad image at: public/images/actionheat-300x250.jpg
