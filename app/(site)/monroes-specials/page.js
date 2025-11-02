@@ -6,34 +6,34 @@ export const metadata = { title: "Monroe's Specials | Phoenix Creek Supply" };
 
 const products = [
   {
-    title: "Example Prospecting Kit",
-    href: "https://amzn.to/3WzWi2Y",
-    price: "$39.99",
-    description: "A curated kit for prospecting and fieldwork."
+    title: 'Example Prospecting Kit',
+    href: 'https://amzn.to/3WzWi2Y',
+    price: '$39.99',
+    description: 'A curated kit for prospecting and fieldwork.'
   },
   {
-    title: "Field Knife",
-    href: "https://amzn.to/4oslQvi",
-    price: "$24.99",
-    description: "A reliable fixed-blade knife for camp and field use."
+    title: 'Field Knife',
+    href: 'https://amzn.to/4oslQvi',
+    price: '$24.99',
+    description: 'A reliable fixed-blade knife for camp and field use.'
   },
   {
-    title: "Compact Shovel",
-    href: "https://amzn.to/47GTdDl",
-    price: "$29.99",
-    description: "Foldable compact shovel — great for digging and small work."
+    title: 'Compact Shovel',
+    href: 'https://amzn.to/47GTdDl',
+    price: '$29.99',
+    description: 'Foldable compact shovel — great for digging and small work.'
   },
   {
-    title: "Gold Pan",
-    href: "https://amzn.to/3JhTXGW",
-    price: "$14.99",
-    description: "Classic gold pan for hobbyist prospecting."
+    title: 'Gold Pan',
+    href: 'https://amzn.to/3JhTXGW',
+    price: '$14.99',
+    description: 'Classic gold pan for hobbyist prospecting.'
   },
   {
-    title: "Magnet Recovery Kit",
-    href: "https://amzn.to/4oK0gBV",
-    price: "$12.99",
-    description: "Neodymium magnet kit for recovering small metal items from concentrates."
+    title: 'Magnet Recovery Kit',
+    href: 'https://amzn.to/4oK0gBV',
+    price: '$12.99',
+    description: 'Neodymium magnet kit for recovering small metal items from concentrates.'
   }
 ];
 
