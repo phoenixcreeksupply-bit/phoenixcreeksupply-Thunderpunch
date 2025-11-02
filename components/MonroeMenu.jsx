@@ -1,13 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-
-const LINKS = [
-  { title: "Prospecting Kit", href: "https://amzn.to/3WzWi2Y" },
-  { title: "Field Knife", href: "https://amzn.to/4oslQvi" },
-  { title: "Compact Shovel", href: "https://amzn.to/47GTdDl" },
-  { title: "Gold Pan", href: "https://amzn.to/3JhTXGW" },
-  { title: "Magnet Recovery Kit", href: "https://amzn.to/4oK0gBV" }
-];
+import products from "../data/monroe-products.json";
 
 export default function MonroeMenu() {
   const [open, setOpen] = useState(false);
@@ -35,9 +28,9 @@ export default function MonroeMenu() {
       {open && (
         <div className="absolute right-0 mt-2 w-64 bg-white text-black rounded shadow-lg z-50">
           <div className="py-2">
-            {LINKS.map(l => (
+            {products.map((l, idx) => (
               <a
-                key={l.href}
+                key={l.href + idx}
                 href={l.href}
                 target="_blank"
                 rel="nofollow sponsored noopener noreferrer"
