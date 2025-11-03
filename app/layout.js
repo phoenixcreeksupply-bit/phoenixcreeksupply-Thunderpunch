@@ -6,8 +6,6 @@ import StashButton from '../components/StashButton';
 import MonroeMenu from '../components/MonroeMenu';
 import Footer from '../components/Footer';
 
-<script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=9659704eb4dc2d2e148e87c705866398de04c572"></script>
-
 export const metadata = {
   title: 'Phoenix Creek Supply | Lead Yourself, Live With Intent',
   description:
@@ -40,9 +38,9 @@ export default function RootLayout({ children }) {
         */}
         {/* Plain HTML comment with the auth token so verifiers that fetch raw HTML can see it easily */}
         {/* Visible in page source: <!-- AvantLink authResponse: 9659704eb4dc2d2e148e87c705866398de04c572 --> */}
-        <script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=9659704eb4dc2d2e148e87c705866398de04c572"></script>
-        {/* The following raw HTML comment is intentionally added to the server-rendered head: */}
-        {/* <!-- AvantLink authResponse: 9659704eb4dc2d2e148e87c705866398de04c572 --> */}
+  <script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=9659704eb4dc2d2e148e87c705866398de04c572"></script>
+  {/* Also add a harmless meta tag with the plain auth token so it's plainly visible in the homepage HTML source */}
+  <meta name="avantlink-authresponse" content="9659704eb4dc2d2e148e87c705866398de04c572" />
       </head>
       <body>
         <header className="flex justify-between items-center p-4 bg-black/70">

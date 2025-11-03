@@ -13,6 +13,9 @@ Where the tag was placed (repository files and locations):
   Additionally, I added an explicit HTML comment in the homepage head that contains the auth token so verifiers that fetch raw HTML can locate it quickly.
   The comment included in the head (visible in page source) is:
   <!-- AvantLink authResponse: 9659704eb4dc2d2e148e87c705866398de04c572 -->
+  
+  Update: replaced the attempted HTML comment with a safe meta tag so the token is definitely present in the server-rendered HTML head:
+  <meta name="avantlink-authresponse" content="9659704eb4dc2d2e148e87c705866398de04c572" />
 
 Static confirmation files (placed at web root):
 - /public/affiliate_app_confirm.html
