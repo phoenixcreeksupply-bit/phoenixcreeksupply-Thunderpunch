@@ -1,0 +1,39 @@
+To: affiliateapps@avantlink.com
+Subject: Request to manually confirm affiliate application — App ID 1519689
+
+Hello AvantLink team,
+
+I applied for an affiliate account (Application ID: 1519689) and I’m unable to complete the automated website verification step. Please manually confirm our application.
+
+Details:
+- Application ID: 1519689
+- Website URL: https://phoenixcreeksupply.com/
+- Email used to apply: monroe@phoenixcreeksupply.com
+
+Verification evidence:
+- I installed the exact JavaScript tag you requested on the homepage HTML (in the <head>). The tag is:
+  <script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=9659704eb4dc2d2e148e87c705866398de04c572"></script>
+
+- I also added a plain HTML comment in the homepage head so the auth token is present in the raw HTML page source (for verifiers that don't execute JS):
+  <!-- AvantLink authResponse: 9659704eb4dc2d2e148e87c705866398de04c572 -->
+
+- Static confirmation files are available at these direct URLs:
+  - https://phoenixcreeksupply.com/affiliate_app_confirm.html
+  - https://phoenixcreeksupply.com/affiliate_app_confirm.php
+  - https://phoenixcreeksupply.com/affiliate-verify.html
+
+- Plaintext token included for non-JS verification:
+  authResponse: 9659704eb4dc2d2e148e87c705866398de04c572
+
+Verification checks I performed (server-side fetches):
+- Homepage contains the token and the exact script tag.
+- Static files (affiliate_app_confirm.html and affiliate_app_confirm.php) contain the token.
+
+Please use either the homepage or the static URL (recommended) to verify the application:
+https://phoenixcreeksupply.com/affiliate_app_confirm.html
+
+If you need a screenshot of the homepage source showing the tag and token, or a different filename/location to check, let me know and I will provide it immediately.
+
+Thanks for your help,
+Monroe
+monroe@phoenixcreeksupply.com

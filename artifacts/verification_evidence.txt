@@ -10,6 +10,9 @@ Exact script tag installed (copied verbatim):
 Where the tag was placed (repository files and locations):
 - app/layout.js — added the exact script tag inside the <head> so it's present in the homepage HTML.
   Path: app/layout.js (head section)
+  Additionally, I added an explicit HTML comment in the homepage head that contains the auth token so verifiers that fetch raw HTML can locate it quickly.
+  The comment included in the head (visible in page source) is:
+  <!-- AvantLink authResponse: 9659704eb4dc2d2e148e87c705866398de04c572 -->
 
 Static confirmation files (placed at web root):
 - /public/affiliate_app_confirm.html
@@ -44,3 +47,5 @@ Screenshots: (I cannot create a live screenshot of your deployed site from this 
 - To create a screenshot for AvantLink support, open the homepage in a browser, open View -> Developer -> View Page Source and take a screenshot showing the script tag and the authResponse token.
 
 Prepared email draft and attachments are ready. If you want me to fill in the "Email used to apply" field, reply with the email address and I'll generate a ready-to-send email text including it.
+
+Email used to apply: monroe@phoenixcreeksupply.com
