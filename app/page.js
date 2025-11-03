@@ -39,7 +39,7 @@ export default function HomePage() {
           <input
             type="email"
             name="email_address"
-            placeholder="Make thy presence known!"
+            placeholder="Best Email address?"
             required
             className="flex-1 px-4 py-2 rounded-l-lg text-black"
             aria-label="Email address"
@@ -48,7 +48,7 @@ export default function HomePage() {
             type="submit"
             className="px-4 py-2 bg-yellow-400 text-black font-semibold rounded-r-lg hover:bg-yellow-500 transition"
           >
-            Step Forth
+            Flagship member 
           </button>
         </form>
 
