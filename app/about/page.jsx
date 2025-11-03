@@ -89,7 +89,7 @@ export default function AboutPage() {
 
         <footer className="text-center pt-10 border-t border-gray-700">
           <p className="uppercase tracking-wide font-semibold">Phoenix Creek Supply</p>
-          <p className="italic text-gray-400">Lead yourself,Live with intent!!</p>
+          <p className="italic text-gray-400">Lead yourself, Live with intent!!</p>
         </footer>
 
       </div>
