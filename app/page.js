@@ -48,7 +48,7 @@ export default function HomePage() {
             type="submit"
             className="px-4 py-2 bg-yellow-400 text-black font-semibold rounded-r-lg hover:bg-yellow-500 transition"
           >
-            Flagship member 
+            Flagship Entry 
           </button>
         </form>
 
