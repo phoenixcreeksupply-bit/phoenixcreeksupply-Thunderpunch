@@ -5,8 +5,9 @@ import TokenButton from '../components/TokenButton';
 import StashButton from '../components/StashButton';
 import MonroeMenu from '../components/MonroeMenu';
 import Footer from '../components/Footer';
+
 <script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=9659704eb4dc2d2e148e87c705866398de04c572"></script>
-<script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=9659704eb4dc2d2e148e87c705866398de04c572"></script>
+
 export const metadata = {
   title: 'Phoenix Creek Supply | Lead Yourself, Live With Intent',
   description:
