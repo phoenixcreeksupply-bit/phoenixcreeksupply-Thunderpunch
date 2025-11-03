@@ -1,6 +1,6 @@
 import MoonshotButton from "../components/MoonshotButton";
 
-export const metadata = { title: "Phoenix Creek Supply" };
+export const metadata = { title: "Phoenix Creek Supply" }; <script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=7d4cc152694097df60f864a9205b11db69b99323"></script>
 
 const CK_FORM_ID = "8637121"; // ConvertKit Form ID
 
