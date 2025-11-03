@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
             Placing the raw script tag in the head ensures the vendor sees it on the homepage HTML.
             Note: this uses HTTP exactly as supplied by AvantLink; prefer HTTPS if they provide it.
         */}
-        <script src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=9659704eb4dc2d2e148e87c705866398de04c572"></script>
+  <script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=9659704eb4dc2d2e148e87c705866398de04c572"></script>
       </head>
       <body>
         <header className="flex justify-between items-center p-4 bg-black/70">
