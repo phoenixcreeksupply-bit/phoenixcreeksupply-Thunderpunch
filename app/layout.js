@@ -5,6 +5,7 @@ import TokenButton from '../components/TokenButton';
 import StashButton from '../components/StashButton';
 import MonroeMenu from '../components/MonroeMenu';
 import Footer from '../components/Footer';
+import Script from 'next/script';
 
 export const metadata = {
   title: 'Phoenix Creek Supply | Lead Yourself, Live With Intent',
@@ -31,7 +32,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head />
+      <head>
+        {/* Verification script required by AvantLink affiliate onboarding.
+            This injects the auth response the network will check to confirm site ownership.
+            If AvantLink provides an HTTPS URL, prefer that; using HTTP may be blocked on HTTPS sites.
+        */}
+        <Script
+          src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=9659704eb4dc2d2e148e87c705866398de04c572"
+          strategy="afterInteractive"
+        />
+      </head>
       <body>
         <header className="flex justify-between items-center p-4 bg-black/70">
           <div className="flex items-center space-x-3">
