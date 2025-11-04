@@ -87,15 +87,15 @@ const affiliates = [
     slug: 'tcl-homesecurity',
     name: 'TCL Home Security',
     category: 'Tools & Gear',
-    description: 'TCL Home Security — smart home cameras, alarm kits, and bundled monitoring solutions for home and small business.',
+  description: 'Smart home security cameras, alarm systems, and monitoring solutions for home and small business.',
     // primary href (Shop)
     href: 'https://www.tkqlhce.com/click-101573160-17146925',
     // local logo path — replace with uploaded asset at public/images/tcl-homesecurity-banner-400x262.jpg
     logo: '/images/tcl-homesecurity-banner-400x262.jpg',
     features: [
-      'Smart cameras & alarm kits',
-      'Bundle discounts & seasonal deals',
-      'Easy installation and app control'
+      'Indoor & outdoor smart cameras',
+      'Professional and DIY installation',
+      'Monitoring plans & bundle discounts'
     ],
     // preferred host order for primary selection if multiple partners exist
     preferred: ['tkqlhce.com', 'dpbolvw.net'],
@@ -104,14 +104,13 @@ const affiliates = [
         label: 'Shop TCL Home Security',
         displayLabel: 'Shop TCL Home Security',
         href: 'https://www.tkqlhce.com/click-101573160-17146925',
-        // 1x1 impression pixel (if provided)
         pixel: 'https://www.lduhtrp.net/image-101573160-17146925',
         primary: true
       },
       {
-        label: 'TCL Camera Bundles',
-        href: 'https://www.tkqlhce.com/click-101573160-17146925',
+        label: 'Shop Camera Bundles',
         displayLabel: 'Camera Bundles',
+        href: 'https://www.tkqlhce.com/click-101573160-17146925',
         creative: {
           source: 'remote',
           url: 'https://www.lduhtrp.net/image-101573160-17146925',
@@ -120,7 +119,8 @@ const affiliates = [
         }
       },
       {
-        label: 'TCL Monitoring Plans',
+        label: 'Monitoring Plans',
+        displayLabel: 'Monitoring Plans',
         href: 'https://www.tkqlhce.com/click-101573160-17146925'
       },
       {
