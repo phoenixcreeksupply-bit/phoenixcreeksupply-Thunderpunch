@@ -7,6 +7,9 @@ export default function AdminPromos() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState(null);
+  const [promoFolders, setPromoFolders] = useState([]);
+  const [activePromos, setActivePromos] = useState(new Set());
+  const [adminToken, setAdminToken] = useState('');
   
 
   useEffect(() => {
@@ -19,6 +22,17 @@ export default function AdminPromos() {
       .catch(e => {
         setError('Failed to load preferences');
         setLoading(false);
+      });
+
+    // Load promo folders and active list
+    fetch('/api/promos')
+      .then(r => r.json())
+      .then(data => {
+        setPromoFolders(data.folders || []);
+        setActivePromos(new Set(data.active || []));
+      })
+      .catch(() => {
+        // ignore promo loading errors
       });
   }, []);
 
@@ -45,6 +59,25 @@ export default function AdminPromos() {
     }
   }
 
+  async function togglePromo(folder, enable) {
+    setError(null);
+    try {
+      const res = await fetch('/api/promos', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-promo-admin-token': adminToken },
+        body: JSON.stringify({ folder, enable }),
+      });
+      if (!res.ok) {
+        const txt = await res.text();
+        throw new Error(txt || 'Toggle failed');
+      }
+      const json = await res.json();
+      setActivePromos(new Set(json.active || []));
+    } catch (e) {
+      setError(e.message || 'Toggle failed');
+    }
+  }
+
   if (loading) return <div>Loading promo admin…</div>;
 
   return (
@@ -64,6 +97,37 @@ export default function AdminPromos() {
             />
           </div>
         ))}
+      </div>
+
+      <hr className="my-4 border-white/10" />
+
+      <div className="mb-3">
+        <h3 className="text-lg font-medium">Promo folders</h3>
+        <p className="text-sm text-gray-300">Toggle promo folders on/off without removing files. Enter the admin token below to apply changes.</p>
+        <div className="mt-2">
+          <input
+            placeholder="Admin token"
+            value={adminToken}
+            onChange={e => setAdminToken(e.target.value)}
+            className="w-full p-2 rounded bg-white/5 border border-white/10 text-sm mb-2"
+          />
+          <div className="grid gap-2">
+            {promoFolders.length === 0 && <div className="text-sm text-gray-400">No promo folders found.</div>}
+            {promoFolders.map(folder => (
+              <div key={folder} className="flex items-center justify-between">
+                <div className="text-sm">{folder}</div>
+                <div>
+                  <button
+                    onClick={() => togglePromo(folder, !activePromos.has(folder))}
+                    className={`px-3 py-1 rounded ${activePromos.has(folder) ? 'bg-green-500' : 'bg-gray-600'}`}
+                  >
+                    {activePromos.has(folder) ? 'Active' : 'Inactive'}
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Password input hidden while solo-founder mode is active (ADMIN_PASSWORD not configured) */}

@@ -1,4 +1,5 @@
 import MoonshotButton from "../components/MoonshotButton";
+import PromoStaging from "../components/PromoStaging";
 
 export const metadata = { title: "Phoenix Creek Supply" }; <script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=7d4cc152694097df60f864a9205b11db69b99323"></script>
 
@@ -51,6 +52,11 @@ export default function HomePage() {
             Flagship Entry 
           </button>
         </form>
+
+        {/* Promo staging: only on the homepage */}
+        <div className="w-full mt-8">
+          <PromoStaging folder="kqzyfj-17058779" className="mx-auto max-w-3xl p-4" />
+        </div>
 
         {/* Footer */}
         <p className="text-xs text-gray-400 mt-3">
