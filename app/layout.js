@@ -5,6 +5,7 @@ import TokenButton from '../components/TokenButton';
 import StashButton from '../components/StashButton';
 import MonroeMenu from '../components/MonroeMenu';
 import Footer from '../components/Footer';
+import PromoStaging from '../components/PromoStaging';
 import VercelAnalytics from '../components/VercelAnalytics';
 
 export const metadata = {
@@ -85,6 +86,8 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
         <main>{children}</main>
+  {/* Promo staging area: place affiliate promo snippets in public/promos/<folder>/active.html to activate */}
+  <PromoStaging folder="kqzyfj-17058779" className="mx-auto max-w-3xl p-4" />
   <Footer />
         {/* Vercel Analytics (client) */}
         <VercelAnalytics />
