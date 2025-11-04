@@ -11,9 +11,24 @@ export async function GET() {
       if (!ent.isDirectory()) continue;
       const folderPath = path.join(PROMOS_DIR, ent.name);
       const activeFile = path.join(folderPath, 'active.html');
-      if (fs.existsSync(activeFile)) {
-        folders.push(ent.name);
+      if (!fs.existsSync(activeFile)) continue;
+
+      // per-folder meta.json support
+      // meta.json may contain { "active": true|false, "showOnHomepage": true|false }
+      // Defaults: active=true, showOnHomepage=true (if file exists)
+      const metaFile = path.join(folderPath, 'meta.json');
+      if (fs.existsSync(metaFile)) {
+        try {
+          const raw = fs.readFileSync(metaFile, 'utf8');
+          const meta = JSON.parse(raw || '{}');
+          if (meta.hasOwnProperty('active') && meta.active === false) continue;
+          if (meta.hasOwnProperty('showOnHomepage') && meta.showOnHomepage === false) continue;
+        } catch (e) {
+          // malformed meta.json — ignore and treat as visible
+        }
       }
+
+      folders.push(ent.name);
     }
   } catch (e) {
     // ignore errors and return empty list
