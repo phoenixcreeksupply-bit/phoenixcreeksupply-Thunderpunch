@@ -82,6 +82,36 @@ const affiliates = [
     ]
   }
   ,
+  // New affiliate added from user-provided promo: Tools & Gear category
+  {
+    slug: 'tkqlhce-17146925',
+    name: 'Tools & Gear — Featured Promo',
+    category: 'Tools & Gear',
+    description: 'Featured tools & gear promo provided by the partner; appears in the affiliates list under Tools & Gear.',
+    // primary href for the affiliate (uses provided tkqlhce click URL)
+    href: 'https://www.tkqlhce.com/click-101573160-17146925',
+    // Use the provided remote creative as a remote image; front-end will render creative when present.
+    logo: '/images/placeholder-tools-400x300.jpg',
+    features: [
+      'Featured deals and banners',
+      'Promotional creatives shown in More offers'
+    ],
+    links: [
+      {
+        label: 'Featured Tools & Gear Promo',
+        displayLabel: 'Featured Tools & Gear Promo',
+        href: 'https://www.tkqlhce.com/click-101573160-17146925',
+        // Use the provided image as the creative (remote)
+        creative: {
+          source: 'remote',
+          url: 'https://www.lduhtrp.net/image-101573160-17146925',
+          width: 768,
+          height: 768
+        }
+      }
+    ]
+  }
+  ,
   {
     slug: 'durango',
     name: 'Durango',
@@ -224,6 +254,20 @@ const affiliates = [
           url: '/images/BoneCollectorMuck.jpg',
           width: 300,
           height: 600
+        }
+      }
+      ,
+      // User-provided Muck promo (moved from homepage into 'More offers')
+      {
+        label: 'Muck Deal Banner',
+        displayLabel: 'Muck Deal — Limited Time Banner',
+        href: 'https://www.anrdoezrs.net/click-101573160-15670205',
+        pixel: 'https://www.awltovhc.com/image-101573160-15670205',
+        creative: {
+          source: 'remote',
+          url: 'https://www.awltovhc.com/image-101573160-15670205',
+          width: 728,
+          height: 90
         }
       }
     ]
