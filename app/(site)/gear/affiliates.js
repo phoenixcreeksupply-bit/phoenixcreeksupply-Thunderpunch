@@ -1,6 +1,25 @@
 // Central list of affiliates. Add entries here as the program grows.
 // Each affiliate should include: slug (url part), name, description, href (external affiliate link), and optional logo path.
 
+// Default affiliate template and helper
+// Use `AFFILIATE_TEMPLATE` as a reference when adding new affiliates, or call
+// `makeAffiliate({ slug: 'x', name: 'X', ... })` to create a new affiliate object.
+export const AFFILIATE_TEMPLATE = {
+  slug: '',
+  name: '',
+  category: '',
+  description: '',
+  href: '',
+  logo: '',
+  features: [],
+  preferred: [],
+  links: []
+};
+
+export function makeAffiliate(overrides = {}) {
+  return { ...AFFILIATE_TEMPLATE, ...overrides };
+}
+
 // Build-time toggles: set these env vars to make flash sale links the primary CTA for specific affiliates.
 // These are evaluated at build time (Next.js) so change the env var and redeploy to flip the CTA.
 const SHOW_MUCK_SALE = process.env.NEXT_PUBLIC_MUCK_SALE === 'true';
