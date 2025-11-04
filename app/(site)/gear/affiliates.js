@@ -90,8 +90,8 @@ const affiliates = [
   description: 'Smart home security cameras, alarm systems, and monitoring solutions for home and small business.',
     // primary href (Shop)
     href: 'https://www.tkqlhce.com/click-101573160-17146925',
-    // local logo path — replace with uploaded asset at public/images/tcl-homesecurity-banner-400x262.jpg
-    logo: '/images/tcl-homesecurity-banner-400x262.jpg',
+  // main local logo — place the provided image at: public/images/tcl-homesecurity-main.jpg
+  logo: '/images/tcl-homesecurity-main.jpg',
     features: [
       'Indoor & outdoor smart cameras',
       'Professional and DIY installation',
