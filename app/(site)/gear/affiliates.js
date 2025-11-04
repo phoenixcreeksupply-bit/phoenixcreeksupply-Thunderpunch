@@ -82,36 +82,59 @@ const affiliates = [
     ]
   }
   ,
-  // New affiliate added from user-provided promo: Tools & Gear category
+  // TCL Home Security — full affiliate card (mimics King Camo layout)
   {
-    slug: 'tkqlhce-17146925',
-    name: 'Tools & Gear — Featured Promo',
+    slug: 'tcl-homesecurity',
+    name: 'TCL Home Security',
     category: 'Tools & Gear',
-    description: 'Featured tools & gear promo provided by the partner; appears in the affiliates list under Tools & Gear.',
-    // primary href for the affiliate (uses provided tkqlhce click URL)
+    description: 'TCL Home Security — smart home cameras, alarm kits, and bundled monitoring solutions for home and small business.',
+    // primary href (Shop)
     href: 'https://www.tkqlhce.com/click-101573160-17146925',
-    // Use the provided remote creative as a remote image; front-end will render creative when present.
-    logo: '/images/placeholder-tools-400x300.jpg',
+    // local logo path — replace with uploaded asset at public/images/tcl-homesecurity-banner-400x262.jpg
+    logo: '/images/tcl-homesecurity-banner-400x262.jpg',
     features: [
-      'Featured deals and banners',
-      'Promotional creatives shown in More offers'
+      'Smart cameras & alarm kits',
+      'Bundle discounts & seasonal deals',
+      'Easy installation and app control'
     ],
+    // preferred host order for primary selection if multiple partners exist
+    preferred: ['tkqlhce.com', 'dpbolvw.net'],
     links: [
       {
-        label: 'Featured Tools & Gear Promo',
-        displayLabel: 'Featured Tools & Gear Promo',
+        label: 'Shop TCL Home Security',
+        displayLabel: 'Shop TCL Home Security',
         href: 'https://www.tkqlhce.com/click-101573160-17146925',
-        // Use the provided image as the creative (remote)
+        // 1x1 impression pixel (if provided)
+        pixel: 'https://www.lduhtrp.net/image-101573160-17146925',
+        primary: true
+      },
+      {
+        label: 'TCL Camera Bundles',
+        href: 'https://www.tkqlhce.com/click-101573160-17146925',
+        displayLabel: 'Camera Bundles',
         creative: {
           source: 'remote',
           url: 'https://www.lduhtrp.net/image-101573160-17146925',
           width: 768,
           height: 768
         }
+      },
+      {
+        label: 'TCL Monitoring Plans',
+        href: 'https://www.tkqlhce.com/click-101573160-17146925'
+      },
+      {
+        label: 'New Arrivals',
+        href: 'https://www.tkqlhce.com/click-101573160-17146925',
+        creative: {
+          source: 'local',
+          url: '/images/tcl-new-arrivals-300x250.jpg',
+          width: 300,
+          height: 250
+        }
       }
     ]
-  }
-  ,
+  },
   {
     slug: 'durango',
     name: 'Durango',
