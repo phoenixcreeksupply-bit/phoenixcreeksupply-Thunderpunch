@@ -33,15 +33,29 @@ export default function PromoStaging({ folder, className = "mx-auto max-w-2xl p-
         return;
       }
 
-      // No folder specified: fetch active.json and then fetch each active file
+      // No folder specified: fetch promo folder list from readonly API and then fetch each active file
       try {
-        const r = await fetch('/promos/active.json', { cache: 'no-store' });
+        const r = await fetch('/api/promos/folders', { cache: 'no-store' });
         if (!r.ok) {
-          if (!cancelled) setItems([]);
+          // fallback to the old active.json if the API is unavailable
+          const fallback = await fetch('/promos/active.json', { cache: 'no-store' }).catch(() => null);
+          if (!fallback || !fallback.ok) {
+            if (!cancelled) setItems([]);
+            return;
+          }
+          const fj = await fallback.json();
+          const active = fj.active || [];
+          const fetched = [];
+          for (const f of active) {
+            const it = await fetchOne(f);
+            if (it) fetched.push(it);
+          }
+          if (!cancelled) setItems(fetched);
           return;
         }
+
         const json = await r.json();
-        const active = json.active || [];
+        const active = json.folders || [];
         const fetched = [];
         for (const f of active) {
           const it = await fetchOne(f);
