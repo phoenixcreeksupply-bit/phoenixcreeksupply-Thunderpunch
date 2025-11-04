@@ -5,6 +5,7 @@ import TokenButton from '../components/TokenButton';
 import StashButton from '../components/StashButton';
 import MonroeMenu from '../components/MonroeMenu';
 import Footer from '../components/Footer';
+import VercelAnalytics from '../components/VercelAnalytics';
 
 export const metadata = {
   title: 'Phoenix Creek Supply | Lead Yourself, Live With Intent',
@@ -85,6 +86,8 @@ export default function RootLayout({ children }) {
         </header>
         <main>{children}</main>
   <Footer />
+        {/* Vercel Analytics (client) */}
+        <VercelAnalytics />
       </body>
     </html>
   );
