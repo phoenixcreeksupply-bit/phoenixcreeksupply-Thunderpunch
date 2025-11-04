@@ -129,6 +129,14 @@ const affiliates = [
           height: 90
         }
       }
+      ,
+      // Nov 4-6 Deal Roundup promo (moved from homepage into "More offers")
+      {
+        label: 'Nov 4-6 Deal Roundup',
+        displayLabel: 'Nov 4-6 Deal Roundup — Rebel™ styles from $69',
+        href: 'https://www.tkqlhce.com/click-101573160-17178574',
+        pixel: 'https://www.awltovhc.com/image-101573160-17178574'
+      }
     ]
   }
   ,
