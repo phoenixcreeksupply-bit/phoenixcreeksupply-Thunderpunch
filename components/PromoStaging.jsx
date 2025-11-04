@@ -61,7 +61,37 @@ export default function PromoStaging({ folder, className = "mx-auto max-w-2xl p-
           const it = await fetchOne(f);
           if (it) fetched.push(it);
         }
-        if (!cancelled) setItems(fetched);
+
+        // Deduplicate 1x1 tracking pixels across promos so the same pixel URL doesn't fire multiple times
+        try {
+          const seen = new Set();
+          const processed = fetched.map((item) => {
+            try {
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(item.html, 'text/html');
+              const imgs = Array.from(doc.getElementsByTagName('img'));
+              for (const img of imgs) {
+                const w = img.getAttribute('width');
+                const h = img.getAttribute('height');
+                const src = img.getAttribute('src') || '';
+                // treat as tracking pixel when width and height are 1 (common pattern)
+                if ((w === '1' && h === '1') || (w === '1' && !h) || (!w && h === '1')) {
+                  if (seen.has(src)) {
+                    img.remove();
+                  } else {
+                    seen.add(src);
+                  }
+                }
+              }
+              return { folder: item.folder, html: doc.body.innerHTML };
+            } catch (e) {
+              return item;
+            }
+          });
+          if (!cancelled) setItems(processed);
+        } catch (e) {
+          if (!cancelled) setItems(fetched);
+        }
       } catch (e) {
         if (!cancelled) setItems([]);
       } finally {
