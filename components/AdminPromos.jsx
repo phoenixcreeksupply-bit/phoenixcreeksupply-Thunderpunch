@@ -9,7 +9,6 @@ export default function AdminPromos() {
   const [error, setError] = useState(null);
   const [promoFolders, setPromoFolders] = useState([]);
   const [activePromos, setActivePromos] = useState(new Set());
-  const [adminToken, setAdminToken] = useState('');
   
 
   useEffect(() => {
@@ -64,10 +63,13 @@ export default function AdminPromos() {
     try {
       const res = await fetch('/api/promos', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'x-promo-admin-token': adminToken },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ folder, enable }),
       });
       if (!res.ok) {
+        if (res.status === 401 || res.status === 403) {
+          throw new Error('Not authenticated — please sign in on the admin page.');
+        }
         const txt = await res.text();
         throw new Error(txt || 'Toggle failed');
       }

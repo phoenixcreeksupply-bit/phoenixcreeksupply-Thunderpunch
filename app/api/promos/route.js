@@ -38,7 +38,13 @@ export async function GET() {
 export async function POST(request) {
   const secret = process.env.PROMO_ADMIN_TOKEN;
   const headerToken = request.headers.get('x-promo-admin-token');
-  if (!secret || headerToken !== secret) {
+
+  // Allow either the header token or an HttpOnly cookie named 'promo_admin' set by the login endpoint
+  const cookieHeader = request.headers.get('cookie') || '';
+  const cookieMatch = cookieHeader.split(';').map(s => s.trim()).find(s => s.startsWith('promo_admin='));
+  const cookieValue = cookieMatch ? cookieMatch.split('=')[1] : undefined;
+
+  if (!secret || (headerToken !== secret && cookieValue !== secret)) {
     return new Response('Forbidden', { status: 403 });
   }
 
