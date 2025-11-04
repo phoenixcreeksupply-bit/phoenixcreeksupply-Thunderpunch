@@ -12,10 +12,10 @@ Details:
 
 Verification evidence:
 - I installed the exact JavaScript tag you requested on the homepage HTML (in the <head>). The tag is:
-  <script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=9659704eb4dc2d2e148e87c705866398de04c572"></script>
+  <script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=01d685267d651f03926454eb4973f82277048b2b"></script>
 
 - I also added a plain HTML comment in the homepage head so the auth token is present in the raw HTML page source (for verifiers that don't execute JS):
-  <!-- AvantLink authResponse: 9659704eb4dc2d2e148e87c705866398de04c572 -->
+  <!-- AvantLink authResponse: 01d685267d651f03926454eb4973f82277048b2b -->
 
 - Static confirmation files are available at these direct URLs:
   - https://phoenixcreeksupply.com/affiliate_app_confirm.html
@@ -23,7 +23,7 @@ Verification evidence:
   - https://phoenixcreeksupply.com/affiliate-verify.html
 
 - Plaintext token included for non-JS verification:
-  authResponse: 9659704eb4dc2d2e148e87c705866398de04c572
+  authResponse: 01d685267d651f03926454eb4973f82277048b2b
 
 Verification checks I performed (server-side fetches):
 - Homepage contains the token and the exact script tag.

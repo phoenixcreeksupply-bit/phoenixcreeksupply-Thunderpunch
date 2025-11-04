@@ -1,21 +1,21 @@
 AvantLink Verification Evidence
 
 Application ID: 1519689
-Auth token (authResponse): 9659704eb4dc2d2e148e87c705866398de04c572
+Auth token (authResponse): 01d685267d651f03926454eb4973f82277048b2b
 Website URL (applied with): https://phoenixcreeksupply.com/
 
 Exact script tag installed (copied verbatim):
-<script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=9659704eb4dc2d2e148e87c705866398de04c572"></script>
+<script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=01d685267d651f03926454eb4973f82277048b2b"></script>
 
 Where the tag was placed (repository files and locations):
 - app/layout.js — added the exact script tag inside the <head> so it's present in the homepage HTML.
   Path: app/layout.js (head section)
   Additionally, I added an explicit HTML comment in the homepage head that contains the auth token so verifiers that fetch raw HTML can locate it quickly.
   The comment included in the head (visible in page source) is:
-  <!-- AvantLink authResponse: 9659704eb4dc2d2e148e87c705866398de04c572 -->
+  <!-- AvantLink authResponse: 01d685267d651f03926454eb4973f82277048b2b -->
   
   Update: replaced the attempted HTML comment with a safe meta tag so the token is definitely present in the server-rendered HTML head:
-  <meta name="avantlink-authresponse" content="9659704eb4dc2d2e148e87c705866398de04c572" />
+  <meta name="avantlink-authresponse" content="01d685267d651f03926454eb4973f82277048b2b" />
 
 Static confirmation files (placed at web root):
 - /public/affiliate_app_confirm.html
@@ -29,7 +29,7 @@ Exact URLs you can provide to AvantLink for direct checking:
 - https://phoenixcreeksupply.com/affiliate-verify.html
 
 Text visible in the static files (plaintext fallback):
-authResponse: 9659704eb4dc2d2e148e87c705866398de04c572
+authResponse: 01d685267d651f03926454eb4973f82277048b2b
 
 Verification checks performed (from this machine):
 - Homepage contains the token: YES
@@ -38,8 +38,8 @@ Verification checks performed (from this machine):
 - /affiliate_app_confirm.php contains the token: YES
 
 PowerShell commands used (you can re-run locally to verify):
-Invoke-WebRequest -Uri https://phoenixcreeksupply.com/ -UseBasicParsing | Select-Object -ExpandProperty Content | Select-String "9659704eb4dc2d2e148e87c705866398de04c572"
-Invoke-WebRequest -Uri https://phoenixcreeksupply.com/affiliate_app_confirm.html -UseBasicParsing | Select-Object -ExpandProperty Content | Select-String "9659704eb4dc2d2e148e87c705866398de04c572"
+Invoke-WebRequest -Uri https://phoenixcreeksupply.com/ -UseBasicParsing | Select-Object -ExpandProperty Content | Select-String "01d685267d651f03926454eb4973f82277048b2b"
+Invoke-WebRequest -Uri https://phoenixcreeksupply.com/affiliate_app_confirm.html -UseBasicParsing | Select-Object -ExpandProperty Content | Select-String "01d685267d651f03926454eb4973f82277048b2b"
 
 Notes / troubleshooting tips for AvantLink support:
 - The script uses the exact tag provided by AvantLink (HTTP URL and authResponse). If their verifier does not execute JS, the static files include the plaintext token.

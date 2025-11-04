@@ -9,7 +9,7 @@ export default function Head() {
       {/<script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=7d4cc152694097df60f864a9205b11db69b99323"></script>/}
       <script
         type="text/javascript"
-        src="https://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=9659704eb4dc2d2e148e87c705866398de04c572"
+        src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=01d685267d651f03926454eb4973f82277048b2b"
       ></script>
     </>
   );

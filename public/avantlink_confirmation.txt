@@ -1,9 +1,10 @@
 AvantLink verification file
 
 Application ID: 1519689
-Auth token (authResponse): 9659704eb4dc2d2e148e87c705866398de04c572
+
+Auth token (authResponse): 01d685267d651f03926454eb4973f82277048b2b
 
 Exact script tag provided:
-<script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=9659704eb4dc2d2e148e87c705866398de04c572"></script>
+<script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=01d685267d651f03926454eb4973f82277048b2b"></script>
 
 If AvantLink fetches this file directly at /avantlink_confirmation.txt they should see the token and confirm the site.
