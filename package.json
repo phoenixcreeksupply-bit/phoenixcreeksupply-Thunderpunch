@@ -10,14 +10,15 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
-    "next": "14.2.5",
-    "nodemailer": "6.9.4",
+    "hcaptcha": "^0.2.0",
+    "next": "^14.2.33",
+    "nodemailer": "^6.10.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
     "autoprefixer": "10.4.15",
-    "postcss": "8.4.29",
+    "postcss": "^8.5.6",
     "sharp": "^0.32.4",
     "tailwindcss": "3.3.3"
   }

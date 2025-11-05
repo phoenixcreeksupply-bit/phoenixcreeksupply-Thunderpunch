@@ -137,16 +137,52 @@ export async function POST(req) {
         pass: SMTP_PASS,
       },
     });
+    // If SENDGRID_API_KEY is present, prefer the SendGrid Web API (avoids SMTP config).
+    const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY || '';
+    const mailHtml = `<p><strong>Name:</strong> ${escapeHtml(name)}</p><p><strong>Email:</strong> ${escapeHtml(email)}</p><hr/><p>${escapeHtml(message).replace(/\n/g, '<br/>')}</p>`;
+    const mailText = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
 
-    const mailOptions = {
-      from: `${name} <${email}>`,
-      to: CONTACT_TO,
-      subject: `Contact form submission — ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-      html: `<p><strong>Name:</strong> ${escapeHtml(name)}</p><p><strong>Email:</strong> ${escapeHtml(email)}</p><hr/><p>${escapeHtml(message).replace(/\n/g, '<br/>')}</p>`,
-    };
+    if (SENDGRID_API_KEY) {
+      // Send via SendGrid API
+      const sgPayload = {
+        personalizations: [
+          {
+            to: [{ email: CONTACT_TO }],
+            subject: `Contact form submission — ${name}`,
+          },
+        ],
+        from: { email: email, name: name },
+        content: [
+          { type: 'text/plain', value: mailText },
+          { type: 'text/html', value: mailHtml },
+        ],
+      };
 
-    await transporter.sendMail(mailOptions);
+      const sgRes = await fetch('https://api.sendgrid.com/v3/mail/send', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${SENDGRID_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(sgPayload),
+      });
+
+      if (!sgRes.ok) {
+        const body = await sgRes.text();
+        console.error('SendGrid send failed', sgRes.status, body);
+        return NextResponse.json({ ok: false, error: 'failed to send email (SendGrid)' }, { status: 500 });
+      }
+    } else {
+      const mailOptions = {
+        from: `${name} <${email}>`,
+        to: CONTACT_TO,
+        subject: `Contact form submission — ${name}`,
+        text: mailText,
+        html: mailHtml,
+      };
+
+      await transporter.sendMail(mailOptions);
+    }
 
     return NextResponse.json({ ok: true });
   } catch (err) {
