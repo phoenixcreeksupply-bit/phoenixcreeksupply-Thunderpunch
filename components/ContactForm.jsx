@@ -27,6 +27,9 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(null);
   const [error, setError] = useState(null);
+  const [captchaToken, setCaptchaToken] = useState(null);
+  const [hcaptchaWidgetId, setHcaptchaWidgetId] = useState(null);
+  const hcaptchaRef = useRef(null);
   const mounted = useRef(false);
 
   useEffect(() => {
@@ -36,8 +39,26 @@ export default function ContactForm() {
       const src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
       loadScript(src, 'recaptcha-api').catch(err => console.warn('recaptcha load failed', err));
     } else if (HCAPTCHA_SITE_KEY) {
-      const src = 'https://js.hcaptcha.com/1/api.js';
-      loadScript(src, 'hcaptcha-api').catch(err => console.warn('hcaptcha load failed', err));
+      // load explicit render for hCaptcha so we can programmatically render an invisible widget
+      const src = 'https://js.hcaptcha.com/1/api.js?render=explicit';
+      loadScript(src, 'hcaptcha-api')
+        .then(() => {
+          try {
+            if (window.hcaptcha && hcaptchaRef.current) {
+              const id = window.hcaptcha.render(hcaptchaRef.current, {
+                sitekey: HCAPTCHA_SITE_KEY,
+                size: 'invisible',
+                callback: (token) => {
+                  setCaptchaToken(token);
+                }
+              });
+              setHcaptchaWidgetId(id);
+            }
+          } catch (err) {
+            console.warn('hcaptcha render failed', err);
+          }
+        })
+        .catch(err => console.warn('hcaptcha load failed', err));
     }
     return () => {
       mounted.current = false;
@@ -58,13 +79,31 @@ export default function ContactForm() {
         provider = 'recaptcha';
         await window.grecaptcha.ready();
         token = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'contact' });
-      } else if (HCAPTCHA_SITE_KEY && window.hcaptcha && window.hcaptcha.execute) {
+      } else if (HCAPTCHA_SITE_KEY) {
         provider = 'hcaptcha';
-        // hCaptcha usually requires a widget; if execute exists use it
-        try {
-          token = await window.hcaptcha.execute();
-        } catch (err) {
-          console.warn('hcaptcha execute failed', err);
+        // If token already exists (widget callback), use it. Otherwise trigger execute.
+        if (captchaToken) {
+          token = captchaToken;
+        } else if (window.hcaptcha && hcaptchaWidgetId !== null) {
+          try {
+            // trigger execute and wait for token to be set by callback
+            window.hcaptcha.execute(hcaptchaWidgetId);
+            // wait up to 10s for token
+            token = await new Promise((resolve) => {
+              const start = Date.now();
+              const iv = setInterval(() => {
+                if (captchaToken) {
+                  clearInterval(iv);
+                  resolve(captchaToken);
+                } else if (Date.now() - start > 10000) {
+                  clearInterval(iv);
+                  resolve(null);
+                }
+              }, 200);
+            });
+          } catch (err) {
+            console.warn('hcaptcha execute failed', err);
+          }
         }
       }
 
