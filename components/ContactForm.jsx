@@ -167,10 +167,6 @@ export default function ContactForm() {
 
       {success && <p className="text-center text-green-400">Message sent — thank you.</p>}
       {error && <p className="text-center text-rose-400">{error}</p>}
-
-      {!RECAPTCHA_SITE_KEY && !HCAPTCHA_SITE_KEY && (
-        <p className="text-xs text-neutral-500">Note: CAPTCHA not configured. Set NEXT_PUBLIC_RECAPTCHA_SITE_KEY or NEXT_PUBLIC_HCAPTCHA_SITE_KEY in env.</p>
-      )}
     </form>
   );
 }
