@@ -2,6 +2,8 @@ import { AFFILIATE_LINKS } from "/config/links";
 import MonroeMenu from "./MonroeMenu";
 
 export default function Header() {
+  const hideContact = process.env.NEXT_PUBLIC_HIDE_CONTACT_LINKS === 'true';
+
   return (
     <header className="flex justify-between items-center p-4 bg-black bg-opacity-50">
       <a
@@ -19,7 +21,9 @@ export default function Header() {
   <a href="/guides" className="text-white hover:text-yellow-400">Guides</a>
   <a href="/monroes-specials" className="text-white hover:text-yellow-400">Monroe's Specials</a>
   <MonroeMenu />
-        <a href="/contact" className="text-white hover:text-yellow-400">Contact</a>
+        {!hideContact && (
+          <a href="/contact" className="text-white hover:text-yellow-400">Contact</a>
+        )}
       </nav>
     </header>
   );
