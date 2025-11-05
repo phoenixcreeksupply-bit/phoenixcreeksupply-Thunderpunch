@@ -50,21 +50,23 @@ export async function POST(req) {
       return NextResponse.json({ ok: false, error: 'name, email and message are required' }, { status: 400 });
     }
 
-    // Read SMTP config from env vars
+    // Read SMTP/SendGrid config from env vars
     const SMTP_HOST = process.env.SMTP_HOST;
     const SMTP_PORT = process.env.SMTP_PORT;
     const SMTP_USER = process.env.SMTP_USER;
     const SMTP_PASS = process.env.SMTP_PASS;
-    const CONTACT_TO = process.env.CONTACT_TO_EMAIL || 'clarity@phoenixcreeksupply.com';
+    const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY || '';
+    // default to both clarity and support if env not provided
+    const CONTACT_TO = process.env.CONTACT_TO_EMAIL || 'clarity@phoenixcreeksupply.com,support@phoenixcreeksupply.com';
 
-    if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASS) {
-      return NextResponse.json({ ok: false, error: 'SMTP configuration missing on server' }, { status: 500 });
-    }
+    // If neither SendGrid nor SMTP are configured, sending will fail later. We don't hard-fail
+    // here so captcha verification can still be toggled independently.
 
-    // CAPTCHA enforcement: if a provider secret is configured, require verification
-    const RECAPTCHA_SECRET = process.env.RECAPTCHA_SECRET_KEY || '';
-    const HCAPTCHA_SECRET = process.env.HCAPTCHA_SECRET || '';
-    const requireCaptcha = !!(RECAPTCHA_SECRET || HCAPTCHA_SECRET);
+  // CAPTCHA enforcement: allow disabling via DISABLE_CAPTCHA env var
+  const RECAPTCHA_SECRET = process.env.RECAPTCHA_SECRET_KEY || '';
+  const HCAPTCHA_SECRET = process.env.HCAPTCHA_SECRET || '';
+  const DISABLE_CAPTCHA = (process.env.DISABLE_CAPTCHA || 'false').toLowerCase() === 'true';
+  const requireCaptcha = !DISABLE_CAPTCHA && !!(RECAPTCHA_SECRET || HCAPTCHA_SECRET);
 
     const token = (body.captchaToken || '').toString();
     const provider = (body.captchaProvider || '').toString();
@@ -128,17 +130,18 @@ export async function POST(req) {
       return NextResponse.json({ ok: false, error: 'rate limit exceeded' }, { status: 429 });
     }
 
-    const transporter = nodemailer.createTransport({
-      host: SMTP_HOST,
-      port: parseInt(SMTP_PORT, 10),
-      secure: Number(SMTP_PORT) === 465, // true for 465, false for other ports
-      auth: {
-        user: SMTP_USER,
-        pass: SMTP_PASS,
-      },
-    });
-    // If SENDGRID_API_KEY is present, prefer the SendGrid Web API (avoids SMTP config).
-    const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY || '';
+    let transporter = null;
+    if (SMTP_HOST && SMTP_PORT && SMTP_USER && SMTP_PASS) {
+      transporter = nodemailer.createTransport({
+        host: SMTP_HOST,
+        port: parseInt(SMTP_PORT, 10),
+        secure: Number(SMTP_PORT) === 465, // true for 465, false for other ports
+        auth: {
+          user: SMTP_USER,
+          pass: SMTP_PASS,
+        },
+      });
+    }
     const mailHtml = `<p><strong>Name:</strong> ${escapeHtml(name)}</p><p><strong>Email:</strong> ${escapeHtml(email)}</p><hr/><p>${escapeHtml(message).replace(/\n/g, '<br/>')}</p>`;
     const mailText = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
 
@@ -172,7 +175,7 @@ export async function POST(req) {
         console.error('SendGrid send failed', sgRes.status, body);
         return NextResponse.json({ ok: false, error: 'failed to send email (SendGrid)' }, { status: 500 });
       }
-    } else {
+    } else if (transporter) {
       const mailOptions = {
         from: `${name} <${email}>`,
         to: CONTACT_TO,
@@ -182,6 +185,11 @@ export async function POST(req) {
       };
 
       await transporter.sendMail(mailOptions);
+    } else {
+      // No sending provider configured (neither SendGrid nor SMTP)
+      console.error('No email provider configured: set SENDGRID_API_KEY or SMTP_* env vars');
+      return NextResponse.json({ ok: false, error: 'email provider not configured' }, { status: 500 });
+    }
     }
 
     return NextResponse.json({ ok: true });
