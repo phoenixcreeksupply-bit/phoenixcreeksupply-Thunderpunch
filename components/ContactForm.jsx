@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from 'react';
 
 const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '';
 const HCAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY || '';
+// Allow disabling client-side captcha behavior via NEXT_PUBLIC_DISABLE_CAPTCHA
+const PUBLIC_DISABLE_CAPTCHA = (process.env.NEXT_PUBLIC_DISABLE_CAPTCHA || 'false').toLowerCase() === 'true';
 
 function loadScript(src, id) {
   return new Promise((resolve, reject) => {
@@ -34,11 +36,11 @@ export default function ContactForm() {
 
   useEffect(() => {
     mounted.current = true;
-    // load reCAPTCHA v3 if configured
-    if (RECAPTCHA_SITE_KEY) {
+    // load reCAPTCHA v3 if configured and not explicitly disabled
+    if (!PUBLIC_DISABLE_CAPTCHA && RECAPTCHA_SITE_KEY) {
       const src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
       loadScript(src, 'recaptcha-api').catch(err => console.warn('recaptcha load failed', err));
-    } else if (HCAPTCHA_SITE_KEY) {
+    } else if (!PUBLIC_DISABLE_CAPTCHA && HCAPTCHA_SITE_KEY) {
       // load explicit render for hCaptcha so we can programmatically render an invisible widget
       const src = 'https://js.hcaptcha.com/1/api.js?render=explicit';
       loadScript(src, 'hcaptcha-api')
@@ -75,11 +77,11 @@ export default function ContactForm() {
       let token = null;
       let provider = null;
 
-      if (RECAPTCHA_SITE_KEY && window.grecaptcha && window.grecaptcha.execute) {
+      if (!PUBLIC_DISABLE_CAPTCHA && RECAPTCHA_SITE_KEY && window.grecaptcha && window.grecaptcha.execute) {
         provider = 'recaptcha';
         await window.grecaptcha.ready();
         token = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'contact' });
-      } else if (HCAPTCHA_SITE_KEY) {
+      } else if (!PUBLIC_DISABLE_CAPTCHA && HCAPTCHA_SITE_KEY) {
         provider = 'hcaptcha';
         // If token already exists (widget callback), use it. Otherwise trigger execute.
         if (captchaToken) {
