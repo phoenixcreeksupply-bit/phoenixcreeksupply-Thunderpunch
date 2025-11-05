@@ -1,47 +1,47 @@
 import React from "react";
-import ContactForm from '../../components/ContactForm';
 
 export const metadata = {
   title: "Contact | Phoenix Creek Supply",
   description:
-    "Reach out to the Phoenix Creek Supply team — for collaborations, partnerships, or general inquiries.",
+    "Contact Phoenix Creek Supply — email addresses and contact details.",
 };
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-neutral-950 text-neutral-100 flex flex-col items-center justify-start px-6 py-20 space-y-16">
-      <section className="max-w-3xl text-center">
+    <main
+      className="min-h-screen flex items-center justify-center px-6 py-20"
+      style={{
+        backgroundImage: "url('/images/hardhat-shovel.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      <section className="backdrop-blur-sm bg-neutral-900/65 rounded-2xl border border-neutral-800 shadow-lg p-10 max-w-3xl w-full text-center text-neutral-100">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-wide text-amber-500">
           Contact Phoenix Creek Supply
         </h1>
-        <p className="text-lg text-neutral-300 leading-relaxed">
-          Every message we receive is an opportunity to connect with those who
-          share the same code — to live with intent, create with purpose, and
-          stand by the work we build. Whether it’s a collaboration, affiliate
-          inquiry, or simple question — we listen, we respond, and we act.
-        </p>
-      </section>
 
-      <section className="max-w-xl w-full bg-neutral-900 border border-neutral-800 rounded-2xl shadow-md p-8 space-y-6">
-        <h2 className="text-2xl font-semibold text-amber-400 text-center mb-2">
-          Get in Touch
-        </h2>
-        <p className="text-neutral-400 text-center mb-6">
-          Send us a direct message — we’ll get back to you within 1–2 business
-          days.
+        <p className="text-lg text-neutral-300 leading-relaxed mb-6">
+          For general inquiries or partnerships, please email us directly. We monitor both addresses and will reply as soon as possible.
         </p>
 
-        <ContactForm />
-
-        <p className="text-center text-sm text-neutral-500 mt-6">
-          Or email us directly at{" "}
+        <div className="flex flex-col sm:flex-row sm:justify-center gap-4 mt-4">
           <a
+            className="px-6 py-3 rounded-md bg-amber-500 text-neutral-900 font-medium hover:bg-amber-400"
             href="mailto:clarity@phoenixcreeksupply.com"
-            className="text-amber-400 hover:text-amber-300"
           >
             clarity@phoenixcreeksupply.com
           </a>
-        </p>
+
+          <a
+            className="px-6 py-3 rounded-md bg-amber-500 text-neutral-900 font-medium hover:bg-amber-400"
+            href="mailto:support@phoenixcreeksupply.com"
+          >
+            support@phoenixcreeksupply.com
+          </a>
+        </div>
+
+        <p className="text-sm text-neutral-400 mt-6">Or find other ways to connect via our site footer.</p>
       </section>
     </main>
   );
