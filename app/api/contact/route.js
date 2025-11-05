@@ -190,7 +190,6 @@ export async function POST(req) {
       console.error('No email provider configured: set SENDGRID_API_KEY or SMTP_* env vars');
       return NextResponse.json({ ok: false, error: 'email provider not configured' }, { status: 500 });
     }
-    }
 
     return NextResponse.json({ ok: true });
   } catch (err) {
