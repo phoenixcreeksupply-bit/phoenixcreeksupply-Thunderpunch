@@ -2,7 +2,8 @@ import { AFFILIATE_LINKS } from "/config/links";
 import MonroeMenu from "./MonroeMenu";
 
 export default function Header() {
-  const hideContact = process.env.NEXT_PUBLIC_HIDE_CONTACT_LINKS === 'true';
+  // Force-hide contact links for now (temporary override)
+  const hideContact = true;
 
   return (
     <header className="flex justify-between items-center p-4 bg-black bg-opacity-50">

@@ -9,9 +9,7 @@ export default function Footer() {
             <a href="/about" className="hover:underline">About</a>
             <a href="/legal/affiliate">Affiliate</a>
             <a href="/legal/privacy">Privacy</a>
-            {process.env.NEXT_PUBLIC_HIDE_CONTACT_LINKS !== 'true' && (
-              <a href="/contact">Contact</a>
-            )}
+            {/* Contact link hidden temporarily */}
             <a href="/legal/terms">Terms</a>
             <a href="/legal/disclaimer">Disclaimer</a>
             <a href="/legal/returns">Returns Policy</a>
