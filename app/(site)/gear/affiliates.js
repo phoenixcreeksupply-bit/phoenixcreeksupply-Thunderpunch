@@ -480,4 +480,40 @@ affiliates.push({
   ]
 });
 
+// Ravin Crossbows — added from user-supplied affiliate anchor/pixel
+// Place an optional logo at: public/images/ravin-crossbows.jpg
+affiliates.push({
+  slug: 'ravin-crossbows',
+  name: 'Ravin Crossbows',
+  category: 'Archery & Hunting',
+  description: 'Ravin Crossbows — high-performance crossbows and accessories. Experience the apex of hunting.',
+  href: 'https://www.tkqlhce.com/click-101573160-17009262',
+  // local logo — replaced with the supplied JPG at public/images/ravin-crossbows.jpg
+  logo: '/images/ravin-crossbows.jpg',
+  links: [
+    {
+      label: 'Ravin Crossbows — 2 Free Gifts With R500 or R18 Purchase',
+      href: 'https://www.tkqlhce.com/click-101573160-17009262',
+      // 1x1 impression pixel provided by user
+      pixel: 'https://www.ftjcfx.com/image-101573160-17009262',
+      primary: true
+    },
+    {
+      label: 'Limited Time - 20% Off Ravin Optics',
+      href: 'https://www.kqzyfj.com/click-101573160-17174449',
+      pixel: 'https://www.awltovhc.com/image-101573160-17174449'
+    },
+    {
+      label: 'Buy a Wrath 430 or 430X — Get FREE arrows with order',
+      href: 'https://www.dpbolvw.net/click-101573160-15262753',
+      pixel: 'https://www.ftjcfx.com/image-101573160-15262753'
+    },
+    {
+      label: 'R500 XK7 Camo rebate — submit by Dec 31',
+      href: 'https://www.tkqlhce.com/click-101573160-15643237',
+      pixel: 'https://www.lduhtrp.net/image-101573160-15643237'
+    }
+  ]
+});
+
 export default affiliates;
