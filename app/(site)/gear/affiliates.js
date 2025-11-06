@@ -442,4 +442,34 @@ affiliates.push({
   ]
 });
 
+// Prospectors Dream — new affiliate card added with provided logo and links
+affiliates.push({
+  slug: 'prospectors-dream',
+  name: 'Prospectors Dream',
+  category: 'Tools & Gear',
+  description: 'Prospectors Dream — gold panning kits, sluices, and prospecting supplies (Dream Mat).',
+  href: 'https://prospectorsdream.com',
+  // use uploaded logo (existing file in public/images)
+  logo: '/images/DreamMatLogo.jpg',
+  features: [
+    'Gold panning kits and sluices',
+    'Compact pocket sluices and prospecting kits',
+    'Made for field use and easy cleanup'
+  ],
+  links: [
+    {
+      label: 'Gold Pan Kit — Adventure Sluice Combo',
+      href: 'https://prospectorsdream.com/products/gold-pan-kit-adventure-sluice-combo-dream-mat?sca_ref=9910922.RTrHHEA6uW'
+    },
+    {
+      label: 'Gold Pan Kit w/ Pocket Sluices',
+      href: 'https://prospectorsdream.com/products/gold-pan-kit-w-pocket-sluices?sca_ref=9910922.RTrHHEA6uW'
+    },
+    {
+      label: '9-Piece Expedition Gold Prospecting Kit',
+      href: 'https://prospectorsdream.com/products/9-piece-expedition-gold-prospecting-kit?sca_ref=9910922.RTrHHEA6uW'
+    }
+  ]
+});
+
 export default affiliates;
