@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prepare": "husky install",
     "export-snapshots": "node ./scripts/export-snapshots.js",
     "build": "next build",
     "start": "next start"
@@ -20,6 +21,7 @@
     "autoprefixer": "10.4.15",
     "postcss": "^8.5.6",
     "sharp": "^0.32.4",
-    "tailwindcss": "3.3.3"
+    "tailwindcss": "3.3.3",
+    "husky": "8.0.3"
   }
 }
