@@ -312,6 +312,14 @@ const affiliates = [
           height: 90
         }
       }
+      ,
+      // Nov 7-11 flash sale moved from homepage into 'More offers'
+      {
+        label: 'Muck Boots Nov 7-11 Flash Sale',
+        displayLabel: 'Muck Boots Flash Sale — Nov 7-11',
+        href: 'https://www.dpbolvw.net/click-101573160-17190602',
+        pixel: 'https://www.lduhtrp.net/image-101573160-17190602'
+      }
     ]
   }
   ,
