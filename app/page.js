@@ -11,7 +11,8 @@ export default function HomePage() {
       className="relative flex flex-col min-h-screen w-full bg-cover bg-center bg-no-repeat"
   style={{ backgroundImage: "url('/images/Home-bg-fall2025.jpg')" }}
     >
-      <div className="absolute inset-0 bg-black/60" />
+  {/* reduced overlay so background image shows through */}
+  <div className="absolute inset-0 bg-black/20" />
 
   {/* Header removed to avoid prerender error */}
 
