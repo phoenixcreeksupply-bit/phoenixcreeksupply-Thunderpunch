@@ -516,4 +516,63 @@ affiliates.push({
   ]
 });
 
+// Jackery — new affiliate card and homepage promo
+affiliates.push({
+  slug: 'jackery',
+  name: 'Jackery',
+  category: 'Power & Solar',
+  description: 'Jackery portable power stations, solar generators, and backup power solutions.',
+  // Evergreen primary link (displayed as primary CTA when no flash toggle is set)
+  href: 'https://www.dpbolvw.net/click-101573160-17153685',
+  // Local logo: saved JPG at public/images/Jackerylogo.jpg will be used as the preferred logo.
+  logo: '/images/Jackerylogo.jpg',
+  features: [
+    'Portable power stations & solar generators',
+    'Easy backup power for home and field',
+    'Holiday & bundle deals'
+  ],
+  preferred: ['dpbolvw.net', 'anrdoezrs.net'],
+  links: [
+    {
+      label: 'Shop Jackery (evergreen)',
+      displayLabel: 'Shop Jackery',
+      href: 'https://www.dpbolvw.net/click-101573160-17153685',
+      // Use the remote creative as the local card creative when available
+      primary: true,
+      creative: {
+        source: 'remote',
+        url: 'https://www.awltovhc.com/image-101573160-17153685',
+        width: 176,
+        height: 62
+      }
+    },
+    {
+      label: 'Power Your Essential — HomePower 3000 (Reserve Now!)',
+      href: 'https://www.anrdoezrs.net/click-101573160-17131006',
+      pixel: 'https://www.lduhtrp.net/image-101573160-17131006'
+    },
+    {
+      label: 'Jackery Early Black Friday Sale — Explorer 2000v2',
+      href: 'https://www.anrdoezrs.net/click-101573160-17189588',
+      pixel: 'https://www.lduhtrp.net/image-101573160-17189588'
+    },
+    {
+      label: 'Jackery HomePower 3000 — $1,499 (Code: POWER3000)',
+      href: 'https://www.anrdoezrs.net/click-101573160-17121834',
+      pixel: 'https://www.ftjcfx.com/image-101573160-17121834'
+    },
+    // Homepage promo is provided via the promos staging system (public/promos/jackery/active.html)
+    {
+      label: 'Homepage Promo (Jackery)',
+      href: 'https://www.anrdoezrs.net/click-101573160-17189625',
+      creative: {
+        source: 'remote',
+        url: 'https://www.awltovhc.com/image-101573160-17189625',
+        width: 336,
+        height: 280
+      }
+    }
+  ]
+});
+
 export default affiliates;
