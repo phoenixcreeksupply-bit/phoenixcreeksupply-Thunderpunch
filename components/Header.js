@@ -7,15 +7,23 @@ export default function Header() {
 
   return (
     <header className="flex justify-between items-center p-4 bg-black bg-opacity-50">
-      <a href="/" className="text-white font-bold text-lg hover:text-yellow-400">Phoenix Creek Supply</a>
+      <a
+        href={AFFILIATE_LINKS.trailPack}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white font-bold text-lg hover:text-yellow-400"
+      >
+        Basic Trail Pack
+      </a>
       <nav className="space-x-4 flex items-center">
-  <a href="/digital-kits" className="text-white hover:text-yellow-400 hover:underline">Digital Kits</a>
+        <a href="/about" className="text-white hover:text-yellow-400">About</a>
+        <a href="/digital-kits" className="text-white hover:text-yellow-400">Digital Kits</a>
 
         {/* === Alternative Energy Dropdown (placed beside Digital Kits) === */}
         <div className="relative group inline-block">
           <button
             type="button"
-            className="inline-flex items-center space-x-1 text-white hover:text-amber-500 hover:underline transition-colors"
+            className="inline-flex items-center space-x-1 text-white hover:text-amber-500 transition-colors"
           >
             <span>Alternative Energy</span>
             <svg
@@ -89,7 +97,8 @@ export default function Header() {
 
         <a href="/gear" className="text-white hover:text-yellow-400">Gear</a>
         <a href="/guides" className="text-white hover:text-yellow-400">Guides</a>
-  <MonroeMenu />
+        <a href="/monroes-specials" className="text-white hover:text-yellow-400">Monroe's Specials</a>
+        <MonroeMenu />
         {!hideContact && (
           <a href="/contact" className="text-white hover:text-yellow-400">Contact</a>
         )}
