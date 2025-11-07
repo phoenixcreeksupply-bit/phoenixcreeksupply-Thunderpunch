@@ -6,6 +6,7 @@ import StashButton from '../components/StashButton';
 import MonroeMenu from '../components/MonroeMenu';
 import Footer from '../components/Footer';
 import VercelAnalytics from '../components/VercelAnalytics';
+import Header from '../components/Header';
 
 export const metadata = {
   title: 'Phoenix Creek Supply | Lead Yourself, Live With Intent',
@@ -44,46 +45,7 @@ export default function RootLayout({ children }) {
   <meta name="avantlink-authresponse" content="01d685267d651f03926454eb4973f82277048b2b" />
       </head>
       <body>
-        <header className="flex justify-between items-center p-4 bg-black/70">
-          <div className="flex items-center space-x-3">
-            {/* Site title/logo area */}
-            <a href="/" className="text-white font-bold text-lg">Phoenix Creek Supply</a>
-            {/* Stash small icon */}
-            <StashButton />
-            {/* Monroe coin dropdown/menu */}
-            <MonroeMenu />
-          </div>
-          <nav className="space-x-6">
-            <a href="/digital-kits" className="text-white hover:underline">
-              Digital Kits
-            </a>
-            {/* Blog link temporarily hidden until content is ready
-            <a href="/blog" className="text-white hover:underline">
-              Blog
-            </a>
-            */}
-            <a href="/gear" className="text-white hover:underline">
-              Tools & Gear
-            </a>
-            <a
-              href="https://www.jdoqocy.com/click-101573160-15735849"
-              target="_blank"
-              rel="noopener noreferrer sponsored"
-              className="text-white hover:underline"
-            >
-              Audio Books
-            </a>
-            <a
-              href="https://www.amazon.com/hz/wishlist/ls/7Z7QI47C28HP?ref_=wl_share&tag=phoenixcreeksupply-20"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-3 py-1 rounded-lg font-semibold bg-yellow-400 text-black hover:bg-yellow-500 transition"
-            >
-              Trail Pack starters
-            </a>
-            {/* (Stash button moved to header left with other buttons) */}
-          </nav>
-        </header>
+        <Header />
         <main>{children}</main>
   <Footer />
         {/* Vercel Analytics (client) */}
