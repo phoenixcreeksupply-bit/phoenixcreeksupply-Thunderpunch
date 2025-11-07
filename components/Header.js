@@ -16,14 +16,13 @@ export default function Header() {
         Basic Trail Pack
       </a>
       <nav className="space-x-4 flex items-center">
-        <a href="/about" className="text-white hover:text-yellow-400">About</a>
-        <a href="/digital-kits" className="text-white hover:text-yellow-400">Digital Kits</a>
+  <a href="/digital-kits" className="text-white hover:text-yellow-400 hover:underline">Digital Kits</a>
 
         {/* === Alternative Energy Dropdown (placed beside Digital Kits) === */}
         <div className="relative group inline-block">
           <button
             type="button"
-            className="inline-flex items-center space-x-1 text-white hover:text-amber-500 transition-colors"
+            className="inline-flex items-center space-x-1 text-white hover:text-amber-500 hover:underline transition-colors"
           >
             <span>Alternative Energy</span>
             <svg
