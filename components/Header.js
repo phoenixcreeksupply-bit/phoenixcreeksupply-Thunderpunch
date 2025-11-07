@@ -96,8 +96,7 @@ export default function Header() {
 
         <a href="/gear" className="text-white hover:text-yellow-400">Gear</a>
         <a href="/guides" className="text-white hover:text-yellow-400">Guides</a>
-        <a href="/monroes-specials" className="text-white hover:text-yellow-400">Monroe's Specials</a>
-        <MonroeMenu />
+  <MonroeMenu />
         {!hideContact && (
           <a href="/contact" className="text-white hover:text-yellow-400">Contact</a>
         )}
