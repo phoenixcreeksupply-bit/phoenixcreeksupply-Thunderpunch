@@ -339,9 +339,9 @@ const affiliates = [
       {
         label: 'Shop Georgia Boot',
         displayLabel: 'Shop Georgia Boot',
-        href: 'https://www.jdoqocy.com/click-101573160-15736465',
+        href: 'https://www.tkqlhce.com/click-101573160-16947863',
         primary: true,
-        pixel: 'https://www.ftjcfx.com/image-101573160-15736465'
+        pixel: 'https://www.tqlkg.com/image-101573160-16947863'
       },
       {
         label: 'New Arrivals',
