@@ -55,6 +55,7 @@ export default function HomePage() {
         </form>
 
         {/* Promo staging: only on the homepage. No folder supplied => render all active promos */}
+        {/* Promo staging: only on the homepage. No folder supplied => render all active promos */}
         <div className="w-full mt-8">
           <PromoStaging className="mx-auto max-w-3xl p-4" />
         </div>
