@@ -1,6 +1,7 @@
 
 // app/layout.js
 import '../styles/globals.css';
+import '../styles/globals.css';
 import TokenButton from '../components/TokenButton';
 import StashButton from '../components/StashButton';
 import MonroeMenu from '../components/MonroeMenu';
