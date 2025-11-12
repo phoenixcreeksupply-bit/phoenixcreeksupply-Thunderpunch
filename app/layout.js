@@ -155,7 +155,7 @@ export default function RootLayout({ children }) {
               rel="noopener noreferrer"
               className="px-3 py-1 rounded-lg font-semibold bg-yellow-400 text-black hover:bg-yellow-500 transition"
             >
-              Trail Pack starters
+              Trail Pack Starters
             </a>
             {/* (Stash button moved to header left with other buttons) */}
           </nav>
