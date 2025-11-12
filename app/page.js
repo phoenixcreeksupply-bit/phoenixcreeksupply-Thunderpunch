@@ -41,7 +41,7 @@ export default function HomePage() {
           <input
             type="email"
             name="email_address"
-            placeholder="Best Email address?"
+            placeholder="Best email address?"
             required
             className="flex-1 px-4 py-2 rounded-l-lg text-black"
             aria-label="Email address"
