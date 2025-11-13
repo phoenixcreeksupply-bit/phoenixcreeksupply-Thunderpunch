@@ -1,3 +1,45 @@
+import Link from 'next/link';
+
+export default function HolidayDropdown() {
+  return (
+    <div className="absolute right-0 mt-2 w-72 bg-neutral-900/95 text-sm text-gray-200 rounded-xl shadow-lg transition-opacity duration-200 z-50 backdrop-blur-md">
+      <ul className="divide-y divide-neutral-800">
+        <li>
+          <a
+            href="/monroes-specials"
+            className="block px-4 py-3 hover:bg-amber-700/40 rounded-t-xl"
+          >
+            Monroe's Specials — Limited Time
+          </a>
+        </li>
+        <li>
+          <a
+            href="/gear"
+            className="block px-4 py-3 hover:bg-amber-700/40"
+          >
+            Winter Tools & Boots
+          </a>
+        </li>
+        <li>
+          <a
+            href="/field-guides"
+            className="block px-4 py-3 hover:bg-amber-700/40"
+          >
+            Field Guides — Cold Weather Picks
+          </a>
+        </li>
+        <li>
+          <a
+            href="/blog"
+            className="block px-4 py-3 hover:bg-amber-700/40 rounded-b-xl"
+          >
+            Winter Drop Blog & Announcements
+          </a>
+        </li>
+      </ul>
+    </div>
+  );
+}
 // components/HolidayDropdown.jsx
 "use client";
 
