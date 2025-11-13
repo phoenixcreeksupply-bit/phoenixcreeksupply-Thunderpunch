@@ -1,9 +1,12 @@
 import { AFFILIATE_LINKS } from "/config/links";
 import MonroeMenu from "./MonroeMenu";
+import HolidayDropdown from "./HolidayDropdown";
+import { useState } from "react";
 
 export default function Header() {
   // Force-hide contact links for now (temporary override)
   const hideContact = true;
+  const [open, setOpen] = useState(false);
 
   return (
     <header className="flex justify-between items-center p-4 bg-black bg-opacity-50">
@@ -92,6 +95,26 @@ export default function Header() {
               </a>
             </li>
           </ul>
+        </div>
+        {/* Winter Drop (NEW) */}
+        <div
+          className="relative"
+          onMouseEnter={() => setOpen(true)}
+          onMouseLeave={() => setOpen(false)}
+        >
+          <button
+            className="
+            inline-flex items-center gap-2 rounded-full
+            border border-emerald-500/40 bg-slate-950/70
+            px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em]
+            text-emerald-100 hover:border-red-500/60 hover:text-emerald-50
+          "
+          >
+            Winter Drop
+            <span className="text-[10px] text-emerald-300/80">NEW</span>
+          </button>
+
+          {open && <HolidayDropdown />}
         </div>
   <a href="/gear" className="text-white hover:text-yellow-400">Gear</a>
   <a href="/guides" className="text-white hover:text-yellow-400">Guides</a>
