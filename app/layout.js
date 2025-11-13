@@ -5,6 +5,7 @@ import '../styles/globals.css';
 import TokenButton from '../components/TokenButton';
 import StashButton from '../components/StashButton';
 import MonroeMenu from '../components/MonroeMenu';
+import HolidayDropdown from '../components/HolidayDropdown';
 import Footer from '../components/Footer';
 import VercelAnalytics from '../components/VercelAnalytics';
 
@@ -138,6 +139,20 @@ export default function RootLayout({ children }) {
               Blog
             </a>
             */}
+            {/* Winter Drop (server-rendered): show HolidayDropdown on hover via CSS */}
+            <div className="relative group inline-block">
+              <button
+                type="button"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-slate-950/70 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-100 hover:border-red-500/60 hover:text-emerald-50"
+              >
+                Winter Drop
+                <span className="text-[10px] text-emerald-300/80 ml-2">NEW</span>
+              </button>
+
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                <HolidayDropdown />
+              </div>
+            </div>
             <a href="/gear" className="text-white hover:underline">
               Tools & Gear
             </a>
