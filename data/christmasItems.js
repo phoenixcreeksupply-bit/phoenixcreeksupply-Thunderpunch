@@ -17,7 +17,7 @@ export const christmasItems = [
   },
   {
     id: "heated-gloves-1",
-    name: "Electric Heated Gloves – 8500mAh",
+    name: "Electric Heated Socks – 8500mAh",
     tagline: "Serious battery-powered heat for long cold shifts.",
     image: "/images/christmas/heated-gloves-1.jpg",
     href: "https://amzn.to/3JZWkyf",
@@ -31,14 +31,14 @@ export const christmasItems = [
   },
   {
     id: "extremeheat-blanket",
-    name: "ExtremeHEAT Camping Blanket",
+    name: "ExtremeHEAT Camping Chair",
     tagline: "Water-resistant heated throw for camp, truck, or couch.",
     image: "/images/christmas/extremeheat-blanket.jpg",
     href: "https://amzn.to/47SHKkd",
   },
   {
     id: "winter-survival-bag",
-    name: "Winter Survival Sleeping Bag",
+    name: "Winter Vehicle Bag",
     tagline: "Emergency bivy-style bag built for brutal temps.",
     image: "/images/christmas/winter-survival-bag.jpg",
     href: "https://amzn.to/4hWSZwt",
@@ -59,14 +59,14 @@ export const christmasItems = [
   },
   {
     id: "heated-hoodie-store",
-    name: "Heated Gear Store Page",
-    tagline: "Browse a full lineup of heated hoodies & gear.",
+    name: "BlueTooth Stand",
+    tagline: "Browse a full lineup.",
     image: "/images/christmas/heated-store.jpg",
     href: "https://amzn.to/4nXz2Ho",
   },
   {
     id: "bt-headphones",
-    name: "Bluetooth Wireless Headphones",
+    name: "Bluetooth Wireless Beanie",
     tagline: "Comfy over-ears for shop work, gym, or long drives.",
     image: "/images/christmas/bt-headphones.jpg",
     href: "https://amzn.to/4oILtYI",
