@@ -4,7 +4,33 @@ export const metadata = { title: "Monroe's Specials | Phoenix Creek Supply" };
 // This page is intended to host Amazon SiteStripe links (affiliate links generated via Amazon's SiteStripe).
 // Replace the placeholder links below with the SiteStripe links you generate.
 
-import products from '../../../data/monroe-products.json';
+const products = [
+  {
+    title: 'Danner Men\'s Vicious 4.5" Construction Boot',
+    href: 'https://amzn.to/3WzWi2Y',
+  },
+  {
+    title: 'Snickers Workwear (Jacket)',
+    href: 'https://amzn.to/4oslQvi',
+    description: 'AllroundWork 37.5 Insulated Jacket (Black/Black) - Medium.'
+  },
+  {
+    title: 'Snickers Allround WorkPants',
+    href: 'https://amzn.to/47GTdDl',
+    description: 'AllroundWork Full Stretch Work Pants + Holster Pockets Black/Black'
+  },
+  {
+    title: 'Snickers Workwear (Insulated Pants)',
+    href: 'https://amzn.to/3JhTXGW',
+    description: 'Insulated Work Pants Black/Black.'
+  },
+  {
+    title: 'Snickers Workwear (Tool Vest)',
+    href: 'https://amzn.to/4oK0gBV',
+    price: '$12.99',
+    description: 'Allround Work Tool Vest, L Black.'
+  }
+];
 
 export default function Page() {
   return (
