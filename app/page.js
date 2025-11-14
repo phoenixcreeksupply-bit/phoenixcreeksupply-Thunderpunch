@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <main
       className="relative flex flex-col min-h-screen w-full bg-cover bg-center bg-no-repeat"
-  style={{ backgroundImage: "url('/images/Home-bg-fall2025.jpg')" }}
+  style={{ backgroundImage: "url('/images/brand/pcs-hero-creek.jpg')" }}
     >
   {/* reduced overlay so background image shows through */}
   <div className="absolute inset-0 bg-black/20" />
