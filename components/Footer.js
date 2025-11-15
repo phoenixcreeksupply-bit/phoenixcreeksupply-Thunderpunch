@@ -8,12 +8,18 @@ export default function Footer() {
           <nav className="flex gap-4">
             <a href="/about" className="hover:underline">About</a>
             <a href="/legal/affiliate">Affiliate</a>
-            <a href="/legal/privacy">Privacy</a>
+            <a href="/legal/privacy">Privacy (legacy)</a>
             {/* Contact link hidden temporarily */}
             <a href="/legal/terms">Terms</a>
             <a href="/legal/disclaimer">Disclaimer</a>
-            <a href="/legal/returns">Returns Policy</a>
+            <a href="/legal/returns">Returns Policy (legacy)</a>
             <a href="/legal/dmca">DMCA Notice</a>
+
+            {/* New policy pages (site-managed) */}
+            <a href="/policies/privacy" className="hover:underline">Privacy Policy</a>
+            <a href="/policies/shipping" className="hover:underline">Shipping Policy</a>
+            <a href="/policies/returns" className="hover:underline">Returns & Refunds</a>
+            <a href="/policies/affiliate-disclosure" className="hover:underline">Affiliate Disclosure</a>
           </nav>
         </div>
       </footer>
