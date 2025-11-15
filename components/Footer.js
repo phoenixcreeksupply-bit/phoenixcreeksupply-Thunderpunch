@@ -3,23 +3,22 @@ export default function Footer() {
   return (
     <>
       <footer className="mt-16 border-t border-white/10">
-        <div className="mx-auto max-w-6xl p-6 text-sm text-gray-300 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-          <p>© Phoenix Creek Supply. All rights reserved. 🜂 <a href="/legal/digital-goods" className="text-yellow-300 hover:underline">Digital Goods Policy</a></p>
-          <nav className="flex gap-4">
-            <a href="/about" className="hover:underline">About</a>
-            <a href="/legal/affiliate">Affiliate</a>
-            <a href="/legal/privacy">Privacy (legacy)</a>
-            {/* Contact link hidden temporarily */}
-            <a href="/legal/terms">Terms</a>
-            <a href="/legal/disclaimer">Disclaimer</a>
-            <a href="/legal/returns">Returns Policy (legacy)</a>
-            <a href="/legal/dmca">DMCA Notice</a>
+        <div className="mx-auto max-w-6xl p-6 space-y-2 text-sm text-gray-300">
+          <p>
+            © Phoenix Creek Supply. All rights reserved. 🜂{' '}
+            <a href="/legal/digital-goods" className="text-yellow-300 hover:underline">
+              Digital Goods Policy
+            </a>
+          </p>
+          <nav className="space-y-2 text-sm text-gray-300">
+            <a href="/about" className="hover:underline block">About</a>
+            <a href="/legal/affiliate" className="block">Affiliate</a>
 
             {/* New policy pages (site-managed) */}
-            <a href="/policies/privacy" className="hover:underline">Privacy Policy</a>
-            <a href="/policies/shipping" className="hover:underline">Shipping Policy</a>
-            <a href="/policies/returns" className="hover:underline">Returns & Refunds</a>
-            <a href="/policies/affiliate-disclosure" className="hover:underline">Affiliate Disclosure</a>
+            <a href="/policies/privacy" className="hover:underline block">Privacy Policy</a>
+            <a href="/policies/shipping" className="hover:underline block">Shipping Policy</a>
+            <a href="/policies/returns" className="hover:underline block">Returns & Refunds</a>
+            <a href="/policies/affiliate-disclosure" className="hover:underline block">Affiliate Disclosure</a>
           </nav>
         </div>
       </footer>

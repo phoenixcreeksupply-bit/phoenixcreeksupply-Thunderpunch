@@ -109,27 +109,20 @@ export default function PromoStaging({ folder, className = "mx-auto max-w-2xl p-
   if (!loaded) return null;
   if (!items || items.length === 0) return null;
 
-  // If there are multiple promos, render them in a responsive grid so they can appear
-  // side-by-side on medium+ screens and stack on small screens.
-  const isMulti = items.length > 1;
-
+  // Render promos in a uniform responsive grid layout.
   return (
     <div className={className}>
-      {isMulti ? (
-        <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 items-start">
-          {items.map((it) => (
-            <div key={it.folder} data-promo-folder={it.folder} className="">
-              <div dangerouslySetInnerHTML={{ __html: it.html }} />
-            </div>
-          ))}
-        </div>
-      ) : (
-        items.map((it) => (
-          <div key={it.folder} data-promo-folder={it.folder} className="mb-4">
-            <div dangerouslySetInnerHTML={{ __html: it.html }} />
-          </div>
-        ))
-      )}
+      <div
+        className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 ${className}`}
+      >
+        {items.map((it) => (
+          <div
+            key={it.folder}
+            className="promo-card bg-black/50 rounded-xl overflow-hidden shadow-md border border-white/10"
+            dangerouslySetInnerHTML={{ __html: it.html }}
+          />
+        ))}
+      </div>
     </div>
   );
 }
