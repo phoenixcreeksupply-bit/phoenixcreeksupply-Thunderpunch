@@ -13,12 +13,10 @@ export default function Footer() {
           <nav className="space-y-2 text-sm text-gray-300">
             <a href="/about" className="hover:underline block">About</a>
             <a href="/legal/affiliate" className="block">Affiliate</a>
-
-            {/* New policy pages (site-managed) */}
-            <a href="/policies/privacy" className="hover:underline block">Privacy Policy</a>
-            <a href="/policies/shipping" className="hover:underline block">Shipping Policy</a>
-            <a href="/policies/returns" className="hover:underline block">Returns & Refunds</a>
             <a href="/policies/affiliate-disclosure" className="hover:underline block">Affiliate Disclosure</a>
+            <a href="/policies/privacy" className="hover:underline block">Privacy Policy</a>
+            <a href="/policies/returns" className="hover:underline block">Returns & Refunds</a>
+            <a href="/policies/shipping" className="hover:underline block">Shipping Policy</a>
           </nav>
         </div>
       </footer>

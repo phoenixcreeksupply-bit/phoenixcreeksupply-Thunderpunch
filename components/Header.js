@@ -19,9 +19,7 @@ export default function Header() {
         Basic Trail Pack
       </a>
       <nav className="space-x-4 flex items-center">
-        <a href="/about" className="text-white hover:text-yellow-400">About</a>
-        <a href="/digital-kits" className="text-white hover:text-yellow-400">Digital Kits</a>
-        {/* === Alternative Energy Dropdown (placed beside Digital Kits) === */}
+        {/* === Alternative Energy Dropdown === */}
         <div className="relative group inline-block">
           <button
             type="button"
@@ -96,6 +94,12 @@ export default function Header() {
             </li>
           </ul>
         </div>
+        <a href="/about" className="text-white hover:text-yellow-400">About</a>
+        <a href="/digital-kits" className="text-white hover:text-yellow-400">Digital Kits</a>
+        <a href="/gear" className="text-white hover:text-yellow-400">Gear</a>
+        <a href="/guides" className="text-white hover:text-yellow-400">Guides</a>
+        <a href="/monroes-specials" className="text-white hover:text-yellow-400">Monroe's Specials</a>
+        <MonroeMenu />
         {/* Winter Drop (NEW) */}
         <div
           className="relative"
@@ -116,10 +120,6 @@ export default function Header() {
 
           {open && <HolidayDropdown />}
         </div>
-  <a href="/gear" className="text-white hover:text-yellow-400">Gear</a>
-  <a href="/guides" className="text-white hover:text-yellow-400">Guides</a>
-  <a href="/monroes-specials" className="text-white hover:text-yellow-400">Monroe's Specials</a>
-  <MonroeMenu />
         {!hideContact && (
           <a href="/contact" className="text-white hover:text-yellow-400">Contact</a>
         )}
