@@ -27,44 +27,29 @@ a { @apply underline underline-offset-4; }
 .btn-dark { @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-semibold bg-black/70 text-white hover:bg-black transition; }
 .card { @apply rounded-2xl bg-white/5 border border-white/10 p-4; }
 
-/* PromoStaging card styles */
-.promo-card {
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.promo-card img {
+/* Promo masonry (image-only, no tiles) */
+.promo-masonry img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Mobile adjustment for promo-card height */
-@media (max-width: 640px) {
-  .promo-card {
-    height: 260px;
-  }
-}
-
-/* === PROMO OVERLAY CLEANUP (Option A) === */
-.promo-card * {
-  background: transparent !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  border: none !important;
-}
-
-.promo-card a {
+  height: auto;
   display: block;
-  width: 100%;
-  height: 100%;
+  object-fit: cover;
+  border-radius: 0; /* Square, rugged */
 }
 
-.promo-card img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
+.promo-masonry {
+  margin-bottom: 1.25rem;
+}
+
+.promo-masonry * {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0;
+  box-shadow: none !important;
+}
+
+@media (max-width: 640px) {
+  .promo-masonry img {
+    width: 100%;
+  }
 }

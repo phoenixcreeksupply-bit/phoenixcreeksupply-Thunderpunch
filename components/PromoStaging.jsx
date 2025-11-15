@@ -109,16 +109,14 @@ export default function PromoStaging({ folder, className = "mx-auto max-w-2xl p-
   if (!loaded) return null;
   if (!items || items.length === 0) return null;
 
-  // Render promos in a uniform responsive grid layout.
+  // Render promos in a controlled masonry (CSS columns) layout — image-only, no tiles.
   return (
     <div className={className}>
-      <div
-        className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 ${className}`}
-      >
+      <div className={`columns-1 sm:columns-2 lg:columns-3 gap-5 mt-10 ${className}`}>
         {items.map((it) => (
           <div
             key={it.folder}
-            className="promo-card bg-black/50 rounded-xl overflow-hidden shadow-md border border-white/10"
+            className="promo-masonry mb-5 break-inside-avoid"
             dangerouslySetInnerHTML={{ __html: it.html }}
           />
         ))}
