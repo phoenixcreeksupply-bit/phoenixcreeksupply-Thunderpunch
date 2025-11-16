@@ -47,10 +47,9 @@ export default function AboutPage() {
       >
         <header className="text-center space-y-2">
           <h1 className="text-4xl font-bold tracking-wide uppercase">
-            About Monroe & The Mission
+            "Monroe’s mission, the PCS code, and the legacy behind Phoenix Creek Supply."
           </h1>
-          <p className="text-sm text-gray-400">Phoenix Creek Supply</p>
-        </header>
+          </header>
 
         {/* SECTION 1: The Man Who Should've Broken */}
         <article className="space-y-6">
