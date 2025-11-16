@@ -1,3 +1,4 @@
+"use client";
 import { AFFILIATE_LINKS } from "/config/links";
 import MonroeMenu from "./MonroeMenu";
 
