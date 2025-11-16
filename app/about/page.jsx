@@ -1,97 +1,143 @@
-import React from 'react';
+import React from "react";
 
 export const metadata = {
-  title: 'About | Phoenix Creek Supply',
-  description: 'About Monroe and the mission of Phoenix Creek Supply.',
+  title: "About | Phoenix Creek Supply",
+  description:
+    "Monroe’s mission, the PCS code, and the legacy behind Phoenix Creek Supply.",
 };
 
 export default function AboutPage() {
   return (
     <section
       className="about-monroe text-gray-100 py-16 px-8"
-      // Use the uploaded Monroe image as the about background
       style={{
         backgroundImage: "url('/images/Monroe1.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center center',
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
       }}
     >
       <div
         className="max-w-4xl mx-auto space-y-16 bg-transparent rounded-2xl p-8 shadow-2xl"
-        style={{ textShadow: '0 1px 3px rgba(0,0,0,0.9)' }}
+        style={{ textShadow: "0 1px 3px rgba(0,0,0,0.9)" }}
       >
-
         <header className="text-center space-y-2">
-          <h1 className="text-4xl font-bold tracking-wide uppercase">About Monroe & The Mission</h1>
+          <h1 className="text-4xl font-bold tracking-wide uppercase">
+            About Monroe & The Mission
+          </h1>
           <p className="text-sm text-gray-400">Phoenix Creek Supply</p>
         </header>
 
+        {/* SECTION 1: The Man Who Should've Broken */}
         <article className="space-y-6">
-          <h2 className="text-2xl font-semibold text-amber-400">The Man Who Should've Broken</h2>
+          <h2 className="text-2xl font-semibold text-amber-400">
+            The Man Who Should’ve Broken
+          </h2>
           <p>
-            He wasn't supposed to make it this far. By all accounts — life had thrown enough at Monroe to break most men twice over.
-            But pain, for him, was never the ending. It was the forge.
+            He wasn’t supposed to make it this far. By all reasonable accounts,
+            life had thrown enough at Monroe to break most men twice over. Loss,
+            betrayal, long nights without answers — the kind that make a man
+            question his path and his worth.
+          </p>
+          <p>Pain was never the end of his story. Pain was the forge.</p>
+          <p>
+            He learned early that discipline isn’t built in comfort — it’s carved
+            out of failure, sharpened by responsibility, and tempered by the
+            moments when no one is coming to rescue you. So he stopped waiting
+            for easier days. He built himself inside the storm instead.
           </p>
           <p>
-            He learned early that discipline isn't built in comfort — it's carved out of loss, failure, and long nights where no one's coming to help.
-            So he stopped waiting for easy days. He built his strength in the storm instead.
+            There was a moment when staying down would’ve been expected. Normal.
+            Accepted. But between the failures, the disappointment, the mud, and
+            the blood… he made the choice that defined everything:
+            <strong className="text-amber-300"> Get up anyway.</strong>
           </p>
           <p>
-            There was a time he should've stayed down — when every hit landed, every door closed, and even the ground felt like it wanted to keep him.
-            But somewhere between the failures, disappointments, the blood and the dirt, he made the decision that changed everything:
-            <strong className="text-amber-300">to get up anyway.</strong>
-            Even broken. Even when the world had already written him off.
-            He rose without applause, without promise, alone — because that's what real men do when they've got nothing left but fight.
+            He rose because real men don’t rise for applause. They rise because
+            their code demands it.
           </p>
         </article>
 
+        {/* SECTION 2: Forged From the Wild */}
         <article className="space-y-6">
-          <h2 className="text-2xl font-semibold text-amber-400">Forged From the Wild</h2>
+          <h2 className="text-2xl font-semibold text-amber-400">
+            Forged From the Wild
+          </h2>
           <p>
-            Monroe didn't create Phoenix Creek Supply to chase profit or trend.
-            He built it as a rebellion against the softening world — a reminder that grit still matters.
-            That a man can build something real with his hands, his word, and his will.
+            Phoenix Creek Supply wasn’t born from trends, influencers, or
+            corporate polish. It was born from a rebellion — a rebellion against
+            the softness swallowing the modern world.
           </p>
           <p>
-            Every tool, every map, every claim that bears the PCS mark stands for that principle:
-            <strong className="uppercase tracking-wide"> Earn it. Test it. Own it.</strong>
+            Monroe built PCS to stand as proof that grit still matters. That the
+            old code still works. That a man can build something real with his
+            hands, his word, and his intent.
+          </p>
+          <p>
+            Every tool, every map, every digital kit carrying the PCS mark stands
+            on one principle:
+            <strong className="uppercase tracking-wide">
+              {" "}
+              Earn it. Test it. Own it.
+            </strong>
           </p>
         </article>
 
+        {/* SECTION 3: For Men Who Walk Where the Signal Dies */}
         <article className="space-y-6">
-          <h2 className="text-2xl font-semibold text-amber-400">Where Signal Dies, Legacy Begins</h2>
+          <h2 className="text-2xl font-semibold text-amber-400">
+            For Men Who Walk Where the Signal Dies
+          </h2>
           <p>
-            He's the kind of man who walks where the signal dies — where there's no applause, no shortcuts, no excuses.
-            The kind who carries his name like a weight, not a slogan.
-            He doesn't talk about legacy; he <em>builds</em> it.
-            One ridge, one creek, one cut of earth at a time.
+            Phoenix Creek Supply is a home base for the self-led, the capable,
+            the disciplined — for the ones who carry their name like a weight,
+            not a slogan.
+          </p>
+          <p>
+            These men don’t look for shortcuts. They look for clarity. They don’t
+            wait for the world to hand them strength. They build it — one ridge,
+            one creek, one cut of earth at a time.
+          </p>
+          <p>
+            PCS isn’t noise; it’s signal. It isn’t hype; it’s proof. And it stands
+            quietly, confidently with one offer:
+            <em className="text-amber-200"> “Here’s what works. Use it well.”</em>
           </p>
         </article>
 
+        {/* SECTION 4: The Code Lives Here */}
         <article className="space-y-6">
-          <h2 className="text-2xl font-semibold text-amber-400">The Code Lives Here</h2>
-          <p>
-            Monroe isn't selling gear — he's sharing proof that the old code still works:
-          </p>
-          <ul className="list-disc list-inside">
-            <li>Patience IS a virtue.</li>
-            <li>Discipline your Mind.</li>
+          <h2 className="text-2xl font-semibold text-amber-400">
+            The Code Lives Here
+          </h2>
+          <p>Monroe didn’t create PCS to sell gear.</p>
+          <p>He built it to preserve a code — a way of living that’s dying in the modern world.</p>
+
+          <ul className="list-disc list-inside space-y-1">
+            <li>Patience is a virtue.</li>
+            <li>Discipline your mind.</li>
             <li>Work harder.</li>
             <li>Stand taller.</li>
             <li>Keep your word.</li>
             <li>Leave something worth remembering.</li>
           </ul>
+
           <p className="font-semibold">
-            Because some men break under pressure. <br />
-            <span className="text-amber-300">Monroe built a legacy out of it.</span>
+            Some men break under pressure. <br />
+            <span className="text-amber-300">
+              Monroe built a legacy out of it.
+            </span>
           </p>
         </article>
 
+        {/* FOOTER */}
         <footer className="text-center pt-10 border-t border-gray-700">
-          <p className="uppercase tracking-wide font-semibold">Phoenix Creek Supply</p>
-          <p className="italic text-gray-400">Lead yourself, Live with intent!!</p>
+          <p className="uppercase tracking-wide font-semibold">
+            Phoenix Creek Supply
+          </p>
+          <p className="italic text-gray-400">
+            Lead yourself, Live with intent.
+          </p>
         </footer>
-
       </div>
     </section>
   );
