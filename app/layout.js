@@ -18,8 +18,7 @@ export const metadata = {
     type: "website",
     url: "https://www.phoenixcreeksupply.com/",
     title: "Phoenix Creek Supply",
-    description:
-      "Gear, digital kits, and rugged tools for the modern stoic.",
+    description: "Lead Yourself. Live With Intent.",
     images: [
       {
         url: "/brand/pcs-og.png",
@@ -31,6 +30,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Phoenix Creek Supply",
+    description: "Lead Yourself. Live With Intent.",
     images: ["/brand/pcs-og.png"],
   },
 };
