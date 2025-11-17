@@ -47,8 +47,8 @@ async function main() {
 
   const tasks = [
     {
-      name: 'PCS-share',
-      input: path.join(repoRoot, 'public', 'brand', 'PCS-share.svg'),
+      name: 'pcs-og',
+      input: path.join(repoRoot, 'public', 'brand', 'pcs-og.png'),
       width: 1200,
       height: 630
     },

@@ -25,5 +25,5 @@ Start-Process .\snapshots
 
 Notes:
 
-- The `preview_image` referenced in `site-card.json` is a placeholder: `/brand/PCS-share.jpg`. If you want a social preview image in the repo, add the image to `public/brand/PCS-share.jpg` and commit.
+ - The `preview_image` referenced in `site-card.json` is the canonical social preview: `/brand/pcs-og.png`. If you want a social preview image in the repo, add the image to `public/brand/pcs-og.png` and commit.
 - Snapshots are static and do not reflect runtime admin overrides, build-time flags, or server-side logging that occur at runtime.

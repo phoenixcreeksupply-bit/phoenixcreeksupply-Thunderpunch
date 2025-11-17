@@ -339,9 +339,9 @@ const affiliates = [
       {
         label: 'Shop Georgia Boot',
         displayLabel: 'Shop Georgia Boot',
-        href: 'https://www.jdoqocy.com/click-101573160-15736465',
+        href: 'https://www.tkqlhce.com/click-101573160-16947863',
         primary: true,
-        pixel: 'https://www.ftjcfx.com/image-101573160-15736465'
+        pixel: 'https://www.tqlkg.com/image-101573160-16947863'
       },
       {
         label: 'New Arrivals',
@@ -572,6 +572,59 @@ affiliates.push({
         height: 280
       }
     }
+  ]
+});
+
+// Added affiliate: Crosman (Air Power)
+affiliates.push({
+  slug: 'crosman',
+  name: 'Crosman',
+  category: 'Airguns & Power',
+  description: 'Crosman — air rifles, pellets, and air power accessories.',
+  // Use the provided tracked click and impression pixel. The creative is hosted remotely.
+  href: 'https://www.tkqlhce.com/click-101573160-15183518',
+  logo: 'https://www.ftjcfx.com/image-101573160-15183518',
+  links: [
+    {
+      label: 'Shop Crosman Air Power',
+      displayLabel: 'Shop Crosman',
+      href: 'https://www.tkqlhce.com/click-101573160-15183518',
+      primary: true,
+      pixel: 'https://www.ftjcfx.com/image-101573160-15183518',
+      creative: {
+        source: 'remote',
+        url: 'https://www.ftjcfx.com/image-101573160-15183518',
+        width: 250,
+        height: 250
+      }
+    }
+      ,
+      {
+        label: 'Crosman Prospect PCP Pellet Rifle',
+        displayLabel: 'Crosman Prospect PCP Pellet Rifle',
+        href: 'https://www.kqzyfj.com/click-101573160-17020827',
+        // 1x1 impression pixel provided by the affiliate
+        pixel: 'https://www.ftjcfx.com/image-101573160-17020827',
+        creative: {
+          source: 'remote',
+          url: 'https://www.ftjcfx.com/image-101573160-17020827',
+          width: 1,
+          height: 1
+        }
+      }
+      ,
+      {
+        label: 'Crosman Vapor Max — Variable Pump Multi-Shot',
+        displayLabel: 'Crosman Vapor Max',
+        href: 'https://www.dpbolvw.net/click-101573160-17145705',
+        pixel: 'https://www.ftjcfx.com/image-101573160-17145705',
+        creative: {
+          source: 'remote',
+          url: 'https://www.ftjcfx.com/image-101573160-17145705',
+          width: 1,
+          height: 1
+        }
+      }
   ]
 });
 

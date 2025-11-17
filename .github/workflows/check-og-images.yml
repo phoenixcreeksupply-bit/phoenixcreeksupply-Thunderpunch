@@ -1,0 +1,23 @@
+name: Check brand metadata images
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  check-brand-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies (optional)
+        run: npm ci --silent || true
+
+      - name: Run brand image checker
+        run: node ./scripts/check-brand-images.js

@@ -1,32 +1,38 @@
 
 // app/layout.js
 import '../styles/globals.css';
+import '../styles/globals.css';
 import TokenButton from '../components/TokenButton';
 import StashButton from '../components/StashButton';
 import MonroeMenu from '../components/MonroeMenu';
+import WinterDrop from '../components/WinterDrop';
 import Footer from '../components/Footer';
 import VercelAnalytics from '../components/VercelAnalytics';
 import Header from '../components/Header';
 
 export const metadata = {
-  title: 'Phoenix Creek Supply | Lead Yourself, Live With Intent',
+  metadataBase: new URL('https://www.phoenixcreeksupply.com'),
+  title: "Phoenix Creek Supply | Rugged Tools for the Modern Stoic",
   description:
-    'Phoenix Creek Supply — rugged tools, digital kits, and gear built for those who lead themselves and live with intent.',
+    "Phoenix Creek Supply — digital kits, rugged prospecting gear, and stoic tools for those who lead themselves.",
   openGraph: {
-    type: 'website',
-    url: 'https://www.phoenixcreeksupply.com/',
-    title: 'Phoenix Creek Supply',
-    description: 'Lead Yourself. Live With Intent.',
+    type: "website",
+    url: "https://www.phoenixcreeksupply.com/",
+    title: "Phoenix Creek Supply",
+    description: "Lead Yourself. Live With Intent.",
     images: [
       {
-        url: 'https://www.phoenixcreeksupply.com/brand/PCS-share.jpg',
+        url: "/brand/pcs-og.png",
         width: 1200,
         height: 630,
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
+    title: "Phoenix Creek Supply",
+    description: "Lead Yourself. Live With Intent.",
+    images: ["/brand/pcs-og.png"],
   },
 };
 

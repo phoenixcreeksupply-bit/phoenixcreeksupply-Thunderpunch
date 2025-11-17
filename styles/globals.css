@@ -26,3 +26,30 @@ a { @apply underline underline-offset-4; }
 .btn { @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-semibold bg-white text-black hover:bg-gray-200 transition; }
 .btn-dark { @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-semibold bg-black/70 text-white hover:bg-black transition; }
 .card { @apply rounded-2xl bg-white/5 border border-white/10 p-4; }
+
+/* Promo masonry (image-only, no tiles) */
+.promo-masonry img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 0; /* Square, rugged */
+}
+
+.promo-masonry {
+  margin-bottom: 1.25rem;
+}
+
+.promo-masonry * {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0;
+  box-shadow: none !important;
+}
+
+@media (max-width: 640px) {
+  .promo-masonry img {
+    width: 100%;
+  }
+}

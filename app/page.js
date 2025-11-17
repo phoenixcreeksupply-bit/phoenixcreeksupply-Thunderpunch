@@ -11,14 +11,12 @@ export default function HomePage() {
       className="relative flex flex-col min-h-screen w-full bg-cover bg-center bg-no-repeat"
   style={{ backgroundImage: "url('/images/home-bg-nov25')" }}
     >
-  {/* reduced overlay so background image shows through */}
-  <div className="absolute inset-0 bg-black/20" />
-
-  {/* Header removed to avoid prerender error */}
+      {/* dark overlay so background image shows through */}
+      <div className="absolute inset-0 bg-black/20" />
 
       {/* Hero Section */}
-    <section className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6">
-        <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg">
+      <section className="relative z-10 text-center text-white drop-shadow-xl flex-1 flex flex-col items-center justify-center px-6">
+        <h1 className="text-5xl md:text-6xl drop-shadow-2xl font-semibold text-white">
           Phoenix Creek Supply
         </h1>
         <p className="mt-4 text-lg md:text-2xl text-gray-200">
@@ -41,7 +39,7 @@ export default function HomePage() {
           <input
             type="email"
             name="email_address"
-            placeholder="Best Email address?"
+            placeholder="Best email address?"
             required
             className="flex-1 px-4 py-2 rounded-l-lg text-black"
             aria-label="Email address"
@@ -50,10 +48,11 @@ export default function HomePage() {
             type="submit"
             className="px-4 py-2 bg-yellow-400 text-black font-semibold rounded-r-lg hover:bg-yellow-500 transition"
           >
-            Flagship Entry 
+            Submit. 
           </button>
         </form>
 
+        {/* Promo staging: only on the homepage. No folder supplied => render all active promos */}
         {/* Promo staging: only on the homepage. No folder supplied => render all active promos */}
         <div className="w-full mt-8">
           <PromoStaging className="mx-auto max-w-3xl p-4" />
