@@ -69,6 +69,30 @@ export default function PromoStaging({ folder, className = "mx-auto max-w-2xl p-
             try {
               const parser = new DOMParser();
               const doc = parser.parseFromString(item.html, 'text/html');
+
+              // Append UTMs to outbound links in promos (client-side) while preserving
+              // existing query params and affiliate tracking tags.
+              try {
+                const anchors = Array.from(doc.getElementsByTagName('a'));
+                for (const a of anchors) {
+                  const href = a.getAttribute('href') || '';
+                  try {
+                    const tmp = new URL(href, window.location.origin);
+                    if (tmp.origin !== window.location.origin && (tmp.protocol === 'http:' || tmp.protocol === 'https:')) {
+                      const params = tmp.searchParams;
+                      if (!params.has('utm_source')) params.append('utm_source', 'pcs');
+                      if (!params.has('utm_medium')) params.append('utm_medium', 'site');
+                      if (!params.has('utm_campaign')) params.append('utm_campaign', 'winter_drop_2025');
+                      a.setAttribute('href', tmp.toString());
+                    }
+                  } catch (e) {
+                    // leave href unchanged if URL parsing fails
+                  }
+                }
+              } catch (e) {
+                // ignore anchor processing errors
+              }
+
               const imgs = Array.from(doc.getElementsByTagName('img'));
               for (const img of imgs) {
                 const w = img.getAttribute('width');

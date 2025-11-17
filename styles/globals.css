@@ -18,6 +18,11 @@ body {
   background: none;
 }
 
+/* ConvertKit email input: keep placeholder styling unchanged, but show typed text in gold */
+.ck-email:not(:placeholder-shown) {
+  color: #FFD700;
+}
+
 /* Mobile browsers handle fixed backgrounds poorly — if you add a global fixed
    background in the future, consider changing attachment on small screens. */
 

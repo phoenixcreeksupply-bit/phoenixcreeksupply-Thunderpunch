@@ -41,7 +41,7 @@ export default function HomePage() {
             name="email_address"
             placeholder="Best email address?"
             required
-            className="flex-1 px-4 py-2 rounded-l-lg text-black"
+            className="flex-1 px-4 py-2 rounded-l-lg text-black ck-email"
             aria-label="Email address"
           />
           <button

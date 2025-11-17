@@ -1,6 +1,6 @@
 export default function TokenButton() {
   // Simple floating referral button — server-safe (no client-only logic)
-  const refUrl = "https://freebitco.in/?r=37252628";
+  const refUrl = "https://freebitco.in/?r=37252628&utm_source=pcs&utm_medium=site&utm_campaign=winter_drop_2025";
   // Prefer the full graphic if present, otherwise fallback to the icon
   const imgSrc = "/images/pcs-token.jpg";
 

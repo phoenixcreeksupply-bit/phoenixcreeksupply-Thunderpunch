@@ -88,7 +88,7 @@ export default function RootLayout({ children }) {
               <ul className="absolute left-0 mt-2 w-64 bg-neutral-900/95 text-sm text-gray-200 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50 backdrop-blur-md">
                 <li>
                   <a
-                    href="https://5539dkiatcvrixj8ycmtbn5u17.hop.clickbank.net"
+                    href="https://5539dkiatcvrixj8ycmtbn5u17.hop.clickbank.net?utm_source=pcs&utm_medium=site&utm_campaign=winter_drop_2025"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block px-4 py-2 hover:bg-amber-700/40 rounded-t-xl"
@@ -98,7 +98,7 @@ export default function RootLayout({ children }) {
                 </li>
                 <li>
                   <a
-                    href="https://03eeffwauivvcukl10r0zn2lbs.hop.clickbank.net"
+                    href="https://03eeffwauivvcukl10r0zn2lbs.hop.clickbank.net?utm_source=pcs&utm_medium=site&utm_campaign=winter_drop_2025"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block px-4 py-2 hover:bg-amber-700/40"
@@ -108,7 +108,7 @@ export default function RootLayout({ children }) {
                 </li>
                 <li>
                   <a
-                    href="https://636bfnt8sbmvizle3bgl61amfv.hop.clickbank.net"
+                    href="https://636bfnt8sbmvizle3bgl61amfv.hop.clickbank.net?utm_source=pcs&utm_medium=site&utm_campaign=winter_drop_2025"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block px-4 py-2 hover:bg-amber-700/40"
@@ -118,7 +118,7 @@ export default function RootLayout({ children }) {
                 </li>
                 <li>
                   <a
-                    href="https://cf2dbbrimbsifxkrrjd9fo9t3l.hop.clickbank.net"
+                    href="https://cf2dbbrimbsifxkrrjd9fo9t3l.hop.clickbank.net?utm_source=pcs&utm_medium=site&utm_campaign=winter_drop_2025"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block px-4 py-2 hover:bg-amber-700/40"
@@ -128,7 +128,7 @@ export default function RootLayout({ children }) {
                 </li>
                 <li>
                   <a
-                    href="https://66490ejipfprer7mz7kezc53ul.hop.clickbank.net"
+                    href="https://66490ejipfprer7mz7kezc53ul.hop.clickbank.net?utm_source=pcs&utm_medium=site&utm_campaign=winter_drop_2025"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block px-4 py-2 hover:bg-amber-700/40 rounded-b-xl"
@@ -149,7 +149,7 @@ export default function RootLayout({ children }) {
               Tools & Gear
             </a>
             <a
-              href="https://www.jdoqocy.com/click-101573160-15735849"
+              href="https://www.jdoqocy.com/click-101573160-15735849?utm_source=pcs&utm_medium=site&utm_campaign=winter_drop_2025"
               target="_blank"
               rel="noopener noreferrer sponsored"
               className="text-white hover:underline"
@@ -157,7 +157,7 @@ export default function RootLayout({ children }) {
               Audio Books
             </a>
             <a
-              href="https://www.amazon.com/hz/wishlist/ls/7Z7QI47C28HP?ref_=wl_share&tag=phoenixcreeksupply-20"
+              href="https://www.amazon.com/hz/wishlist/ls/7Z7QI47C28HP?ref_=wl_share&tag=phoenixcreeksupply-20&utm_source=pcs&utm_medium=site&utm_campaign=winter_drop_2025"
               target="_blank"
               rel="noopener noreferrer"
               className="px-3 py-1 rounded-lg font-semibold bg-yellow-400 text-black hover:bg-yellow-500 transition"

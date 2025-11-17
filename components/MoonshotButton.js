@@ -13,8 +13,23 @@ export default function MoonshotButton({ href }) {
       // ignore tracking errors
       console.error('tracking error', err);
     }
-    // open moonshot link in new tab
-    window.open(href, '_blank', 'noopener');
+    // open moonshot link in new tab (append UTM params for outbound tracking)
+    const final = appendUtm(href);
+    window.open(final, '_blank', 'noopener');
+  }
+
+  function appendUtm(raw) {
+    try {
+      const url = new URL(raw);
+      if (url.origin === window.location.origin) return raw;
+      const params = url.searchParams;
+      if (!params.has('utm_source')) params.append('utm_source', 'pcs');
+      if (!params.has('utm_medium')) params.append('utm_medium', 'site');
+      if (!params.has('utm_campaign')) params.append('utm_campaign', 'winter_drop_2025');
+      return url.toString();
+    } catch (e) {
+      return raw;
+    }
   }
 
   return (

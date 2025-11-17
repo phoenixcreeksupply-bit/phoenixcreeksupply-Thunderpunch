@@ -53,7 +53,7 @@ export default function Page() {
             <div className="mt-4 flex items-center justify-between">
               <span className="text-sm text-gray-400">{k.price}</span>
               <a 
-                href={k.href} 
+                href={appendUtm(k.href)} 
                 target="_blank" 
                 rel="nofollow sponsored noopener" 
                 className="btn"
@@ -68,4 +68,19 @@ export default function Page() {
       </div>
     </main>
   );
+}
+
+function appendUtm(raw) {
+  try {
+    // only process absolute http(s) links; leave relative/internal alone
+    if (!raw || (!raw.startsWith('http://') && !raw.startsWith('https://'))) return raw;
+    const url = new URL(raw);
+    const params = url.searchParams;
+    if (!params.has('utm_source')) params.append('utm_source', 'pcs');
+    if (!params.has('utm_medium')) params.append('utm_medium', 'site');
+    if (!params.has('utm_campaign')) params.append('utm_campaign', 'winter_drop_2025');
+    return url.toString();
+  } catch (e) {
+    return raw;
+  }
 }

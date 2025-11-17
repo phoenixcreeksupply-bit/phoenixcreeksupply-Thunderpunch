@@ -16,12 +16,12 @@ export default function StashButton({ href = 'https://freebitco.in/?r=37252628' 
       // ignore tracking errors
       console.error('stash tracking error', err);
     }
-    window.open(href, '_blank', 'noopener,noreferrer');
+    window.open(appendUtm(href), '_blank', 'noopener,noreferrer');
   }
 
   return (
     <a
-      href={href}
+      href={appendUtm(href)}
       onClick={handleClick}
       aria-label="Open Stash referral"
       rel="noopener noreferrer sponsored"
@@ -30,4 +30,18 @@ export default function StashButton({ href = 'https://freebitco.in/?r=37252628' 
       <img src="/images/COin2.jpg" alt="Stash" className="w-6 h-6 rounded-full" />
     </a>
   );
+}
+
+function appendUtm(raw) {
+  try {
+    const url = new URL(raw);
+    if (url.origin === window.location.origin) return raw;
+    const params = url.searchParams;
+    if (!params.has('utm_source')) params.append('utm_source', 'pcs');
+    if (!params.has('utm_medium')) params.append('utm_medium', 'site');
+    if (!params.has('utm_campaign')) params.append('utm_campaign', 'winter_drop_2025');
+    return url.toString();
+  } catch (e) {
+    return raw;
+  }
 }

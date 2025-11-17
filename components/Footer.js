@@ -22,10 +22,10 @@ export default function Footer() {
       </footer>
 
       {/* Bottom-right affiliate button - styled like the header Amazon button. Hidden unless NEXT_PUBLIC_SHOW_HOLIDAY_PROMO=true */}
-      {process.env.NEXT_PUBLIC_SHOW_HOLIDAY_PROMO === 'true' && (
+        {process.env.NEXT_PUBLIC_SHOW_HOLIDAY_PROMO === 'true' && (
         <div className="fixed bottom-4 right-4 z-50">
           <a
-            href="https://www.anrdoezrs.net/click-101573160-11985611?url=https%3A%2F%2Fwww.dhgate.com%2F"
+            href="https://www.anrdoezrs.net/click-101573160-11985611?url=https%3A%2F%2Fwww.dhgate.com%2F&utm_source=pcs&utm_medium=site&utm_campaign=winter_drop_2025"
             target="_blank"
             rel="noopener noreferrer sponsored"
             className="px-3 py-1 rounded-lg font-semibold bg-yellow-400 text-black hover:bg-yellow-500 transition"
