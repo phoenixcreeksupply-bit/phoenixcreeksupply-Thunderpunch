@@ -11,6 +11,15 @@ export default function Footer() {
             </a>
           </p>
           <nav className="space-y-2 text-sm text-gray-300">
+            {/* Non-link Contact tab with hover submenu (text-only) */}
+            <div className="group relative">
+              <div className="hover:underline block cursor-default">Contact</div>
+              <div className="absolute left-0 mt-1 w-56 rounded-md bg-black/85 text-sm text-gray-300 p-3 shadow-lg opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 z-50">
+                <div className="leading-relaxed">clarity@phoenixcreeksupply.com</div>
+                <div className="leading-relaxed mt-1">monroe@phoenixcreeksupply.com</div>
+                <div className="leading-relaxed mt-1">support@phoenixcreeksupply.com</div>
+              </div>
+            </div>
             <a href="/about" className="hover:underline block">About</a>
             <a href="/legal/affiliate" className="block">Affiliate</a>
             <a href="/policies/affiliate-disclosure" className="hover:underline block">Affiliate Disclosure</a>
