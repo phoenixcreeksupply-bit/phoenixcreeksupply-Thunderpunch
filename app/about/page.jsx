@@ -1,10 +1,35 @@
 import React from "react";
 
 export const metadata = {
+  metadataBase: new URL("https://www.phoenixcreeksupply.com"),
+
   title: "About | Phoenix Creek Supply",
   description:
     "Monroe’s mission, the PCS code, and the legacy behind Phoenix Creek Supply.",
+
+  openGraph: {
+    title: "About | Phoenix Creek Supply",
+    description:
+      "Monroe’s mission, the PCS code, and the legacy behind Phoenix Creek Supply.",
+    url: "https://www.phoenixcreeksupply.com/about",
+    siteName: "Phoenix Creek Supply",
+    images: [
+      {
+        url: "/brand/pcs-og.png",
+        width: 1200,
+        height: 630,
+        alt: "Phoenix Creek Supply — Lead Yourself, Live With Intent.",
+      },
+    ],
+    type: "website",
+  },
+
+  // Optional — silences "fb:app_id missing" warnings in validators
+  other: {
+    "fb:app_id": "0",
+  },
 };
+
 
 export default function AboutPage() {
   return (
@@ -22,10 +47,9 @@ export default function AboutPage() {
       >
         <header className="text-center space-y-2">
           <h1 className="text-4xl font-bold tracking-wide uppercase">
-            About Monroe & The Mission
+            "Monroe’s mission, the PCS code, and the legacy behind Phoenix Creek Supply."
           </h1>
-          <p className="text-sm text-gray-400">Phoenix Creek Supply</p>
-        </header>
+          </header>
 
         {/* SECTION 1: The Man Who Should've Broken */}
         <article className="space-y-6">
