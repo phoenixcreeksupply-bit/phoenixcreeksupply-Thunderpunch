@@ -15,7 +15,13 @@ const posts = [
       "A reflection on community, resilience, and the disappearance of real neighborly connection.",
     image: "/blog/creekside-header.jpg",
   },
-  // Future posts will be added here.
+  {
+    title: "ActionHeat 5V Heated Jacket Review",
+    slug: "actionheat-5v-heated-jacket-review",
+    description:
+      "A PCS review of ActionHeat's 5V Heated Softshell Jacket — real-world warmth and performance.",
+    image: "/blog/actionheat-header.jpg",
+  },
 ];
 
 export default function BlogIndex() {
