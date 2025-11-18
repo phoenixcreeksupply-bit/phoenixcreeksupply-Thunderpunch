@@ -1,22 +1,57 @@
+import Link from "next/link";
+import Image from "next/image";
 
-export const metadata = { title: "Journal | Phoenix Creek Supply" };
+export const metadata = {
+  title: "PCS Journal — Creekside Reflections & Field Notes",
+  description:
+    "The Phoenix Creek Supply Journal — stories, reflections, reviews, and field notes from Monroe and the PCS frontier.",
+};
 
 const posts = [
-  { title: "Creekside with Monroe", slug: "creekside-with-monroe", description: "A reflection on community, resilience, and the changing nature of connection." }
+  {
+    title: "Creekside with Monroe — Where Have All the Good Neighbors Gone?",
+    slug: "creekside-with-monroe",
+    description:
+      "A reflection on community, resilience, and the disappearance of real neighborly connection.",
+    image: "/blog/creekside-header.jpg",
+  },
+  // Future posts will be added here.
 ];
 
-export default function Page() {
+export default function BlogIndex() {
   return (
-    <div className="mx-auto max-w-6xl px-6 py-16">
-      <h1 className="text-4xl font-bold mb-8">Journal</h1>
-      <div className="grid gap-4">
-        {posts.map(p => (
-          <a key={p.slug} href={`/blog/${p.slug}`} className="card">
-            <h2 className="text-2xl font-semibold">{p.title}</h2>
-            <p className="text-sm text-gray-400 mt-2">{p.description}</p>
-          </a>
+    <main className="max-w-5xl mx-auto py-16 px-4 space-y-12">
+      <h1 className="text-4xl font-bold tracking-wide">The Journal</h1>
+      <p className="text-gray-300 text-lg">
+        Reflections, field notes, and stories from the Phoenix Creek frontier.
+      </p>
+
+      {/* CARD GRID */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {posts.map((post) => (
+          <Link
+            key={post.slug}
+            href={`/blog/${post.slug}`}
+            className="group block rounded-lg overflow-hidden bg-neutral-900 border border-neutral-800 hover:border-neutral-600 transition-all shadow-lg"
+          >
+            <div className="relative w-full h-56">
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                style={{ objectFit: "cover" }}
+                className="group-hover:opacity-90 transition"
+              />
+            </div>
+            <div className="p-5 space-y-2">
+              <h2 className="text-2xl font-bold group-hover:text-amber-400 transition">
+                {post.title}
+              </h2>
+              <p className="text-gray-300">{post.description}</p>
+            </div>
+          </Link>
         ))}
       </div>
-    </div>
+    </main>
   );
 }

@@ -138,11 +138,9 @@ export default function RootLayout({ children }) {
                 </li>
               </ul>
             </div>
-            {/* Blog link temporarily hidden until content is ready
             <a href="/blog" className="text-white hover:underline">
-              Blog
+              Journal
             </a>
-            */}
             {/* Winter Drop (server-rendered wrapper uses a small client component for accessibility and interaction) */}
             <WinterDrop />
             <a href="/gear" className="text-white hover:underline">
