@@ -75,18 +75,18 @@ export default function ActionHeatReview() {
         items={[
           {
             name: "ActionHeat 5V Heated Jacket (Men's Softshell)",
-            link: "YOUR_ACTIONHEAT_AFFILIATE_LINK_HERE",
+            link: "https://www.anrdoezrs.net/click-101573160-15380410?url=https%3A%2F%2Factionheat.com%2Fproducts%2Factionheat-5v-battery-heated-jacket-mens%3Fvariant%3D19690711810166",
             note: "Primary layer for cold-weather field days.",
           },
           {
-            name: "ActionHeat Spare 5V Battery Pack",
-            link: "YOUR_SPARE_BATTERY_AFFILIATE_LINK_HERE",
-            note: "Critical for all-day use.",
+            name: "ActionHeat 5V Men's Heated Base Layer Pants",
+            link: "https://www.anrdoezrs.net/click-101573160-15380410?url=https%3A%2F%2Factionheat.com%2Fproducts%2Factionheat-5v-base-layer-pants-mens",
+            note: "Critical for all-day.",
           },
           {
-            name: "Muck Arctic Sport Boots",
-            link: "YOUR_MUCK_AFFILIATE_LINK_HERE",
-            note: "Best lower-body pairing for deep cold.",
+            name: "Men's Arctic Sport Steel Toe Insulated Boot",
+            link: "https://www.dpbolvw.net/click-101573160-14338493?url=https%3A%2F%2Fmuckbootcompany.com%2Fproducts%2Faspstl%3F_pos%3D3%26_sid%3D05ba5cc51%26_ss%3Dr%26variant%3D50969710395674",
+            note: "Warm and Dry feet are Essential.",
           },
         ]}
       />
