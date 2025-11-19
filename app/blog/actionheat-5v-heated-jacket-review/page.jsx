@@ -84,6 +84,11 @@ export default function ActionHeatReview() {
             note: "Critical for all-day.",
           },
           {
+            name: "ActionHeat 5V 6000mAh Power Bank Kit",
+            link: "https://www.dpbolvw.net/click-101573160-15380410?url=https%3A%2F%2Factionheat.com%2Fproducts%2Factionheat-5v-power-bank-6000mah",
+            note: "Remember Me!!",
+          },
+          {
             name: "Men's Arctic Sport Steel Toe Insulated Boot",
             link: "https://www.dpbolvw.net/click-101573160-14338493?url=https%3A%2F%2Fmuckbootcompany.com%2Fproducts%2Faspstl%3F_pos%3D3%26_sid%3D05ba5cc51%26_ss%3Dr%26variant%3D50969710395674",
             note: "Warm and Dry feet are Essential.",
