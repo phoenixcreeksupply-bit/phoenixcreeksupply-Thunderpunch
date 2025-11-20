@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 // PromoStaging: two modes
 // - folder provided: fetch /promos/<folder>/active.html and render it
 // - no folder: fetch /promos/active.json and render every active folder found
-export default function PromoStaging({ folder, className = "mx-auto max-w-2xl p-4" }) {
+export default function PromoStaging({ folder, className = "mx-auto max-w-5xl p-4" }) {
   const [items, setItems] = useState([]); // array of { folder, html }
   const [loaded, setLoaded] = useState(false);
 
@@ -133,16 +133,30 @@ export default function PromoStaging({ folder, className = "mx-auto max-w-2xl p-
   if (!loaded) return null;
   if (!items || items.length === 0) return null;
 
-  // Render promos in a controlled masonry (CSS columns) layout — image-only, no tiles.
+  // Single-folder mode: render one promo as-is
+  if (folder) {
+    return (
+      <div className={className}>
+        <div dangerouslySetInnerHTML={{ __html: items[0].html }} />
+      </div>
+    );
+  }
+
+  // Multi-promo mode: 2-column masonry layout
   return (
     <div className={className}>
-      <div className={`columns-1 sm:columns-2 lg:columns-3 gap-5 mt-10 ${className}`}>
-        {items.map((it) => (
+      {/* Masonry-style columns: 1 on mobile, 2 on desktop */}
+      <div className="columns-1 md:columns-2 gap-4">
+        {items.map((item) => (
           <div
-            key={it.folder}
-            className="promo-masonry mb-5 break-inside-avoid"
-            dangerouslySetInnerHTML={{ __html: it.html }}
-          />
+            key={item.folder || item.id || item.html?.slice(0, 40)}
+            className="mb-4 break-inside-avoid"
+          >
+            {/* Render advertiser HTML exactly as provided */}
+            <div
+              dangerouslySetInnerHTML={{ __html: item.html }}
+            />
+          </div>
         ))}
       </div>
     </div>
