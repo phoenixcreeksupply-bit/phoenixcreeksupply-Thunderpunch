@@ -57,4 +57,50 @@ a { @apply underline underline-offset-4; }
   .promo-masonry img {
     width: 100%;
   }
+/* ------------------------------------------------------ */
+/* MOBILE HEADER FIX — Phoenix Creek Supply               */
+/* Ensures clean mobile wrapping, spacing, and alignment  */
+/* ------------------------------------------------------ */
+
+@media (max-width: 640px) {
+
+  /* Wrapper around the header links */
+  .monroe-nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+
+  /* Group containing all nav items */
+  .monroe-nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    width: 100%;
+  }
+
+  /* Each nav link */
+  .monroe-nav-links a {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    white-space: nowrap;
+  }
+
+  /* Badges like Trail / Pack Starters */
+  .monroe-badge {
+    white-space: nowrap;
+    padding: 3px 8px;
+    font-size: 0.8rem;
+  }
+
+  /* Winter Drop pill */
+  .winter-pill {
+    white-space: nowrap;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+  }
+}
 }
