@@ -1,7 +1,7 @@
 
 "use client";
 
-import GlobalMarketButton from "./GlobalMarketButton";
+import GlobalMarketButton from "./GlobalMarketButton.jsx";
 import { useState } from "react";
 
 export default function Footer() {
