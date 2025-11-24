@@ -3,6 +3,8 @@ import Image from "next/image";
 export default function BlogTemplate({ title, subtitle, headerImage, children }) {
   return (
     <main className="max-w-3xl mx-auto py-12 px-4 space-y-10">
+
+      {/* Header Image */}
       {headerImage && (
         <div className="w-full h-64 md:h-96 relative rounded-lg overflow-hidden shadow-lg">
           <Image
@@ -15,14 +17,21 @@ export default function BlogTemplate({ title, subtitle, headerImage, children })
         </div>
       )}
 
+      {/* Title + Subtitle */}
       <header className="space-y-2">
         <h1 className="text-4xl font-bold tracking-wide">{title}</h1>
-        {subtitle && <p className="text-xl text-gray-300">{subtitle}</p>}
+        {subtitle && (
+          <p className="text-xl text-gray-300 leading-snug">
+            {subtitle}
+          </p>
+        )}
       </header>
 
+      {/* Main Article Body */}
       <article className="prose prose-invert prose-lg max-w-none leading-relaxed">
         {children}
       </article>
+
     </main>
   );
 }
