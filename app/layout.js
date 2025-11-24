@@ -48,6 +48,8 @@ export default function RootLayout({ children }) {
   <script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=01d685267d651f03926454eb4973f82277048b2b"></script>
   {/* Also add a harmless meta tag with the plain auth token so it's plainly visible in the homepage HTML source */}
   <meta name="avantlink-authresponse" content="01d685267d651f03926454eb4973f82277048b2b" />
+    {/* Pinterest Domain Verification */}
+  <meta name="p:domain_verify" content="c2681aa5590f1c30fc98c8d35f9a78fd" />
       </head>
       <body>
         <header className="flex justify-between items-center p-4 bg-black/70">
