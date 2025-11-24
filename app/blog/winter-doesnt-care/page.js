@@ -2,7 +2,7 @@ import BlogTemplate from "../../../components/blog/BlogTemplate";
 
 export const metadata = {
   title: "Winter Doesn't Care — Prepare Anyway",
-  description: "A short reflection on capability, cold weather, and winter readiness.",
+  hero="/images/winter1.jpg",
 };
 
 export default function Page() {
