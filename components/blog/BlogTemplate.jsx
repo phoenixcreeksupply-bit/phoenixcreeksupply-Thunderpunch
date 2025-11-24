@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 
 export default function BlogTemplate({ title, subtitle, headerImage, children }) {
   return (
