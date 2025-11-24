@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import BlogTemplate from "../../../components/blog/BlogTemplate";
 
 export const metadata = {
