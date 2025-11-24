@@ -1,4 +1,4 @@
-
+import Image from "next/image";
 
 export default function BlogTemplate({ title, subtitle, headerImage, children }) {
   return (
@@ -18,6 +18,23 @@ export default function BlogTemplate({ title, subtitle, headerImage, children })
       )}
 
       {/* Title + Subtitle */}
+      <header className="space-y-2">
+        <h1 className="text-4xl font-bold tracking-wide">{title}</h1>
+        {subtitle && (
+          <p className="text-xl text-gray-300 leading-snug">
+            {subtitle}
+          </p>
+        )}
+      </header>
+
+      {/* Main Article Body */}
+      <article className="prose prose-invert prose-lg max-w-none leading-relaxed">
+        {children}
+      </article>
+
+    </main>
+  );
+}
       <header className="space-y-2">
         <h1 className="text-4xl font-bold tracking-wide">{title}</h1>
         {subtitle && (
