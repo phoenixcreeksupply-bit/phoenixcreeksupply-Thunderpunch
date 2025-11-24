@@ -62,6 +62,13 @@ export default function HomePage() {
         <p className="text-xs text-gray-400 mt-3">
           No spam. Unsubscribe anytime.
         </p>
+
+        {/* Hidden SEO links for crawlers */}
+        <div className="hidden">
+          <a href="/blog/black-friday-gear-worth-owning">Black Friday Gear Roundup</a>
+          <a href="/blog/winter-doesnt-care">Winter Prep Guide</a>
+          <a href="/blog/a-man-and-his-tools">Tools That Earn Their Keep</a>
+        </div>
         </section>
     </main>
   );

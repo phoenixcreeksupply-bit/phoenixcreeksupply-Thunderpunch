@@ -48,6 +48,23 @@ export default function RootLayout({ children }) {
   <script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=01d685267d651f03926454eb4973f82277048b2b"></script>
   {/* Also add a harmless meta tag with the plain auth token so it's plainly visible in the homepage HTML source */}
   <meta name="avantlink-authresponse" content="01d685267d651f03926454eb4973f82277048b2b" />
+  
+  {/* Blog Schema for SEO */}
+  <script type="application/ld+json">
+{`
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Creekside with Monroe",
+  "url": "https://www.phoenixcreeksupply.com/blog",
+  "description": "Reflections, grit, gear, and field notes from the Phoenix Creek frontier.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Phoenix Creek Supply"
+  }
+}
+`}
+  </script>
       </head>
       <body>
         <header className="flex justify-between items-center p-4 bg-black/70">
