@@ -2,12 +2,16 @@ import BlogTemplate from "../../../components/blog/BlogTemplate";
 
 export const metadata = {
   title: "Winter Doesn't Care — Prepare Anyway",
-  hero="/images/winter1.jpg",
+  description:
+    "A short reflection on capability, cold weather, and winter readiness.",
 };
 
 export default function Page() {
   return (
-    <BlogTemplate title="Winter Doesn't Care — Prepare Anyway">
+    <BlogTemplate
+      title="Winter Doesn't Care — Prepare Anyway"
+      headerImage="/images/winter1.jpg"
+    >
 {`
 The cold doesn't negotiate.
 
