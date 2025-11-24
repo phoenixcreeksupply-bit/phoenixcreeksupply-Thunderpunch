@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import BlogTemplate from "../../../components/blog/BlogTemplate";
 
 export const metadata = {
@@ -7,7 +9,10 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <BlogTemplate title="Winter Doesn't Care — Prepare Anyway">
+    <BlogTemplate
+      title="Winter Doesn't Care — Prepare Anyway"
+      headerImage="images/winter1.jpg"
+    >
 {`
 The cold doesn't negotiate.
 
