@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function BlogTemplate({ title, subtitle, headerImage, children }) {
   return (
     <main className="max-w-3xl mx-auto py-12 px-4 space-y-10">
