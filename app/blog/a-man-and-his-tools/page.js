@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <BlogTemplate 
       title="A Man and His Tools"
-      headerImage="/public/images/survival-kit-1.jpg"
+      headerImage="/blog/tools-header.jpg"
     >
 {`
 Every season exposes something — your gear, your routine, or your grit.
