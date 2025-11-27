@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <BlogTemplate
       title="Winter Doesn't Care — Prepare Anyway"
-      headerImage="images/winter1.jpg"
+      headerImage="/blog/winter-header.jpg"
     >
 {`
 The cold doesn't negotiate.

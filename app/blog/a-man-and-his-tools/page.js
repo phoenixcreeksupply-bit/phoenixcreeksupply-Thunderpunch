@@ -7,7 +7,10 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <BlogTemplate title="A Man and His Tools">
+    <BlogTemplate 
+      title="A Man and His Tools"
+      headerImage="/blog/tools-header.jpg"
+    >
 {`
 Every season exposes something — your gear, your routine, or your grit.
 

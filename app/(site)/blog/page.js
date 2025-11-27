@@ -27,21 +27,21 @@ const posts = [
     slug: "black-friday-gear-worth-owning",
     description:
       "Field-tested thoughts on Black Friday gear that actually matters.",
-    image: "/blog/creekside-header.jpg",
+    image: "/blog/black-friday-header.jpg",
   },
   {
     title: "Winter Doesn't Care — Prepare Anyway",
     slug: "winter-doesnt-care",
     description:
       "A short reflection on capability, cold weather, and winter readiness.",
-    image: "/blog/creekside-header.jpg",
+    image: "/blog/winter-header.jpg",
   },
   {
     title: "A Man and His Tools",
     slug: "a-man-and-his-tools",
     description:
       "A reflection on tools, seasons, and the PCS mindset.",
-    image: "/blog/creekside-header.jpg",
+    image: "/blog/tools-header.jpg",
   },
 ];
 

@@ -7,7 +7,10 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <BlogTemplate title="Black Friday Gear That Actually Earns Its Keep">
+    <BlogTemplate 
+      title="Black Friday Gear That Actually Earns Its Keep"
+      headerImage="/blog/black-friday-header.jpg"
+    >
 {`
 Most sales are noise — but a few pieces of kit rise above the pile.
 
