@@ -16,7 +16,6 @@ export default function HomePage() {
     className="object-cover object-center -z-10"
   />
 
-    >
       {/* dark overlay so background image shows through */}
       <div className="absolute inset-0 bg-black/20" />
 
