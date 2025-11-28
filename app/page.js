@@ -1,23 +1,31 @@
+import Image from "next/image";
 import MoonshotButton from "../components/MoonshotButton";
 import PromoStaging from "../components/PromoStaging";
 
-export const metadata = { title: "Phoenix Creek Supply" }; <script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=7d4cc152694097df60f864a9205b11db69b99323"></script>
+export const metadata = {
+  title: "Phoenix Creek Supply",
+};
+
+// Do NOT inline <script> tags here.
+// Use <Script> from next/script inside the component instead.
 
 const CK_FORM_ID = "8637121"; // ConvertKit Form ID
 
 export default function HomePage() {
   return (
     <main className="relative flex flex-col min-h-screen w-full">
-  <Image
-    src="/images/home-bg1225.jpg"
-    alt="Home Background"
-    fill
-    priority
-    className="object-cover object-center -z-10"
-  />
+
+      {/* Background Image */}
+      <Image
+        src="/images/home-bg1225.jpg"
+        alt="Home Background"
+        fill
+        priority
+        className="object-cover object-center -z-10"
+      />
 
       {/* dark overlay so background image shows through */}
-      <div className="absolute inset-0 bg-black/20" />
+      <div className="absolute inset-0 bg-black/20 -z-0" />
 
       {/* Hero Section */}
       <section className="relative z-10 text-center text-white drop-shadow-xl flex-1 flex flex-col items-center justify-center px-6">
@@ -30,10 +38,12 @@ export default function HomePage() {
 
         {/* Navigation */}
         <div className="mt-8 flex flex-wrap gap-4 justify-center">
-          {/* Client-side button that records analytics then opens Moonshot */}
           <MoonshotButton href="https://moonshot.com/ubgcjEpaApLjpMjyrP3GCcbpoehEcp47qUWSdTjmoon?ref=28SVAj" />
         </div>
-        <p className="mt-10 italic text-gray-300">“Discipline is forged from the fragments of failure”</p>
+
+        <p className="mt-10 italic text-gray-300">
+          “Discipline is forged from the fragments of failure”
+        </p>
 
         {/* ConvertKit Opt-In Form */}
         <form
@@ -53,12 +63,11 @@ export default function HomePage() {
             type="submit"
             className="px-4 py-2 bg-yellow-400 text-black font-semibold rounded-r-lg hover:bg-yellow-500 transition"
           >
-            Submit. 
+            Submit.
           </button>
         </form>
 
-        {/* Promo staging: only on the homepage. No folder supplied => render all active promos */}
-        {/* Promo staging: only on the homepage. No folder supplied => render all active promos */}
+        {/* Promo staging */}
         <div className="w-full mt-8">
           <PromoStaging className="mx-auto max-w-3xl p-4" />
         </div>
@@ -68,13 +77,15 @@ export default function HomePage() {
           No spam. Unsubscribe anytime.
         </p>
 
-        {/* Hidden SEO links for crawlers */}
+        {/* Hidden SEO links */}
         <div className="hidden">
           <a href="/blog/black-friday-gear-worth-owning">Black Friday Gear Roundup</a>
           <a href="/blog/winter-doesnt-care">Winter Prep Guide</a>
           <a href="/blog/a-man-and-his-tools">Tools That Earn Their Keep</a>
         </div>
-        </section>
+      </section>
+
     </main>
   );
 }
+
