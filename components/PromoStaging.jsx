@@ -62,7 +62,7 @@ export default function PromoStaging({ folder, className = "mx-auto max-w-5xl p-
           if (it) fetched.push(it);
         }
 
-        // Deduplicate 1x1 tracking pixels across promos so the same pixel URL doesn't fire multiple times
+        // Deduplicate tracking pixels + add UTM params
         try {
           const seen = new Set();
           const processed = fetched.map((item) => {
@@ -70,8 +70,7 @@ export default function PromoStaging({ folder, className = "mx-auto max-w-5xl p-
               const parser = new DOMParser();
               const doc = parser.parseFromString(item.html, 'text/html');
 
-              // Append UTMs to outbound links in promos (client-side) while preserving
-              // existing query params and affiliate tracking tags.
+              // Update affiliate hrefs
               try {
                 const anchors = Array.from(doc.getElementsByTagName('a'));
                 for (const a of anchors) {
@@ -86,19 +85,17 @@ export default function PromoStaging({ folder, className = "mx-auto max-w-5xl p-
                       a.setAttribute('href', tmp.toString());
                     }
                   } catch (e) {
-                    // leave href unchanged if URL parsing fails
+                    // invalid link, ignore
                   }
                 }
-              } catch (e) {
-                // ignore anchor processing errors
-              }
+              } catch (e) {}
 
+              // Remove duplicate 1x1 pixels
               const imgs = Array.from(doc.getElementsByTagName('img'));
               for (const img of imgs) {
                 const w = img.getAttribute('width');
                 const h = img.getAttribute('height');
                 const src = img.getAttribute('src') || '';
-                // treat as tracking pixel when width and height are 1 (common pattern)
                 if ((w === '1' && h === '1') || (w === '1' && !h) || (!w && h === '1')) {
                   if (seen.has(src)) {
                     img.remove();
@@ -107,6 +104,7 @@ export default function PromoStaging({ folder, className = "mx-auto max-w-5xl p-
                   }
                 }
               }
+
               return { folder: item.folder, html: doc.body.innerHTML };
             } catch (e) {
               return item;
@@ -137,23 +135,25 @@ export default function PromoStaging({ folder, className = "mx-auto max-w-5xl p-
   if (folder) {
     return (
       <div className={className}>
-        <div dangerouslySetInnerHTML={{ __html: items[0].html }} />
+        <div
+          className="pcs-promo"
+          dangerouslySetInnerHTML={{ __html: items[0].html }}
+        />
       </div>
     );
   }
 
-  // Multi-promo mode: 2-column masonry layout
+  // Multi-promo mode: masonry layout
   return (
     <div className={className}>
-      {/* Masonry-style columns: 1 on mobile, 2 on desktop */}
       <div className="columns-1 md:columns-2 gap-4">
         {items.map((item) => (
           <div
             key={item.folder || item.id || item.html?.slice(0, 40)}
             className="mb-4 break-inside-avoid"
           >
-            {/* Render advertiser HTML exactly as provided */}
             <div
+              className="pcs-promo"
               dangerouslySetInnerHTML={{ __html: item.html }}
             />
           </div>
@@ -162,3 +162,5 @@ export default function PromoStaging({ folder, className = "mx-auto max-w-5xl p-
     </div>
   );
 }
+
+

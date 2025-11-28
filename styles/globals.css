@@ -18,27 +18,26 @@ body {
   background: none;
 }
 
-/* ConvertKit email input: keep placeholder styling unchanged, but show typed text in gold */
+/* ConvertKit email input: gold once user types */
 .ck-email:not(:placeholder-shown) {
   color: #FFD700;
 }
 
-/* Mobile browsers handle fixed backgrounds poorly — if you add a global fixed
-   background in the future, consider changing attachment on small screens. */
-
-/* Your existing custom styles preserved */
+/* Default link + button styles */
 a { @apply underline underline-offset-4; }
 .btn { @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-semibold bg-white text-black hover:bg-gray-200 transition; }
 .btn-dark { @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-semibold bg-black/70 text-white hover:bg-black transition; }
 .card { @apply rounded-2xl bg-white/5 border border-white/10 p-4; }
 
-/* Promo masonry (image-only, no tiles) */
+/* ------------------------------------------------------ */
+/* PROMO MASONRY (existing PCS promo style)               */
+/* ------------------------------------------------------ */
 .promo-masonry img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
-  border-radius: 0; /* Square, rugged */
+  border-radius: 0;
 }
 
 .promo-masonry {
@@ -53,18 +52,26 @@ a { @apply underline underline-offset-4; }
   box-shadow: none !important;
 }
 
-@media (max-width: 640px) {
-  .promo-masonry img {
-    width: 100%;
-  }
+/* ------------------------------------------------------ */
+/* 🔥 SKYSCRAPER FIX — applies to all affiliate promos    */
+/* This prevents 120x600 or 160x600 banners from blowing  */
+/* out to full width and becoming pixelated.              */
+/* ------------------------------------------------------ */
+
+.pcs-promo img {
+  max-width: 300px !important;   /* Clean skyscraper width */
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 /* ------------------------------------------------------ */
 /* MOBILE HEADER FIX — Phoenix Creek Supply               */
-/* Ensures clean mobile wrapping, spacing, and alignment  */
 /* ------------------------------------------------------ */
-
 @media (max-width: 640px) {
 
-  /* Wrapper around the header links */
   .monroe-nav-wrapper {
     display: flex;
     flex-direction: column;
@@ -74,7 +81,6 @@ a { @apply underline underline-offset-4; }
     width: 100%;
   }
 
-  /* Group containing all nav items */
   .monroe-nav-links {
     display: flex;
     flex-wrap: wrap;
@@ -82,25 +88,21 @@ a { @apply underline underline-offset-4; }
     width: 100%;
   }
 
-  /* Each nav link */
   .monroe-nav-links a {
     font-size: 0.9rem;
     line-height: 1.1rem;
     white-space: nowrap;
   }
 
-  /* Badges like Trail / Pack Starters */
   .monroe-badge {
     white-space: nowrap;
     padding: 3px 8px;
     font-size: 0.8rem;
   }
 
-  /* Winter Drop pill */
   .winter-pill {
     white-space: nowrap;
     padding: 4px 10px;
     font-size: 0.8rem;
   }
-}
 }
