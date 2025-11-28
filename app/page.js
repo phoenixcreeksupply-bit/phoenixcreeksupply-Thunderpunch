@@ -7,9 +7,15 @@ const CK_FORM_ID = "8637121"; // ConvertKit Form ID
 
 export default function HomePage() {
   return (
-    <main
-      className="relative flex flex-col min-h-screen w-full bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/images/home-bg1225.jpg')" }}
+    <main className="relative flex flex-col min-h-screen w-full">
+  <Image
+    src="/images/home-bg1225.jpg"
+    alt="Home Background"
+    fill
+    priority
+    className="object-cover object-center -z-10"
+  />
+
     >
       {/* dark overlay so background image shows through */}
       <div className="absolute inset-0 bg-black/20" />
