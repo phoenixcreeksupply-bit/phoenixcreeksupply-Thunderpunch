@@ -13,7 +13,7 @@ export const metadata = {
     url: "https://www.phoenixcreeksupply.com/blog/fenix-8-pro-review",
     images: [
       {
-        url: "/images/blog-fenix8-header.jpg",
+        url: "/blog/watch.jpg",
         width: 1200,
         height: 630,
         alt: "Garmin Fenix 8 Pro GPS Watch",
@@ -169,7 +169,7 @@ It’s here to be:
 ## Where to Get It
 
 **Amazon (Fast Ship, Clean Price):**  
-https://amzn.to/4rpvMaA
+[Garmin Fēnix 8 Pro — Sapphire GPS Watch](https://amzn.to/4rpvMaA)
 
 It sells out every winter cycle — men who move with purpose tend to recognize the same tools.
 
