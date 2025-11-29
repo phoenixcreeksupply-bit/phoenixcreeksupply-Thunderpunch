@@ -27,7 +27,7 @@ const posts = [
     slug: "black-friday-gear-worth-owning",
     description:
       "Field-tested thoughts on Black Friday gear that actually matters.",
-    image: "/images/PCSlogo.jpg",
+    image: "/images/black-friday-header.jpg",
   },
   {
     title: "Winter Doesn't Care — Prepare Anyway",
