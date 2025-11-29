@@ -169,7 +169,7 @@ It’s here to be:
 ## Where to Get It
 
 **Amazon (Fast Ship, Clean Price):**  
-https://amzn.to/4rpvMaA
+"https://amzn.to/4rpvMaA"
 
 It sells out every winter cycle — men who move with purpose tend to recognize the same tools.
 
