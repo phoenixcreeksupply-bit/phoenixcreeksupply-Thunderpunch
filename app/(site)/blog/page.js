@@ -49,6 +49,14 @@ const posts = [
   description: "A rugged GPS watch for men who live outside the algorithm.",
   image: "/images/watch.jpg",
 },
+  {
+  title: "Jackery HomePower 3600 — PCS Field Breakdown",
+  slug: "jackery-homepower-3600",
+  description:
+    "A rugged power breakdown of Jackery’s HomePower 3600 — winter-ready capability and off-grid independence.",
+  image: "/images/jackery1225.jpg",
+},
+
 
 ];
 
