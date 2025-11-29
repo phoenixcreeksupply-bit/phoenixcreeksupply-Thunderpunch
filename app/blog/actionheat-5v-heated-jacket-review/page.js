@@ -28,7 +28,7 @@ export default function ActionHeatReview() {
     <BlogTemplate
       title="ActionHeat 5V Heated Jacket Review"
       subtitle="Field-Tested Warmth for Harsh Conditions"
-      headerImage="/images/axrio.jpg"   // FIXED
+      headerImage="blog/actionheat-og.jpg"   // FIXED
     >
       <p>
         The winters here are not forgiving. Wind cuts through layers, cold bites
