@@ -20,7 +20,7 @@ const posts = [
     slug: "actionheat-5v-heated-jacket-review",
     description:
       "A PCS review of ActionHeat's 5V Heated Softshell Jacket — real-world warmth and performance.",
-    image: "/images/axrio.jpg",
+    image: "/blog/actionheat-og.jpg",
   },
   {
     title: "Black Friday Gear That Actually Earns Its Keep",
