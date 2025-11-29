@@ -11,7 +11,7 @@ export const metadata = {
     url: "https://www.phoenixcreeksupply.com/blog/jackery-homepower-3600",
     images: [
       {
-        url: "/images/jackery/jackery-header.jpg",
+        url: "/blog/jackery1225.jpg",
         width: 1200,
         height: 630,
         alt: "Jackery HomePower 3600 Solar Generator Kit",
