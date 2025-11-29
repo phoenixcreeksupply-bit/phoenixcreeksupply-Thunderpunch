@@ -20,28 +20,28 @@ const posts = [
     slug: "actionheat-5v-heated-jacket-review",
     description:
       "A PCS review of ActionHeat's 5V Heated Softshell Jacket — real-world warmth and performance.",
-    image: "/blog/actionheat-header.jpg",
+    image: "/images/actionheat-header.jpg",
   },
   {
     title: "Black Friday Gear That Actually Earns Its Keep",
     slug: "black-friday-gear-worth-owning",
     description:
       "Field-tested thoughts on Black Friday gear that actually matters.",
-    image: "/blog/black-friday-header.jpg",
+    image: "/images/black-friday-header.jpg",
   },
   {
     title: "Winter Doesn't Care — Prepare Anyway",
     slug: "winter-doesnt-care",
     description:
       "A short reflection on capability, cold weather, and winter readiness.",
-    image: "/blog/winter-header.jpg",
+    image: "/images/winterdoesntcare.jpg",
   },
   {
     title: "A Man and His Tools",
     slug: "a-man-and-his-tools",
     description:
       "A reflection on tools, seasons, and the PCS mindset.",
-    image: "/blog/tools-header.jpg",
+    image: "/images/survival-kit-1.jpg",
   },
 ];
 
