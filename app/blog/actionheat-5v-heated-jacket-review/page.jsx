@@ -14,7 +14,7 @@ export const metadata = {
     url: "https://www.phoenixcreeksupply.com/blog/actionheat-5v-heated-jacket-review",
     images: [
       {
-        url: "/images/blog-actionheat-og.jpg",   // FIXED
+        url: "/images/axrio.jpg",   // FIXED
         width: 1200,
         height: 630,
         alt: "ActionHeat 5V Heated Jacket — Men's Softshell Review",
@@ -28,7 +28,7 @@ export default function ActionHeatReview() {
     <BlogTemplate
       title="ActionHeat 5V Heated Jacket Review"
       subtitle="Field-Tested Warmth for Harsh Conditions"
-      headerImage="/images/blog-actionheat-header.jpg"   // FIXED
+      headerImage="/images/axrio.jpg"   // FIXED
     >
       <p>
         The winters here are not forgiving. Wind cuts through layers, cold bites
