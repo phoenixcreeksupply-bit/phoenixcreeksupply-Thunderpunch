@@ -47,7 +47,7 @@ const posts = [
   title: "Garmin Fēnix 8 Pro — Built for Men Who Don’t Outsource Their Direction",
   slug: "fenix-8-pro-review",
   description: "A rugged GPS watch for men who live outside the algorithm.",
-  image: "/images/blog-fenix8-header.jpg",
+  image: "/images/watch.jpg",
 },
 
 ];
