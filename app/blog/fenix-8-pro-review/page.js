@@ -13,7 +13,7 @@ export const metadata = {
     url: "https://www.phoenixcreeksupply.com/blog/fenix-8-pro-review",
     images: [
       {
-        url: "/images/watch.jpg",
+        url: "/blog/watch.jpg",
         width: 1200,
         height: 630,
         alt: "Garmin Fenix 8 Pro GPS Watch",
