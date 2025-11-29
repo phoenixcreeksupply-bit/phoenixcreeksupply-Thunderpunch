@@ -168,12 +168,10 @@ It’s here to be:
 
 ## Where to Get It
 
-**Amazon (Fast Ship, Clean Price):**  
-[Garmin Fēnix 8 Pro — Sapphire GPS Watch](https://amzn.to/4rpvMaA)
+[**Garmin Fēnix 8 Pro — Sapphire GPS Watch**](https://amzn.to/4rpvMaA)
 
-It sells out every winter cycle — men who move with purpose tend to recognize the same tools.
+It sells out every winter cycle. Men who move with purpose tend to recognize the same tools — and they always grab these before winter gets serious.
 
-Pick one up before the season gets serious.
 
 `}
     </BlogTemplate>
