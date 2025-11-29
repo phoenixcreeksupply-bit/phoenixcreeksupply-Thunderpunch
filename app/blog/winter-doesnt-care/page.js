@@ -9,9 +9,9 @@ export default function Page() {
   return (
     <BlogTemplate
       title="Winter Doesn't Care — Prepare Anyway"
-      headerImage="images/winter-header.jpg"
+      headerImage="/images/winter-header.jpg"  // FIXED PATH
     >
-{`
+      {`
 The cold doesn't negotiate.
 
 You either respect the season, or you get humbled by it.
@@ -23,7 +23,8 @@ A few of the winter drops this week hit the mark for real-world use, not catalog
 If the temperature is about to test you, test your gear first.
 
 Stay sharp out there.
-`}
+      `}
     </BlogTemplate>
   );
 }
+
