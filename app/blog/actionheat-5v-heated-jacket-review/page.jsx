@@ -14,7 +14,7 @@ export const metadata = {
     url: "https://www.phoenixcreeksupply.com/blog/actionheat-5v-heated-jacket-review",
     images: [
       {
-        url: "/images/axrio.jpg",   // FIXED
+        url: "/blog/actionheat-og.jpg",   // FIXED
         width: 1200,
         height: 630,
         alt: "ActionHeat 5V Heated Jacket — Men's Softshell Review",
