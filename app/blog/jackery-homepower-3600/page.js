@@ -25,87 +25,139 @@ export default function Page() {
     <BlogTemplate
       title="Jackery HomePower 3600 — PCS Field Breakdown"
       subtitle="Backup Power for Men Who Don’t Wait on the Grid"
-      headerImage="/images/jackery/jackery-header.jpg"
+      headerImage="/images/jackery1225.jpg"
     >
-{`
-Winter exposes every weak link.
+      <p>
+        Winter exposes every weak link. When the temperature drops, the roads
+        glaze over, and the grid throws a tantrum, you're left with two choices:
+      </p>
 
-When the temperature drops, the roads glaze over, and the grid throws a tantrum, you're left with two choices:
+      <ul className="list-disc pl-6">
+        <li>Wait for help</li>
+        <li>or power your own life</li>
+      </ul>
 
-1. Wait for help  
-2. or power your own life
+      <p>
+        The <strong>Jackery HomePower 3600</strong> sits in that second
+        category — the self-reliance lane. It's not a gimmick generator or a
+        plastic toy pretending to be rugged. It's a power system built for men
+        who keep moving when everything else stalls.
+      </p>
 
-The **Jackery HomePower 3600** sits in that second category — the self-reliance lane. It's not a gimmick generator or a plastic toy pretending to be rugged. It's a power system built for men who keep moving when everything else stalls.
+      <hr className="my-6" />
 
----
+      <h2 className="text-2xl font-bold mb-3">What Makes It Worth a Look</h2>
 
-### **What Makes It Worth a Look**
+      <p>
+        There are cheaper systems and there are bigger ones, but the 3600 hits
+        the sweet spot most people miss:
+      </p>
 
-There are cheaper systems and there are bigger ones, but the 3600 hits the sweet spot most people miss:
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Enough wattage to run essentials</li>
+        <li>Expandable battery modules</li>
+        <li>Solar-ready out of the box</li>
+        <li>Wheels + carry handles (because mobility matters)</li>
+        <li>Safe, silent, and indoor-friendly</li>
+      </ul>
 
-- Enough wattage to run essentials  
-- Expandable battery modules  
-- Solar-ready out of the box  
-- Wheels + carry handles (because mobility matters)  
-- Safe, silent, and indoor-friendly  
+      <p>In a blackout, this isn’t comfort — it’s capability.</p>
 
-In a blackout, this isn’t comfort — it’s capability.
+      <hr className="my-6" />
 
----
+      <h2 className="text-2xl font-bold mb-3">Cold Weather Reality</h2>
 
-### **Cold Weather Reality**
+      <p>
+        Gas generators fail in cold snaps. Solar generators <em>don’t have to</em> if the
+        system is built right.
+      </p>
 
-Gas generators fail in cold snaps.  
-Solar generators *don’t have to* if the system is built right.
+      <p>The 3600 handles:</p>
 
-The 3600 handles:
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Sub-freezing temps</li>
+        <li>Winter charging cycles</li>
+        <li>High-draw tools</li>
+        <li>Emergency loads (heaters, fridges, medical devices)</li>
+      </ul>
 
-- Sub-freezing temps  
-- Winter charging cycles  
-- High-draw tools  
-- Emergency loads (heaters, fridges, medical devices)
+      <p>It gives you time, options, and control — not panic.</p>
 
-It gives you time, options, and control — not panic.
+      <hr className="my-6" />
 
----
+      <h2 className="text-2xl font-bold mb-3">
+        Where It Fits in a PCS Lifestyle
+      </h2>
 
-### **Where It Fits in a PCS Lifestyle**
+      <p>
+        If you spend real time outdoors, off-grid, or in rural Montana
+        conditions, you already know the truth:
+      </p>
 
-If you spend real time outdoors, off-grid, or in rural Montana conditions, you already know the truth:
+      <p>
+        <strong>Power is freedom.</strong>
+        <br />
+        And the man who generates his own never goes dark.
+      </p>
 
-**Power is freedom.**  
-And the man who generates his own never goes dark.
+      <p>This system fits:</p>
 
-This system fits:
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Cabin life</li>
+        <li>Winter outages</li>
+        <li>Truck camping</li>
+        <li>Remote workstations</li>
+        <li>Tool charging</li>
+        <li>Emergency heat</li>
+        <li>Field operations</li>
+      </ul>
 
-- Cabin life  
-- Winter outages  
-- Truck camping  
-- Remote workstations  
-- Tool charging  
-- Emergency heat  
-- Field operations  
+      <p>
+        It’s overkill for some — perfect for the ones who lead themselves.
+      </p>
 
-It’s overkill for some — perfect for the ones who lead themselves.
+      <hr className="my-6" />
 
----
+      <h2 className="text-2xl font-bold mb-3">PCS Verdict</h2>
 
-### **PCS Verdict**
+      <p>
+        The HomePower 3600 isn’t hype. It’s a field-ready tool for men who take
+        responsibility for their own momentum.
+      </p>
 
-The HomePower 3600 isn’t hype.  
-It’s a field-ready tool for men who take responsibility for their own momentum.
+      <p>If winter’s coming for you, gear up accordingly.</p>
 
-If winter’s coming for you, gear up accordingly.
+      <hr className="my-6" />
 
----
+      <h2 className="text-2xl font-bold mb-2">
+        PCS Affiliate Link (Supports the Mission)
+      </h2>
 
-## PCS Affiliate Link (Supports the Mission)
+      <p>
+        <a
+          href="https://www.anrdoezrs.net/click-101573160-17093989?url=https%3A%2F%2Fwww.jackery.com%2Fproducts%2Fjackery-solar-generator-homepower-3600-plus"
+          target="_blank"
+          rel="noopener sponsored"
+          className="text-amber-400 font-semibold hover:text-amber-300 transition"
+        >
+          Jackery HomePower 3600 Kit
+        </a>
+      </p>
 
-[**Jackery HomePower 3600 Kit**](https://www.anrdoezrs.net/click-101573160-17093989?url=https%3A%2F%2Fwww.jackery.com%2Fproducts%2Fjackery-solar-generator-homepower-3600-plus)
+      <p className="mt-2">
+        Pick one up before the season decides for you.
+      </p>
 
-Pick one up before the season decides for you.
+      <hr className="my-6" />
 
-`}
+      <p>
+        Stay capable.
+        <br />
+        Stay prepared.
+        <br />
+        Build what lasts.
+      </p>
     </BlogTemplate>
   );
 }
+
