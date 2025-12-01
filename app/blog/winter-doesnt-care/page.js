@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <BlogTemplate
       title="Winter Doesn't Care — Prepare Anyway"
-      headerImage="/images/winter-header.jpg"  // FIXED PATH
+      headerImage="images/winter-header.jpg"
     >
       {`
 The cold doesn't negotiate.
