@@ -27,7 +27,7 @@ export default function Page() {
     <BlogTemplate
       title="Garmin Fēnix 8 Pro — Built for Men Who Don’t Outsource Their Direction"
       subtitle="A rugged GPS watch for men who live outside the algorithm."
-      headerImage="/images/blog-fenix8-header.jpg"
+      headerImage="/images/watch.jpg"
     >
 {`
 Some gear is optional.  
