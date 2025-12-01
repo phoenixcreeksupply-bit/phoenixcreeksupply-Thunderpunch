@@ -99,12 +99,12 @@ If winter’s coming for you, gear up accordingly.
 
 ---
 
-### **PCS Affiliate Link (Supports the Mission)**
+## PCS Affiliate Link (Supports the Mission)
 
-**Jackery HomePower 3600 Kit**  
-https://www.anrdoezrs.net/click-101573160-17093989?url=https%3A%2F%2Fwww.jackery.com%2Fproducts%2Fjackery-solar-generator-homepower-3600-plus
+[**Jackery HomePower 3600 Kit**](https://www.anrdoezrs.net/click-101573160-17093989?url=https%3A%2F%2Fwww.jackery.com%2Fproducts%2Fjackery-solar-generator-homepower-3600-plus)
 
 Pick one up before the season decides for you.
+
 `}
     </BlogTemplate>
   );
