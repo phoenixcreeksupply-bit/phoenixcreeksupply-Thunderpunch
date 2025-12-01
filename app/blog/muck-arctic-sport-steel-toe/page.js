@@ -11,7 +11,7 @@ export const metadata = {
     url: "https://www.phoenixcreeksupply.com/blog/muck-arctic-sport-steel-toe",
     images: [
       {
-        url: "/images/muck-arctic-header.jpg",
+        url: "/blog/muck-arctic-header.jpg",
         width: 1200,
         height: 630,
         alt: "Muck Arctic Sport Steel Toe — PCS Field Review",
