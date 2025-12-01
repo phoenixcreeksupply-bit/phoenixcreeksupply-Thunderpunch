@@ -25,7 +25,7 @@ export default function Page() {
     <BlogTemplate
       title="Jackery HomePower 3600 — PCS Field Breakdown"
       subtitle="Backup Power for Men Who Don’t Wait on the Grid"
-      headerImage="/images/jackery/jackery-header.jpg"
+      headerImage="/images/jackery1225.jpg"
     >
 {`
 Winter exposes every weak link.
