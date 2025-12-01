@@ -74,7 +74,7 @@ you stay the man who keeps going.
 
 ## PCS Affiliate Link (Supports the Mission)
 
-[**Muck Arctic Sport Steel Toe — Men's Winter Work Boot**](https://www.anrdoezrs.net/click-101573160-15361272?url=https%3A%2F%2Fwww.muckbootcompany.com%2Fproducts%2FASPSTL%3Fsource%3Dgoogleps%26amp%3Bcountry%3DUS%26amp%3Bcurrency%3DUSD&cjsku=ASPSTLM8)
+**[Muck Arctic Sport Steel Toe — Men’s Winter Work Boot](https://www.anrdoezrs.net/click-101573160-15361272?url=https%3A%2F%2Fwww.muckbootcompany.com%2Fproducts%2FASPSTL%3Fsource%3Dgoogleps%26amp%3Bcountry%3DUS%26amp%3Bcurrency%3DUSD&cjsku=ASPSTLM8)**
 
 Pick up a pair before winter reminds you why they exist.
 
