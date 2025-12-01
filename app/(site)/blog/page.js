@@ -23,11 +23,11 @@ const posts = [
     image: "/blog/actionheat-og.jpg",
   },
   {
-    title: "Black Friday Gear That Actually Earns Its Keep",
-    slug: "black-friday-gear-worth-owning",
-    description:
-      "Field-tested thoughts on Black Friday gear that actually matters.",
-    image: "/images/black-friday-header.jpg",
+    title: "Muck Arctic Sport Steel Toe — The Winter Boot That Doesn’t Flinch",
+  slug: "muck-arctic-sport-steel-toe",
+  description:
+    "Field-tested breakdown of the Muck Arctic Sport ST — the winter work boot that refuses to quit.",
+  image: "/blog/muck-arctic-header.jpg",
   },
   {
     title: "Winter Doesn't Care — Prepare Anyway",
