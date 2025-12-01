@@ -27,63 +27,78 @@ export default function Page() {
       subtitle="If the job doesn’t cancel for weather, your boots better not either."
       headerImage="/images/muck-arctic-header.jpg"
     >
-      {`
-Some gear is optional. This isn’t.
+      <p>
+        Some gear is optional. This isn’t. When the ground is frozen, the wind is
+        bitter, and every step feels like walking on hostility — the Muck Arctic
+        Sport Steel Toe earns its place.
+      </p>
 
-When the ground is frozen, the wind is bitter, and every step feels like 
-walking on hostility — the Muck Arctic Sport Steel Toe earns its place.
+      <p>
+        I’ve run these in creek beds, frozen soil, sloppy thaw mud, and the kind
+        of winter mornings where breath freezes before it leaves your beard.
+        They hold. They don’t leak. And they don’t quit.
+      </p>
 
-I’ve run these in creek beds, frozen soil, sloppy thaw mud, and the 
-kind of winter mornings where breath freezes before it leaves your beard.
-They hold. They don’t leak. And they don’t quit.
+      <hr />
 
----
+      <h2 className="text-2xl font-bold mt-6 mb-2">Why This Boot Stands Apart</h2>
 
-## Why This Boot Stands Apart
+      <ul className="list-disc pl-6 space-y-2">
+        <li>
+          <strong>Warmth Without Bulk:</strong> The neoprene upper keeps heat in
+          without swelling your foot or creating pressure points.
+        </li>
+        <li>
+          <strong>Steel Toe That Doesn’t Punish You:</strong> Most steel toes
+          feel like anchors. This one disappears five minutes into the day.
+        </li>
+        <li>
+          <strong>Actually Waterproof:</strong> Not “water-resistant.” Not
+          “until it freezes.” These boots stay sealed in real field conditions.
+        </li>
+        <li>
+          <strong>Tread That Bites Back:</strong> Glacier mud, thaw slop,
+          gravel, ice — when everything else slides, these grip.
+        </li>
+      </ul>
 
-**1. Warmth Without Bulk**  
-The neoprene upper keeps heat in without turning your foot into a balloon.  
-Zero stiffness, zero hotspots.
+      <hr />
 
-**2. Steel Toe That Doesn’t Feel Like a Brick**  
-Most steel toes punish you.  
-This one disappears after five minutes.
+      <h2 className="text-2xl font-bold mt-6 mb-2">Field Reality Check</h2>
 
-**3. 100% Waterproof. Really Waterproof.**  
-Not “kind of waterproof” or “waterproof until it gets cold.”  
-Actual *field-grade* waterproofing.
+      <p>
+        The Arctic Sport ST isn’t pretty. It isn’t soft. And it damn sure isn’t
+        a fashion boot. It’s a tool — a winter survival tool. When temperatures
+        drop into the realm where excuses grow, these boots help you stay the
+        man who keeps going.
+      </p>
 
-**4. Tread That Bites Back**  
-Glacier mud, thaw slop, gravel, ice — it grips when everything else slides.
+      <hr />
 
----
+      <h2 className="text-2xl font-bold mt-6 mb-3">
+        PCS Affiliate Link (Supports the Mission)
+      </h2>
 
-## Field Reality Check
+      <p>
+        <a
+          href="https://www.anrdoezrs.net/click-101573160-15361272?url=https%3A%2F%2Fwww.muckbootcompany.com%2Fproducts%2FASPSTL%3Fsource%3Dgoogleps%26amp%3Bcountry%3DUS%26amp%3Bcurrency%3DUSD&cjsku=ASPSTLM8"
+          target="_blank"
+          rel="noopener sponsored"
+          className="text-amber-400 font-semibold hover:text-amber-300 transition"
+        >
+          Muck Arctic Sport Steel Toe — Men’s Winter Work Boot
+        </a>
+      </p>
 
-The Arctic Sport ST isn’t pretty.  
-It isn’t soft.  
-And it damn sure isn’t a fashion boot.
+      <p className="mt-2">Pick up a pair before winter reminds you why they exist.</p>
 
-It’s a tool.  
-A winter survival tool.
+      <hr />
 
-When temperatures drop into the realm where excuses grow — these boots help 
-you stay the man who keeps going.
-
----
-
-## PCS Affiliate Link (Supports the Mission)
-
-**[Muck Arctic Sport Steel Toe — Men’s Winter Work Boot](https://www.anrdoezrs.net/click-101573160-15361272?url=https%3A%2F%2Fwww.muckbootcompany.com%2Fproducts%2FASPSTL%3Fsource%3Dgoogleps%26amp%3Bcountry%3DUS%26amp%3Bcurrency%3DUSD&cjsku=ASPSTLM8)**
-
-Pick up a pair before winter reminds you why they exist.
-
----
-
-Stay capable.  
-Stay prepared.  
-Build what lasts.
-      `}
+      <p className="mt-6">
+        Stay capable. <br />
+        Stay prepared. <br />
+        Build what lasts.
+      </p>
     </BlogTemplate>
   );
 }
