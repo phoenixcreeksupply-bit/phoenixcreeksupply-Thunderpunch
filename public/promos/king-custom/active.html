@@ -1,28 +1,54 @@
-// components/promos/KingCyberMonday.jsx
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kings Promo</title>
 
-export default function KingCyberMonday() {
-  return (
-    <div className="promo-masonry mb-5">
-      <a
-        href="https://www.anrdoezrs.net/click-101573160-15785642?url=https%3A%2F%2Fkingscamo.com%2Fpages%2Fkings-holiday-specials"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="/images/king-cstm.jpg"
-          alt="Kings Camo — 25% Off Sitewide"
-          className="w-full h-auto rounded-lg shadow-md"
-        />
-      </a>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    .promo-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    img.promo-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
 
-      {/* CJ tracking pixel */}
+  <div class="promo-wrapper">
+    <a
+      href="https://www.anrdoezrs.net/click-101573160-15785642?url=https%3A%2F%2Fkingscamo.com%2Fpages%2Fkings-holiday-specials"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <img
-        src="https://www.lduhtrp.net/image-101573160-15785642"
-        width="1"
-        height="1"
-        alt=""
-        style={{ display: "none" }}
+        src="/images/king-cstm.jpg"
+        alt="Kings — 25% Off Sitewide"
+        class="promo-img"
       />
-    </div>
-  );
-}
+    </a>
+
+    <!-- CJ Tracking Pixel -->
+    <img
+      src="https://www.lduhtrp.net/image-101573160-15785642"
+      width="1"
+      height="1"
+      alt=""
+      style="display:none;"
+    />
+  </div>
+
+</body>
+</html>
+
