@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react";
 
-// PromoStaging: two modes
-// - folder provided: fetch /promos/<folder>/active.html and render it
-// - no folder: fetch /promos/active.json and render every active folder found
+// PromoStaging Component
+// - folder mode: fetch only /promos/<folder>/active.html
+// - auto mode: fetch list, then each active.html
+// - cleaned HTML parser with full IMG integrity preservation
 export default function PromoStaging({ folder, className = "mx-auto max-w-5xl p-4" }) {
-  const [items, setItems] = useState([]); // array of { folder, html }
+  const [items, setItems] = useState([]);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -18,103 +19,86 @@ export default function PromoStaging({ folder, className = "mx-auto max-w-5xl p-
         if (!res.ok) return null;
         const text = await res.text();
         return { folder: f, html: text };
-      } catch (e) {
+      } catch {
         return null;
       }
     }
 
     async function run() {
+      // --- Single-folder mode ---
       if (folder) {
-        const single = await fetchOne(folder);
+        const file = await fetchOne(folder);
         if (!cancelled) {
-          setItems(single ? [single] : []);
+          setItems(file ? [file] : []);
           setLoaded(true);
         }
         return;
       }
 
-      // No folder specified: fetch promo folder list from readonly API and then fetch each active file
+      // --- Auto mode ---
       try {
-        const r = await fetch('/api/promos/folders', { cache: 'no-store' });
-        if (!r.ok) {
-          // fallback to the old active.json if the API is unavailable
-          const fallback = await fetch('/promos/active.json', { cache: 'no-store' }).catch(() => null);
-          if (!fallback || !fallback.ok) {
-            if (!cancelled) setItems([]);
-            return;
+        const r = await fetch("/api/promos/folders", { cache: "no-store" });
+
+        let folders = [];
+        if (r.ok) {
+          const json = await r.json();
+          folders = json.folders || [];
+        } else {
+          // fallback to old active.json
+          const fb = await fetch("/promos/active.json", { cache: "no-store" });
+          if (fb.ok) {
+            const jj = await fb.json();
+            folders = jj.active || [];
           }
-          const fj = await fallback.json();
-          const active = fj.active || [];
-          const fetched = [];
-          for (const f of active) {
-            const it = await fetchOne(f);
-            if (it) fetched.push(it);
-          }
-          if (!cancelled) setItems(fetched);
-          return;
         }
 
-        const json = await r.json();
-        const active = json.folders || [];
         const fetched = [];
-        for (const f of active) {
+        for (const f of folders) {
           const it = await fetchOne(f);
           if (it) fetched.push(it);
         }
 
-        // Deduplicate tracking pixels + add UTM params
-        try {
-          const seen = new Set();
-          const processed = fetched.map((item) => {
-            try {
-              const parser = new DOMParser();
-              const doc = parser.parseFromString(item.html, 'text/html');
+        // ==========================
+        // 🔥 GLOBAL PATCH APPLIED
+        // ==========================
+        const seenPixels = new Set();
 
-              // Update affiliate hrefs
-              try {
-                const anchors = Array.from(doc.getElementsByTagName('a'));
-                for (const a of anchors) {
-                  const href = a.getAttribute('href') || '';
-                  try {
-                    const tmp = new URL(href, window.location.origin);
-                    if (tmp.origin !== window.location.origin && (tmp.protocol === 'http:' || tmp.protocol === 'https:')) {
-                      const params = tmp.searchParams;
-                      if (!params.has('utm_source')) params.append('utm_source', 'pcs');
-                      if (!params.has('utm_medium')) params.append('utm_medium', 'site');
-                      if (!params.has('utm_campaign')) params.append('utm_campaign', 'winter_drop_2025');
-                      a.setAttribute('href', tmp.toString());
-                    }
-                  } catch (e) {
-                    // invalid link, ignore
-                  }
-                }
-              } catch (e) {}
+        const cleaned = fetched.map((item) => {
+          try {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(item.html, "text/html");
 
-              // Remove duplicate 1x1 pixels
-              const imgs = Array.from(doc.getElementsByTagName('img'));
-              for (const img of imgs) {
-                const w = img.getAttribute('width');
-                const h = img.getAttribute('height');
-                const src = img.getAttribute('src') || '';
-                if ((w === '1' && h === '1') || (w === '1' && !h) || (!w && h === '1')) {
-                  if (seen.has(src)) {
-                    img.remove();
-                  } else {
-                    seen.add(src);
-                  }
+            // Preserve EXACT promo HTML except:
+            // - Dedupe 1x1 tracking pixels
+            // - DO NOT touch, strip, or rewrite normal <img> tags
+            const imgs = Array.from(doc.getElementsByTagName("img"));
+            imgs.forEach((img) => {
+              const w = img.getAttribute("width");
+              const h = img.getAttribute("height");
+              const src = img.getAttribute("src") || "";
+
+              const isPixel =
+                (w === "1" && h === "1") ||
+                (w === "1" && !h) ||
+                (!w && h === "1");
+
+              if (isPixel) {
+                if (seenPixels.has(src)) {
+                  img.remove(); // block duplicates
+                } else {
+                  seenPixels.add(src); // allow first one only
                 }
               }
+            });
 
-              return { folder: item.folder, html: doc.body.innerHTML };
-            } catch (e) {
-              return item;
-            }
-          });
-          if (!cancelled) setItems(processed);
-        } catch (e) {
-          if (!cancelled) setItems(fetched);
-        }
-      } catch (e) {
+            return { folder: item.folder, html: doc.body.innerHTML };
+          } catch (err) {
+            return item;
+          }
+        });
+
+        if (!cancelled) setItems(cleaned);
+      } catch {
         if (!cancelled) setItems([]);
       } finally {
         if (!cancelled) setLoaded(true);
@@ -122,40 +106,31 @@ export default function PromoStaging({ folder, className = "mx-auto max-w-5xl p-
     }
 
     run();
-
-    return () => {
-      cancelled = true;
-    };
+    return () => (cancelled = true);
   }, [folder]);
 
-  if (!loaded) return null;
-  if (!items || items.length === 0) return null;
+  // ---- Render ----
+  if (!loaded || items.length === 0) return null;
 
-  // Single-folder mode: render one promo as-is
+  // Single promo
   if (folder) {
     return (
       <div className={className}>
-        <div
-          className="pcs-promo"
-          dangerouslySetInnerHTML={{ __html: items[0].html }}
-        />
+        <div dangerouslySetInnerHTML={{ __html: items[0].html }} />
       </div>
     );
   }
 
-  // Multi-promo mode: masonry layout
+  // Multiple promos (2-column masonry)
   return (
     <div className={className}>
       <div className="columns-1 md:columns-2 gap-4">
-        {items.map((item) => (
+        {items.map((it) => (
           <div
-            key={item.folder || item.id || item.html?.slice(0, 40)}
+            key={it.folder || it.html.slice(0, 40)}
             className="mb-4 break-inside-avoid"
           >
-            <div
-              className="pcs-promo"
-              dangerouslySetInnerHTML={{ __html: item.html }}
-            />
+            <div dangerouslySetInnerHTML={{ __html: it.html }} />
           </div>
         ))}
       </div>
