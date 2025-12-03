@@ -70,6 +70,9 @@ export default function HomePage() {
         <p className="text-xs text-gray-400 mt-3">
           No spam. Unsubscribe anytime.
         </p>
+        <p class="pcs-disclosure">
+          As an Amazon/CJ affiliate, we may earn from qualifying purchases—at no extra cost to you.
+        </p>
 
         <div className="hidden">
           <a href="/blog/black-friday-gear-worth-owning">Black Friday Gear Roundup</a>
