@@ -188,8 +188,11 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
   <Footer />
         {/* Vercel Analytics (client) */}
-        <VercelAnalytics />
-      </body>
-    </html>
+        <VercelAnalytics /></div>
+    <p class="pcs-disclosure">
+      As an Amazon/CJ affiliate, we may earn from qualifying purchases—at no extra cost to you.
+    </p>
+  </body>
+</html>
   );
 }
