@@ -22,7 +22,7 @@ export default function MonroeMenu() {
         aria-haspopup="true"
         className="inline-flex items-center px-1 py-0 bg-transparent"
       >
-  <img src="/images/COin2.jpg" alt="Monroe's specials" className="h-8 w-8 rounded-full border" />
+  <img src="/images/COin2.png" alt="Monroe's specials" className="h-8 w-8 rounded-full border" />
       </button>
 
       {open && (
