@@ -22,7 +22,6 @@ const kits = [
     description: "Checklist, field notes, and tool picks.", 
     price: "$20",
     href: "https://phoenixcreeksupply.gumroad.com/l/pqrul"
-  }
   },
   { 
     title: "OMAD Power Plan", 
