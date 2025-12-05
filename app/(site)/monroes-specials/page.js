@@ -27,7 +27,6 @@ const products = [
   {
     title: 'Snickers Workwear (Tool Vest)',
     href: 'https://amzn.to/4oK0gBV',
-    price: '$12.99',
     description: 'Allround Work Tool Vest, L Black.'
   }
 ];
