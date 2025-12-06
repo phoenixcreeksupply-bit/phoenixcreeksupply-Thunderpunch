@@ -1,5 +1,5 @@
-// app/blog/winter-gear-guide-2025/page.jsx
-import Link from "next/link";
+import BlogTemplate from "../../../components/blog/BlogTemplate";
+
 
 export const metadata = {
   title: "Winter Gear Guide 2025 | Phoenix Creek Supply",
