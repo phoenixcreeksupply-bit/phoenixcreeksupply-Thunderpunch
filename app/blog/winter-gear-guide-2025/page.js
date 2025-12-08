@@ -14,7 +14,7 @@ export default function WinterGearGuide2025Page() {
       {/* HERO IMAGE */}
       <div className="mb-10">
         <Image
-          src="/images/winter-gear-hero.jpg"
+          src="/images/wintergear2025.jpg"
           alt="Winter gear layout for Phoenix Creek Supply guide"
           width={1600}
           height={1000}
