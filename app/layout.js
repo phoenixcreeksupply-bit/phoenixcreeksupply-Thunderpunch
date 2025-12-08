@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
         */}
     {/* Plain HTML comment with the auth token so verifiers that fetch raw HTML can see it easily */}
     {/* Visible in page source: <!-- AvantLink authResponse: 01d685267d651f03926454eb4973f82277048b2b --> */}
-  <script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=01d685267d651f03926454eb4973f82277048b2b"></script>
+  <script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=ee979378c7cd621b9217cfd689806c09f17f6797"></script>
   {/* Also add a harmless meta tag with the plain auth token so it's plainly visible in the homepage HTML source */}
   <meta name="avantlink-authresponse" content="01d685267d651f03926454eb4973f82277048b2b" />
   
