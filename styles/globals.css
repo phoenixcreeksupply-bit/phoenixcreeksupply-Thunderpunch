@@ -106,3 +106,20 @@ a { @apply underline underline-offset-4; }
     font-size: 0.8rem;
   }
 }
+
+/* ------------------------------------------------------ */
+/* BLOG CONTENT LINK STYLES                               */
+/* Only applies to links inside blog post content         */
+/* ------------------------------------------------------ */
+.prose.blog-content a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #FACC15;                    /* Tailwind yellow-300 */
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.prose.blog-content a:hover {
+  color: #fde047;                    /* brighter yellow */
+  opacity: 0.85;
+  text-decoration: none;
+}

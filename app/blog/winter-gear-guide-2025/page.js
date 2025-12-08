@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function WinterGearGuide2025Page() {
   return (
-    <main className="mx-auto max-w-3xl px-4 py-12 prose prose-invert prose-headings:font-semibold prose-a:text-yellow-300">
+    <main className="blog-content mx-auto max-w-3xl px-4 py-12 prose prose-invert prose-headings:font-semibold prose-a:text-yellow-300">
       <p className="text-sm uppercase tracking-[0.2em] text-gray-400 mb-2">
         Winter · Field Guide
       </p>

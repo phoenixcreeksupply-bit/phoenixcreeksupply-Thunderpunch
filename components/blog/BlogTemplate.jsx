@@ -28,7 +28,7 @@ export default function BlogTemplate({ title, subtitle, headerImage, children })
       </header>
 
       {/* Main Article Body */}
-      <article className="prose prose-invert prose-lg max-w-none leading-relaxed">
+      <article className="blog-content prose prose-invert prose-lg max-w-none leading-relaxed">
         {children}
       </article>
 
