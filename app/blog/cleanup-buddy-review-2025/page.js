@@ -109,7 +109,7 @@ export default function CleanupBuddyReview2025Page() {
           If you want the exact model we run in the field, this is it:
         </p>
         <Link 
-          href="https://prospectorsdream.com/products/gold-clean-up-buddy-kit-dream-mat?sca_ref=9910922.RTrHHEA6uW"
+          href="https://prospectorsdream.com/products/boss-buddy-sluice-clean-up-dream-mat?sca_ref=9910922.RTrHHEA6uW&sca_ref=9910922.RTrHHEA6uW"
           className="font-semibold text-yellow-300 hover:text-yellow-200"
         >
           Checkout the Cleanup Buddy Kit →
