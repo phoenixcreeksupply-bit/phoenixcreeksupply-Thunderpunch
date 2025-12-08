@@ -9,6 +9,13 @@ export const metadata = {
 
 const posts = [
   {
+    title: "Winter Gear Guide 2025",
+    slug: "winter-gear-guide-2025",
+    description:
+      "Montana-tested winter gear guide — boots, heated jackets, power, firewood tools, and survival picks for men who work and live in real cold.",
+    image: "/images/wintergear2025.jpg",
+  },
+  {
     title: "Creekside with Monroe — Where Have All the Good Neighbors Gone?",
     slug: "creekside-with-monroe",
     description:
