@@ -10,12 +10,12 @@ export const metadata = {
 export default function CleanupBuddyReview2025Page() {
   return (
     <main className="blog-content mx-auto max-w-4xl px-6 py-16 prose prose-invert prose-lg prose-headings:font-semibold prose-a:no-underline prose-a:font-semibold prose-a:text-yellow-300 prose-a:hover:text-yellow-200 prose-hr:my-12">
-      
+
       {/* HERO IMAGE */}
       <div className="mb-10">
         <Image
           src="/images/cleanup-buddy-hero.jpg"
-          alt="Dream Mat Cleanup Buddy micro-gold recovery system"
+          alt="Dream Mat Cleanup Buddy micro-gold recovery system in action"
           width={1600}
           height={900}
           className="w-full rounded-xl border border-white/10 shadow-lg object-cover"
@@ -23,21 +23,24 @@ export default function CleanupBuddyReview2025Page() {
         />
       </div>
 
+      {/* HEADER */}
       <p className="text-sm uppercase tracking-[0.2em] text-gray-400 mb-2">
         Prospecting · Gear Review
       </p>
 
       <h1 className="mb-4">Cleanup Buddy Review (2025)</h1>
+
       <p className="text-xl font-medium text-gray-200 mb-10">
         The Micro-Gold Workhorse Every Prospector Should Own
       </p>
 
+      {/* INTRO */}
       <p>
         Fine gold is where most prospectors win or lose — and it’s usually where
-        gear starts to fail. The{" "}
+        gear begins to fail. The{" "}
         <strong>Dream Mat Cleanup Buddy</strong> changes that. It’s a compact,
         high-efficiency cleanup system designed to strip black sand away and
-        trap micro-gold with almost zero effort.
+        lock micro-gold instantly, with almost zero effort.
       </p>
 
       <p>
@@ -51,16 +54,17 @@ export default function CleanupBuddyReview2025Page() {
 
       <hr />
 
+      {/* WHAT IT IS */}
       <h2 id="what-it-is">What the Cleanup Buddy Actually Is</h2>
 
       <p>
-        The Cleanup Buddy is a purpose-built, miniature sluice system powered by
-        Dream Mat’s micro-vortex technology. Unlike riffles or carpet, each
-        cell forms a low-pressure trap that locks gold in place while lights
-        continue moving downstream.
+        The Cleanup Buddy is a purpose-built miniature sluice powered by Dream
+        Mat’s micro-vortex technology. Unlike old-school riffles or carpet, each
+        cell creates a controlled low-pressure trap that locks gold while
+        lighter material flushes cleanly out.
       </p>
 
-      <p>That means:</p>
+      <p>This translates into:</p>
       <ul>
         <li>Less turbulence</li>
         <li>Less blowout</li>
@@ -68,24 +72,25 @@ export default function CleanupBuddyReview2025Page() {
       </ul>
 
       <p>
-        For Montana, Idaho, Oregon, New Mexico, and anywhere micro-gold is
-        normal, this system is deadly effective.
+        For Montana, Idaho, Oregon, New Mexico, and any fine-gold region, this
+        system is brutally effective.
       </p>
 
       <hr />
 
+      {/* WHY IT MATTERS */}
       <h2 id="why-it-matters">Why It Matters (and Why PCS Recommends It)</h2>
 
       <p>
         Most prospectors lose fine gold without ever knowing it. Traditional
-        cleanup sluices simply can’t hold material that small without flooding
-        or over-agitating the flow.
+        cleanup sluices simply can’t control micro-material without excessive
+        turbulence or washout.
       </p>
 
       <p>
-        The Cleanup Buddy fixes that by controlling water velocity inside each
-        micro cell. Gold drops instantly, lights flush out, and every run ends
-        with a clean, deliberate capture pattern.
+        The Cleanup Buddy solves that by controlling water velocity inside each
+        micro cell. Gold drops instantly. Lights flush out. Your recovery becomes
+        predictable.
       </p>
 
       <h3>PCS Field Notes:</h3>
@@ -97,8 +102,23 @@ export default function CleanupBuddyReview2025Page() {
         <li>Portable enough for pack-in prospecting</li>
       </ul>
 
+      {/* AFFILIATE BLOCK — INSERTED AS REQUESTED */}
+      <div className="my-10 p-5 border border-white/10 rounded-xl bg-black/30">
+        <p className="text-yellow-300 font-semibold mb-1">Recommended by PCS</p>
+        <p className="mb-3">
+          If you want the exact model we run in the field, this is it:
+        </p>
+        <Link 
+          href="https://prospectorsdream.com/products/gold-clean-up-buddy-kit-dream-mat?sca_ref=9910922.RTrHHEA6uW"
+          className="font-semibold text-yellow-300 hover:text-yellow-200"
+        >
+          Checkout the Cleanup Buddy Kit →
+        </Link>
+      </div>
+
       <hr />
 
+      {/* WHAT YOU CAN RUN */}
       <h2 id="what-you-can-run">What You Can Run Through It</h2>
 
       <p>This system excels with:</p>
@@ -113,89 +133,90 @@ export default function CleanupBuddyReview2025Page() {
 
       <p>
         If it fits in a scoop and contains gold, the Cleanup Buddy will show you
-        exactly what you caught — and what you would’ve lost.
+        exactly what you caught — and what you would have lost.
       </p>
 
       <hr />
 
+      {/* SETUP */}
       <h2 id="setup">Recommended Setup</h2>
-      <p>Run it simple. Run it clean. Here's the sweet spot:</p>
+
+      <p>Run it simple. Run it clean. Here's the optimized setup:</p>
 
       <ul>
         <li>800–1100 GPH bilge pump</li>
-        <li>¾" hose</li>
-        <li>Small recirculation tub</li>
-        <li>Level sluice tray</li>
+        <li>¾" reinforced hose</li>
+        <li>Shallow recirculation tub</li>
+        <li>Level tray — do not steepen the pitch</li>
       </ul>
 
       <p>
-        High flow isn’t your goal —{" "}
-        <strong>steady, controlled water is.</strong> Dream Mat handles the
-        separation.
+        High flow is not the objective —{" "}
+        <strong>consistent, controlled water is.</strong>
       </p>
 
       <hr />
 
+      {/* ACCESSORIES */}
       <h2 id="accessories">Best Accessories to Pair With It</h2>
 
-      <p>For a complete micro-gold recovery station:</p>
-
+      <p>To build a complete micro-gold recovery station:</p>
       <ul>
-        <li>800–1100 GPH bilge pump</li>
-        <li>Reinforced ¾" hose</li>
-        <li>12V 9Ah sealed battery</li>
+        <li>800–1100 GPH pump</li>
+        <li>12V 9Ah sealed lead acid battery</li>
         <li>¼" or ⅛" classifier</li>
-        <li>Snuffer bottle + fine vials</li>
-        <li>Finishing pan for final cleanups</li>
+        <li>Snuffer bottle and fine vials</li>
+        <li>Finishing pan</li>
       </ul>
 
       <p>
-        These items dramatically improve the speed and quality of your cleanup
-        workflow.
+        Each of these improves speed and precision during cleanup — especially with
+        ultra-fine gold.
       </p>
 
       <hr />
 
+      {/* SHOULD YOU BUY */}
       <h2 id="should-you-buy">Should You Buy One?</h2>
 
       <p>You should if:</p>
 
       <ul>
-        <li>You prospect in fine-gold regions</li>
-        <li>You run more than a few gallons of material a week</li>
-        <li>You want consistent, repeatable cleanup results</li>
+        <li>You prospect in fine-gold country</li>
+        <li>You process more than a few gallons of cons per week</li>
+        <li>You want consistent, repeatable recovery</li>
         <li>You want more gold in the vial — not in the tailings</li>
       </ul>
 
       <p className="font-semibold text-yellow-300">
-        For claim owners, dredgers, and serious weekend warriors — this tool
-        pays for itself fast.
+        For claim owners, highbanker operators, and serious weekend miners — the
+        Cleanup Buddy pays for itself fast.
       </p>
 
       <hr />
 
-      <h2 id="closing">Closing Thoughts — The PCS Verdict</h2>
+      {/* CLOSING */}
+      <h2 id="closing">Closing — The PCS Verdict</h2>
 
       <p>
-        Gold recovery isn’t luck. It’s systems, technique, and gear. The Cleanup
-        Buddy is one of the few tools that actually upgrades your results
-        without adding complexity.
+        Gold recovery isn’t luck — it’s systems, gear, and discipline. The
+        Cleanup Buddy is one of the rare tools that improves your results without
+        adding complexity or maintenance overhead.
       </p>
 
       <p>
-        It earns its place in the pack — not because it looks impressive, but
-        because it produces gold that lesser systems lose.
+        It earns its place in the pack because it consistently recovers gold that
+        lesser systems lose. Simple. Effective. Field-tested.
       </p>
 
       <p className="font-semibold">
-        In a world where fine gold makes the difference, the Cleanup Buddy is
-        the edge.
+        In a world where fine gold makes the difference, the Cleanup Buddy is the
+        edge.
       </p>
 
       <p className="mt-10 text-sm text-gray-400">
-        For more recovery tools and PCS field methods, read{" "}
-        <Link href="/blog/cleanup-techniques-2025">Fine Gold Cleanup Techniques</Link>{" "}
-        (coming soon).
+        More PCS cleanup methods coming soon — including advanced micro-gold
+        finishing and water-flow tuning.
       </p>
     </main>
   );
