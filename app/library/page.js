@@ -55,7 +55,7 @@ const books = [
     author: "Ryan Holiday",
     image: "/images/library/discipline-is-destiny.jpg",
     amazon:
-      "https://www.amazon.com/Discipline-Destiny-Power-Self-Control-Virtues/dp/0593191692?tag=phoenixcreekg-20",
+      "https://amzn.to/3XPGN7D",
     blurb:
       "Holiday takes the stoic lens and locks it onto self-control. Not just saying 'be disciplined,' but showing why it’s the hinge all other virtues swing on.",
   },
