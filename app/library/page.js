@@ -28,7 +28,7 @@ const books = [
     author: "James Clear",
     image: "/images/library/atomic-habits.jpg",
     amazon:
-      "https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299?tag=phoenixcreekg-20",
+      "https://amzn.to/48Llrxj",
     blurb:
       "Not motivational fluff — a system. Tiny adjustments stacked over time until the man you are and the man you meant to be finally match.",
   },
