@@ -129,6 +129,7 @@ export default function Header() {
             >
               Audio Books
             </a>
+            <a href="/library" className="text-white hover:text-yellow-400">Library</a>
             <a
               href={appendUtm('https://www.amazon.com/hz/wishlist/ls/7Z7QI47C28HP?ref_=wl_share&tag=phoenixcreeksupply-20')}
               target="_blank"

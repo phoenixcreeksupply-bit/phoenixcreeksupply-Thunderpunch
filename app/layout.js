@@ -174,6 +174,9 @@ export default function RootLayout({ children }) {
             >
               Audio Books
             </a>
+            <a href="/library" className="text-white hover:underline">
+              Library
+            </a>
             <a
               href="https://www.amazon.com/hz/wishlist/ls/7Z7QI47C28HP?ref_=wl_share&tag=phoenixcreeksupply-20&utm_source=pcs&utm_medium=site&utm_campaign=winter_drop_2025"
               target="_blank"
