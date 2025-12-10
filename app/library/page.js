@@ -73,7 +73,7 @@ const books = [
     author: "Jordan B. Peterson",
     image: "/images/library/12-rules-for-life.jpg",
     amazon:
-      "https://www.amazon.com/12-Rules-Life-Antidote-Chaos/dp/0345816021?tag=phoenixcreekg-20",
+      "https://amzn.to/4pBI7Hq",
     blurb:
       "Hard-won rules for dragging order out of chaos. Helps frame responsibility, burden, and meaning in a way that hits home for men carrying real weight.",
   },
