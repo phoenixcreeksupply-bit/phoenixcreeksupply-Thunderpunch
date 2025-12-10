@@ -46,7 +46,7 @@ const books = [
     author: "David Goggins",
     image: "/images/library/cant-hurt-me.jpg",
     amazon:
-      "https://www.amazon.com/Cant-Hurt-Me-Master-Your/dp/1544512287?tag=phoenixcreekg-20",
+      "https://amzn.to/3KPEWg9",
     blurb:
       "This is what it looks like when a man refuses to stay the product of his past. It’s brutal, repetitive, and exactly what some men need to hear.",
   },
