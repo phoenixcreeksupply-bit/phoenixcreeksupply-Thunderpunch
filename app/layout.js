@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
       </head>
 
       <body>
-        <header className="flex justify-between items-center p-4 bg-black/70">
+        <header className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-4 p-4 bg-black/70">
           <div className="flex items-center space-x-3">
             <a href="/" className="text-white font-bold text-lg">
               Phoenix Creek Supply
@@ -81,8 +81,8 @@ export default function RootLayout({ children }) {
             <MonroeMenu />
           </div>
 
-          <nav className="space-x-6">
-            <a href="/digital-kits" className="text-white hover:underline">
+          <nav className="flex flex-wrap items-center gap-3 lg:gap-4 text-sm">
+            <a href="/digital-kits" className="text-white hover:underline whitespace-nowrap">
               Digital Kits
             </a>
 
@@ -90,7 +90,7 @@ export default function RootLayout({ children }) {
             <div className="relative group inline-block">
               <button
                 type="button"
-                className="inline-flex items-center space-x-1 text-white hover:text-amber-500 transition-colors"
+                className="inline-flex items-center space-x-1 text-white hover:text-amber-500 transition-colors whitespace-nowrap"
               >
                 <span>Alternative Energy</span>
                 <svg
@@ -162,13 +162,13 @@ export default function RootLayout({ children }) {
               </ul>
             </div>
 
-            <a href="/blog" className="text-white hover:underline">
+            <a href="/blog" className="text-white hover:underline whitespace-nowrap">
               Journal
             </a>
 
             <WinterDrop />
 
-            <a href="/gear" className="text-white hover:underline">
+            <a href="/gear" className="text-white hover:underline whitespace-nowrap">
               Tools & Gear
             </a>
 
@@ -176,18 +176,18 @@ export default function RootLayout({ children }) {
               href="https://www.jdoqocy.com/click-101573160-14512672?utm_source=pcs&utm_medium=site&utm_campaign=winter_drop_2025"
               target="_blank"
               rel="noopener noreferrer sponsored"
-              className="text-white hover:underline"
+              className="text-white hover:underline whitespace-nowrap"
             >
               Audio Books
             </a>
-            <a href="/library" className="text-white hover:underline">
+            <a href="/library" className="text-white hover:underline whitespace-nowrap">
               Library
             </a>
             <a
               href="https://www.amazon.com/hz/wishlist/ls/7Z7QI47C28HP?ref_=wl_share&tag=phoenixcreeksupply-20&utm_source=pcs&utm_medium=site&utm_campaign=winter_drop_2025"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3 py-1 rounded-lg font-semibold bg-yellow-400 text-black hover:bg-yellow-500 transition"
+              className="px-3 py-1 rounded-lg font-semibold bg-yellow-400 text-black hover:bg-yellow-500 transition whitespace-nowrap"
             >
               Trail Pack Starters
             </a>
