@@ -1,0 +1,167 @@
+export const metadata = {
+  title: "Monroe’s Library | Phoenix Creek Supply",
+  description:
+    "A curated bookshelf of the titles that forged Monroe — discipline, grit, stoicism, and hard-earned clarity.",
+};
+
+const books = [
+  {
+    title: "Extreme Ownership",
+    author: "Jocko Willink & Leif Babin",
+    image: "/images/library/extreme-ownership.jpg",
+    amazon:
+      "https://www.amazon.com/Extreme-Ownership-U-S-Navy-SEALs/dp/1250067057?tag=phoenixcreekg-20",
+    blurb:
+      "This is leadership under live fire. The idea is simple: everything in your world is your responsibility. Men who truly adopt this stop blaming and start building.",
+  },
+  {
+    title: "Meditations",
+    author: "Marcus Aurelius (Trans. Gregory Hays)",
+    image: "/images/library/meditations-hays.jpg",
+    amazon:
+      "https://www.amazon.com/Meditations-New-Translation-Marcus-Aurelius/dp/0812968255?tag=phoenixcreekg-20",
+    blurb:
+      "The private notes of an emperor trying to stay honorable while carrying the weight of an empire. This is the backbone of modern stoicism — worn, tested, real.",
+  },
+  {
+    title: "Atomic Habits",
+    author: "James Clear",
+    image: "/images/library/atomic-habits.jpg",
+    amazon:
+      "https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299?tag=phoenixcreekg-20",
+    blurb:
+      "Not motivational fluff — a system. Tiny adjustments stacked over time until the man you are and the man you meant to be finally match.",
+  },
+  {
+    title: "The Way of Men",
+    author: "Jack Donovan",
+    image: "/images/library/way-of-men.jpg",
+    amazon:
+      "https://www.amazon.com/Way-Men-Jack-Donovan/dp/0985452307?tag=phoenixcreekg-20",
+    blurb:
+      "Strips masculinity down to strength, courage, mastery, and honor. You don’t have to agree with every angle, but you can’t read it and stay soft.",
+  },
+  {
+    title: "Can’t Hurt Me",
+    author: "David Goggins",
+    image: "/images/library/cant-hurt-me.jpg",
+    amazon:
+      "https://www.amazon.com/Cant-Hurt-Me-Master-Your/dp/1544512287?tag=phoenixcreekg-20",
+    blurb:
+      "This is what it looks like when a man refuses to stay the product of his past. It’s brutal, repetitive, and exactly what some men need to hear.",
+  },
+  {
+    title: "Discipline Is Destiny",
+    author: "Ryan Holiday",
+    image: "/images/library/discipline-is-destiny.jpg",
+    amazon:
+      "https://www.amazon.com/Discipline-Destiny-Power-Self-Control-Virtues/dp/0593191692?tag=phoenixcreekg-20",
+    blurb:
+      "Holiday takes the stoic lens and locks it onto self-control. Not just saying 'be disciplined,' but showing why it’s the hinge all other virtues swing on.",
+  },
+  {
+    title: "Grit",
+    author: "Angela Duckworth",
+    image: "/images/library/grit.jpg",
+    amazon:
+      "https://www.amazon.com/Grit-Passion-Perseverance-Angela-Duckworth/dp/1501111108?tag=phoenixcreekg-20",
+    blurb:
+      "Talent is cheap. Grit — sustained effort over years — is not. Good lens for understanding why some men quietly outlast everyone else.",
+  },
+  {
+    title: "12 Rules for Life",
+    author: "Jordan B. Peterson",
+    image: "/images/library/12-rules-for-life.jpg",
+    amazon:
+      "https://www.amazon.com/12-Rules-Life-Antidote-Chaos/dp/0345816021?tag=phoenixcreekg-20",
+    blurb:
+      "Hard-won rules for dragging order out of chaos. Helps frame responsibility, burden, and meaning in a way that hits home for men carrying real weight.",
+  },
+  {
+    title: "The Obstacle Is the Way",
+    author: "Ryan Holiday",
+    image: "/images/library/obstacle-is-the-way.jpg",
+    amazon:
+      "https://www.amazon.com/Obstacle-Way-Timeless-Turning-Triumph/dp/1591846358?tag=phoenixcreekg-20",
+    blurb:
+      "The stoic lesson in one line: the obstacle *is* the way. You either break against resistance or let it shape you into something sharper.",
+  },
+  {
+    title: "Man’s Search for Meaning",
+    author: "Viktor E. Frankl",
+    image: "/images/library/mans-search-for-meaning.jpg",
+    amazon:
+      "https://www.amazon.com/Mans-Search-Meaning-Viktor-Frankl/dp/0807014265?tag=phoenixcreekg-20",
+    blurb:
+      "A man walks through hell and still finds meaning. Not theory — testimony. It’ll recalibrate what you call 'hard.'",
+  },
+];
+
+export default function LibraryPage() {
+  return (
+    <main className="max-w-6xl mx-auto px-6 py-16 text-gray-100">
+      <section className="mb-12">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          Monroe’s Library
+        </h1>
+        <p className="text-lg text-gray-300 max-w-3xl">
+          This is the bookshelf behind Phoenix Creek Supply. These aren’t
+          trendy reads — they’re the pages that carved out my perspective on
+          discipline, masculinity, suffering, grit, and purpose. If you’re
+          building a quieter, stronger version of yourself, start here.
+        </p>
+        <p className="mt-4 text-sm text-gray-500">
+          Note: Book links on this page are affiliate links. When you pick up a
+          title through Monroe’s Library, you help fuel the work we do here —
+          at no extra cost to you.
+        </p>
+      </section>
+
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {books.map((book) => (
+          <article
+            key={book.title}
+            className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-6 shadow-lg flex flex-col"
+          >
+            <div className="w-full mb-4">
+              <img
+                src={book.image}
+                alt={book.title}
+                className="w-full rounded-xl border border-neutral-800"
+              />
+            </div>
+
+            <h2 className="text-xl font-semibold">{book.title}</h2>
+            <p className="text-sm text-gray-400 mb-4">by {book.author}</p>
+
+            <p className="text-gray-200 mb-6 flex-1">{book.blurb}</p>
+
+            <div className="space-y-2">
+              <a
+                href={book.amazon}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full text-center px-4 py-2 rounded-lg bg-amber-500 text-black font-semibold hover:bg-amber-400 transition"
+              >
+                Buy on Amazon →
+              </a>
+              <p className="text-xs text-gray-500">
+                Prefer audio? Use the <span className="font-semibold">Audio Books</span> tab in the
+                header to grab a free listening trial.
+              </p>
+            </div>
+          </article>
+        ))}
+      </section>
+
+      <section className="mt-14 text-sm text-gray-500 space-y-2">
+        <p>
+          Disclosure: As an Amazon Associate, Phoenix Creek Supply earns from
+          qualifying purchases. That means when you buy a book through this
+          page, a small percentage comes back into the Creek — helping fund new
+          guides, field projects, and gear breakdowns.
+        </p>
+      </section>
+    </main>
+  );
+}
