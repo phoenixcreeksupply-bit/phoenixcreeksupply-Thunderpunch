@@ -37,7 +37,7 @@ const books = [
     author: "Jack Donovan",
     image: "/images/library/way-of-men.jpg",
     amazon:
-      "https://www.amazon.com/Way-Men-Jack-Donovan/dp/0985452307?tag=phoenixcreekg-20",
+      "https://amzn.to/4q1MwmQ",
     blurb:
       "Strips masculinity down to strength, courage, mastery, and honor. You don’t have to agree with every angle, but you can’t read it and stay soft.",
   },
