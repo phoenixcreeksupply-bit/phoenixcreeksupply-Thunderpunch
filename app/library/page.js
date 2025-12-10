@@ -19,7 +19,7 @@ const books = [
     author: "Marcus Aurelius (Trans. Gregory Hays)",
     image: "/images/library/meditations-hays.jpg",
     amazon:
-      "https://www.amazon.com/Meditations-New-Translation-Marcus-Aurelius/dp/0812968255?tag=phoenixcreekg-20",
+      "https://amzn.to/3MtKa1A",
     blurb:
       "The private notes of an emperor trying to stay honorable while carrying the weight of an empire. This is the backbone of modern stoicism — worn, tested, real.",
   },
