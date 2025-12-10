@@ -82,7 +82,7 @@ const books = [
     author: "Ryan Holiday",
     image: "/images/library/obstacle-is-the-way.jpg",
     amazon:
-      "https://www.amazon.com/Obstacle-Way-Timeless-Turning-Triumph/dp/1591846358?tag=phoenixcreekg-20",
+      "https://amzn.to/3XN8Ogc",
     blurb:
       "The stoic lesson in one line: the obstacle *is* the way. You either break against resistance or let it shape you into something sharper.",
   },
