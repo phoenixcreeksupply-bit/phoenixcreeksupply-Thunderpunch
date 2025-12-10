@@ -91,7 +91,7 @@ const books = [
     author: "Viktor E. Frankl",
     image: "/images/library/mans-search-for-meaning.jpg",
     amazon:
-      "https://www.amazon.com/Mans-Search-Meaning-Viktor-Frankl/dp/0807014265?tag=phoenixcreekg-20",
+      "https://amzn.to/4oGK3gp",
     blurb:
       "A man walks through hell and still finds meaning. Not theory — testimony. It’ll recalibrate what you call 'hard.'",
   },
