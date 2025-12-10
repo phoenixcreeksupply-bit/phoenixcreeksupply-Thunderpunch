@@ -121,13 +121,8 @@ export default function Header() {
           className="relative"
           onMouseEnter={() => setOpen(true)}
           onMouseLeave={() => setOpen(false)}
-            <a
-              href={appendUtm('https://www.jdoqocy.com/click-101573160-15735849')}
-              target="_blank"
-              rel="noopener noreferrer sponsored"
-              className="text-white hover:underline"
-            >
-              Audio Books
+            <a href="https://www.jdoqocy.com/click-101573160-14512672" target="_top">
+              <img src="https://www.tqlkg.com/image-101573160-14512672" width="728" height="90" alt="" border="0"/>
             </a>
             <a
               href={appendUtm('https://www.amazon.com/hz/wishlist/ls/7Z7QI47C28HP?ref_=wl_share&tag=phoenixcreeksupply-20')}

@@ -166,13 +166,8 @@ export default function RootLayout({ children }) {
             <a href="/gear" className="text-white hover:underline">
               Tools & Gear
             </a>
-            <a
-              href="https://www.jdoqocy.com/click-101573160-15735849?utm_source=pcs&utm_medium=site&utm_campaign=winter_drop_2025"
-              target="_blank"
-              rel="noopener noreferrer sponsored"
-              className="text-white hover:underline"
-            >
-              Audio Books
+            <a href="https://www.jdoqocy.com/click-101573160-14512672" target="_top">
+              <img src="https://www.tqlkg.com/image-101573160-14512672" width="728" height="90" alt="" border="0"/>
             </a>
             <a
               href="https://www.amazon.com/hz/wishlist/ls/7Z7QI47C28HP?ref_=wl_share&tag=phoenixcreeksupply-20&utm_source=pcs&utm_medium=site&utm_campaign=winter_drop_2025"
