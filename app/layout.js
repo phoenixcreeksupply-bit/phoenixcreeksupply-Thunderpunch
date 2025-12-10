@@ -1,6 +1,4 @@
-
 // app/layout.js
-import '../styles/globals.css';
 import '../styles/globals.css';
 import TokenButton from '../components/TokenButton';
 import StashButton from '../components/StashButton';
@@ -39,51 +37,56 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Verification script required by AvantLink affiliate onboarding.
-            Placing the raw script tag in the head ensures the vendor sees it on the homepage HTML.
-            Note: this uses HTTP exactly as supplied by AvantLink; prefer HTTPS if they provide it.
-        */}
-    {/* Plain HTML comment with the auth token so verifiers that fetch raw HTML can see it easily */}
-    {/* Visible in page source: <!-- AvantLink authResponse: 01d685267d651f03926454eb4973f82277048b2b --> */}
-  <script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=ee979378c7cd621b9217cfd689806c09f17f6797"></script>
-  {/* Also add a harmless meta tag with the plain auth token so it's plainly visible in the homepage HTML source */}
-  <meta name="avantlink-authresponse" content="01d685267d651f03926454eb4973f82277048b2b" />
-  
-  {/* Pinterest Domain Verification */}
-  <meta name="p:domain_verify" content="c2681aa5590f1c30fc98c8d35f9a78fd" />
-  
-  {/* Blog Schema for SEO */}
-  <script type="application/ld+json">
-{`
-{
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Creekside with Monroe",
-  "url": "https://www.phoenixcreeksupply.com/blog",
-  "description": "Reflections, grit, gear, and field notes from the Phoenix Creek frontier.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Phoenix Creek Supply"
-  }
-}
-`}
-  </script>
+
+        {/* === AvantLink Verification Script (Delete after approval) === */}
+        <script
+          type="text/javascript"
+          src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=ee979378c7cd621b9217cfd689806c09f17f6797">
+        </script>
+
+        {/* Extra visibility for verification (harmless, optional) */}
+        <meta
+          name="avantlink-authresponse"
+          content="01d685267d651f03926454eb4973f82277048b2b"
+        />
+
+        {/* Pinterest Domain Verification */}
+        <meta name="p:domain_verify" content="c2681aa5590f1c30fc98c8d35f9a78fd" />
+
+        {/* Blog Schema for SEO */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Blog",
+              "name": "Creekside with Monroe",
+              "url": "https://www.phoenixcreeksupply.com/blog",
+              "description": "Reflections, grit, gear, and field notes from the Phoenix Creek frontier.",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Phoenix Creek Supply"
+              }
+            }
+          `}
+        </script>
       </head>
+
       <body>
         <header className="flex justify-between items-center p-4 bg-black/70">
           <div className="flex items-center space-x-3">
-            {/* Site title/logo area */}
-            <a href="/" className="text-white font-bold text-lg">Phoenix Creek Supply</a>
-            {/* Stash small icon */}
+            <a href="/" className="text-white font-bold text-lg">
+              Phoenix Creek Supply
+            </a>
             <StashButton />
-            {/* Monroe coin dropdown/menu */}
             <MonroeMenu />
           </div>
+
           <nav className="space-x-6">
             <a href="/digital-kits" className="text-white hover:underline">
               Digital Kits
             </a>
-            {/* === Alternative Energy Dropdown (placed beside Digital Kits) === */}
+
+            {/* === Alternative Energy Dropdown === */}
             <div className="relative group inline-block">
               <button
                 type="button"
@@ -158,14 +161,17 @@ export default function RootLayout({ children }) {
                 </li>
               </ul>
             </div>
+
             <a href="/blog" className="text-white hover:underline">
               Journal
             </a>
-            {/* Winter Drop (server-rendered wrapper uses a small client component for accessibility and interaction) */}
+
             <WinterDrop />
+
             <a href="/gear" className="text-white hover:underline">
               Tools & Gear
             </a>
+
             <a
               href="https://www.jdoqocy.com/click-101573160-14512672?utm_source=pcs&utm_medium=site&utm_campaign=winter_drop_2025"
               target="_blank"
@@ -185,12 +191,13 @@ export default function RootLayout({ children }) {
             >
               Trail Pack Starters
             </a>
-            {/* (Stash button moved to header left with other buttons) */}
           </nav>
         </header>
+
         <main>{children}</main>
-  <Footer />
-        {/* Vercel Analytics (client) */}
+
+        <Footer />
+
         <VercelAnalytics />
       </body>
     </html>
