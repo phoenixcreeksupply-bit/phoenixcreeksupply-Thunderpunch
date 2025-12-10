@@ -100,6 +100,8 @@ const books = [
 export default function LibraryPage() {
   return (
     <main className="max-w-6xl mx-auto px-6 py-16 text-gray-100">
+      
+      {/* HEADER */}
       <section className="mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           Monroe’s Library
@@ -117,6 +119,7 @@ export default function LibraryPage() {
         </p>
       </section>
 
+      {/* BOOK GRID */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {books.map((book) => (
           <article
@@ -145,23 +148,23 @@ export default function LibraryPage() {
               >
                 Buy on Amazon →
               </a>
+
               <p className="text-xs text-gray-500">
-                Prefer audio? Use the <span className="font-semibold">Audio Books</span> tab in the
-                header to grab a free listening trial.
+                Prefer audio? Use the <span className="font-semibold">Audio Books</span> tab above to listen while you work.
               </p>
             </div>
           </article>
         ))}
       </section>
 
+      {/* FOOTER / DISCLOSURE */}
       <section className="mt-14 text-sm text-gray-500 space-y-2">
         <p>
-          Disclosure: As an Amazon Associate, Phoenix Creek Supply earns from
-          qualifying purchases. That means when you buy a book through this
-          page, a small percentage comes back into the Creek — helping fund new
-          guides, field projects, and gear breakdowns.
+          As an Amazon Associate, Phoenix Creek Supply earns from qualifying purchases.
+          Your support directly fuels new field kits, guides, and rugged PCS development.
         </p>
       </section>
+
     </main>
   );
 }
