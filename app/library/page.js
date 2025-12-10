@@ -10,7 +10,7 @@ const books = [
     author: "Jocko Willink & Leif Babin",
     image: "/images/library/extreme-ownership.jpg",
     amazon:
-      "https://www.amazon.com/Extreme-Ownership-U-S-Navy-SEALs/dp/1250067057?tag=phoenixcreekg-20",
+      "https://amzn.to/4oMaguc",
     blurb:
       "This is leadership under live fire. The idea is simple: everything in your world is your responsibility. Men who truly adopt this stop blaming and start building.",
   },
