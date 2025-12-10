@@ -64,7 +64,7 @@ const books = [
     author: "Angela Duckworth",
     image: "/images/library/grit.jpg",
     amazon:
-      "https://www.amazon.com/Grit-Passion-Perseverance-Angela-Duckworth/dp/1501111108?tag=phoenixcreekg-20",
+      "https://amzn.to/44QW77M",
     blurb:
       "Talent is cheap. Grit — sustained effort over years — is not. Good lens for understanding why some men quietly outlast everyone else.",
   },
