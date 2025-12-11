@@ -11,7 +11,7 @@ const combatBooks = [
     title: "Get Tough!",
     author: "W.E. Fairbairn",
     image: "/images/library/get-tough.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/48AaVKw",
     blurb:
       "The WWII commando manual that shaped modern combatives. Brutal, direct, efficient — the original blueprint for real-world hand-to-hand violence.",
   },
@@ -19,7 +19,7 @@ const combatBooks = [
     title: "Tao of Jeet Kune Do",
     author: "Bruce Lee",
     image: "/images/library/tao-of-jkd.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/4oOpnDl",
     blurb:
       "Bruce Lee’s synthesis of philosophy and combat. Jeet Kune Do is efficiency made physical: no wasted motion, no hesitation, no ego.",
   },
@@ -27,7 +27,7 @@ const combatBooks = [
     title: "The Book of Five Rings",
     author: "Miyamoto Musashi",
     image: "/images/library/book-of-five-rings.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/4a6j1LZ",
     blurb:
       "Musashi’s timeless doctrine on strategy, timing, rhythm, and dominance. Not a technique manual — a warrior’s operating system.",
   },
@@ -35,7 +35,7 @@ const combatBooks = [
     title: "Complete Krav Maga",
     author: "Darren Levine & John Whitman",
     image: "/images/library/complete-krav-maga.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/3KT6RvG",
     blurb:
       "Krav Maga strips away everything that fails under adrenaline. Aggressive, practical, and built to end violence fast.",
   },
@@ -43,7 +43,7 @@ const combatBooks = [
     title: "Meditations on Violence",
     author: "Rory Miller",
     image: "/images/library/meditations-on-violence.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/4pwHnmX",
     blurb:
       "The psychology of violence explained by someone who’s lived it. Miller’s insights bridge the gap between training and real combat.",
   },
@@ -51,7 +51,7 @@ const combatBooks = [
     title: "The Gift of Fear",
     author: "Gavin de Becker",
     image: "/images/library/gift-of-fear.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/4rM4Sdj",
     blurb:
       "Threat recognition is the first layer of defense. This book teaches how intuition identifies danger before the conscious mind reacts.",
   },
@@ -59,15 +59,15 @@ const combatBooks = [
     title: "Principles of Personal Defense",
     author: "Jeff Cooper",
     image: "/images/library/personal-defense.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/4rRHaw9",
     blurb:
       "A concise but powerful manual on mindset and readiness. Cooper outlines the mental traits required to survive violence.",
   },
   {
-    title: "BJJ: Theory and Technique",
-    author: "Renzo & Royler Gracie",
+    title: "GRACIE JIU-JITSU Revised Edition ",
+    author: "Helio Gracie",
     image: "/images/library/bjj-theory-technique.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/48Vs6Fk",
     blurb:
       "Positional control, leverage, and submissions from the Gracie family. No modern fighter is complete without understanding the ground.",
   },
@@ -75,7 +75,7 @@ const combatBooks = [
     title: "Krav Maga: An Essential Guide",
     author: "David Kahn",
     image: "/images/library/krav-maga-kahn.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/4oU5AT3",
     blurb:
       "Kahn provides a crystal-clear breakdown of Krav Maga principles as taught to military and law enforcement.",
   },
@@ -83,7 +83,7 @@ const combatBooks = [
     title: "Sharpening the Warrior’s Edge",
     author: "Bruce K. Siddle",
     image: "/images/library/sharpening-the-warriors-edge.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/4pCoqze",
     blurb:
       "A groundbreaking look at how stress, heart rate, and fear alter performance. Required reading for anyone training for real confrontation.",
   },
@@ -91,7 +91,7 @@ const combatBooks = [
     title: "A Fighter’s Heart",
     author: "Sam Sheridan",
     image: "/images/library/fighters-heart.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/4jazHVf",
     blurb:
       "A poetic, raw exploration of fighting culture — Muay Thai, BJJ, boxing, MMA. Helps you understand the spirit that lives behind the techniques.",
   },
@@ -99,7 +99,7 @@ const combatBooks = [
     title: "The Art of War",
     author: "Sun Tzu",
     image: "/images/library/art-of-war.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/48N3M8a",
     blurb:
       "Strategy, deception, pressure, tempo, initiative. Sun Tzu remains foundational for any warrior seeking to think before striking.",
   },
