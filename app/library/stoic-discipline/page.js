@@ -11,7 +11,7 @@ const stoicBooks = [
     title: "Meditations",
     author: "Marcus Aurelius (Trans. Gregory Hays)",
     image: "/images/library/meditations-hays.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/3MtKa1A",
     blurb:
       "The private journal of an emperor trying to stay honorable under immense pressure. Stoicism in its rawest form — no theory, just a man wrestling with his duty.",
   },
@@ -19,7 +19,7 @@ const stoicBooks = [
     title: "The Obstacle Is the Way",
     author: "Ryan Holiday",
     image: "/images/library/obstacle-is-the-way.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/3XN8Ogc",
     blurb:
       "The stoic principle distilled: the obstacle *is* the way. Resistance shapes men who don’t bend under it. A field manual for transforming hardship into fuel.",
   },
@@ -27,7 +27,7 @@ const stoicBooks = [
     title: "Discipline Is Destiny",
     author: "Ryan Holiday",
     image: "/images/library/discipline-is-destiny.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/3XPGN7D",
     blurb:
       "Holiday isolates discipline as the keystone virtue — the one that unlocks mastery in every domain. A clear, modern companion to ancient principles.",
   },
@@ -35,7 +35,7 @@ const stoicBooks = [
     title: "Atomic Habits",
     author: "James Clear",
     image: "/images/library/atomic-habits.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/48Llrxj",
     blurb:
       "A practical system for building disciplined routines that stick. Clear teaches how identity, structure, and small changes compound into major transformation.",
   },
@@ -43,7 +43,7 @@ const stoicBooks = [
     title: "The Daily Stoic",
     author: "Ryan Holiday & Stephen Hanselman",
     image: "/images/library/daily-stoic.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/4p78vrP",
     blurb:
       "365 entries of stoic wisdom — a one-page daily checkpoint to keep your thinking sharp, your emotions steady, and your actions aligned with your code.",
   },
@@ -51,7 +51,7 @@ const stoicBooks = [
     title: "12 Rules for Life",
     author: "Jordan B. Peterson",
     image: "/images/library/12-rules-for-life.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/4pBI7Hq",
     blurb:
       "Order, responsibility, meaning, structure. Peterson’s rules force men to carry themselves properly — to shoulder burden rather than avoid it.",
   },
@@ -59,7 +59,7 @@ const stoicBooks = [
     title: "The Practicing Stoic",
     author: "Ward Farnsworth",
     image: "/images/library/practicing-stoic.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/4oSsJFw",
     blurb:
       "A masterclass in stoic thought — clean, structured, and immediately applicable. Farnsworth cuts through fluff and delivers stoicism as a practical craft.",
   },
@@ -67,7 +67,7 @@ const stoicBooks = [
     title: "Stillness Is the Key",
     author: "Ryan Holiday",
     image: "/images/library/stillness-is-the-key.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/4q0HBT3",
     blurb:
       "In a world that celebrates noise, Holiday teaches the lost art of stillness — the internal quiet that lets warriors think clearly in the storm.",
   },
@@ -75,7 +75,7 @@ const stoicBooks = [
     title: "Can't Hurt Me",
     author: "David Goggins",
     image: "/images/library/cant-hurt-me.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/3KPEWg9",
     blurb:
       "Pain, discipline, accountability. Goggins shows what happens when a man decides his past will not dictate his identity. Relentless and necessary.",
   },
@@ -83,7 +83,7 @@ const stoicBooks = [
     title: "Grit",
     author: "Angela Duckworth",
     image: "/images/library/grit.jpg",
-    amazon: "YOUR_AMAZON_AFFILIATE_LINK",
+    amazon: "https://amzn.to/44QW77M",
     blurb:
       "Duckworth breaks down the trait that outperforms talent: sustained effort over long periods. If you're building an unshakeable version of yourself, start here.",
   },
