@@ -120,7 +120,7 @@ export default function LibraryPage() {
       </section>
 
       {/* CATEGORY LINKS */}
-      <section className="mb-12">
+      <section className="mb-12 space-y-6">
         <a
           href="/library/martial-arts"
           className="block bg-neutral-900/60 border border-neutral-800 rounded-2xl p-6 shadow-lg hover:bg-neutral-800 transition"
@@ -128,6 +128,16 @@ export default function LibraryPage() {
           <h2 className="text-2xl font-semibold mb-2">Martial Arts & Combatives</h2>
           <p className="text-gray-300">
             Combat manuals, warrior philosophy, self-defense psychology, and tactical fighting guides.
+          </p>
+        </a>
+
+        <a
+          href="/library/stoic-discipline"
+          className="block bg-neutral-900/60 border border-neutral-800 rounded-2xl p-6 shadow-lg hover:bg-neutral-800 transition"
+        >
+          <h2 className="text-2xl font-semibold mb-2">Stoic Reflections & Discipline Guides</h2>
+          <p className="text-gray-300">
+            The philosophy and mindset frameworks that define inner strength — stillness, responsibility, order, and the discipline that builds legacy.
           </p>
         </a>
       </section>
