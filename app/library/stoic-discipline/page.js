@@ -1,4 +1,4 @@
-import PCSPageLayout from "@/components/PCSPageLayout";
+import PCSPageLayout from "/components/PCSPageLayout";
 
 export const metadata = {
   title: "Stoic Reflections & Discipline Guides | Phoenix Creek Supply",
