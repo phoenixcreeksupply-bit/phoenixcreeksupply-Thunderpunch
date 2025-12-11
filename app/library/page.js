@@ -104,19 +104,32 @@ export default function LibraryPage() {
       {/* HEADER */}
       <section className="mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Monroe’s Library
+          Monroe's Library
         </h1>
         <p className="text-lg text-gray-300 max-w-3xl">
-          This is the bookshelf behind Phoenix Creek Supply. These aren’t
-          trendy reads — they’re the pages that carved out my perspective on
-          discipline, masculinity, suffering, grit, and purpose. If you’re
+          This is the bookshelf behind Phoenix Creek Supply. These aren't
+          trendy reads — they're the pages that carved out my perspective on
+          discipline, masculinity, suffering, grit, and purpose. If you're
           building a quieter, stronger version of yourself, start here.
         </p>
         <p className="mt-4 text-sm text-gray-500">
           Note: Book links on this page are affiliate links. When you pick up a
-          title through Monroe’s Library, you help fuel the work we do here —
+          title through Monroe's Library, you help fuel the work we do here —
           at no extra cost to you.
         </p>
+      </section>
+
+      {/* CATEGORY LINKS */}
+      <section className="mb-12">
+        <a
+          href="/library/martial-arts"
+          className="block bg-neutral-900/60 border border-neutral-800 rounded-2xl p-6 shadow-lg hover:bg-neutral-800 transition"
+        >
+          <h2 className="text-2xl font-semibold mb-2">Martial Arts & Combatives</h2>
+          <p className="text-gray-300">
+            Combat manuals, warrior philosophy, self-defense psychology, and tactical fighting guides.
+          </p>
+        </a>
       </section>
 
       {/* BOOK GRID */}
