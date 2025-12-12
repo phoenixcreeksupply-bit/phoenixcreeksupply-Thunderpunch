@@ -9,8 +9,7 @@ const books = [
     title: "Extreme Ownership",
     author: "Jocko Willink & Leif Babin",
     image: "/images/library/extreme-ownership.jpg",
-    amazon:
-      "https://amzn.to/4oMaguc",
+    amazon: "https://amzn.to/4oMaguc",
     blurb:
       "This is leadership under live fire. The idea is simple: everything in your world is your responsibility. Men who truly adopt this stop blaming and start building.",
   },
@@ -18,8 +17,7 @@ const books = [
     title: "Meditations",
     author: "Marcus Aurelius (Trans. Gregory Hays)",
     image: "/images/library/meditations-hays.jpg",
-    amazon:
-      "https://amzn.to/3MtKa1A",
+    amazon: "https://amzn.to/3MtKa1A",
     blurb:
       "The private notes of an emperor trying to stay honorable while carrying the weight of an empire. This is the backbone of modern stoicism — worn, tested, real.",
   },
@@ -27,8 +25,7 @@ const books = [
     title: "Atomic Habits",
     author: "James Clear",
     image: "/images/library/atomic-habits.jpg",
-    amazon:
-      "https://amzn.to/48Llrxj",
+    amazon: "https://amzn.to/48Llrxj",
     blurb:
       "Not motivational fluff — a system. Tiny adjustments stacked over time until the man you are and the man you meant to be finally match.",
   },
@@ -36,8 +33,7 @@ const books = [
     title: "The Way of Men",
     author: "Jack Donovan",
     image: "/images/library/way-of-men.jpg",
-    amazon:
-      "https://amzn.to/4q1MwmQ",
+    amazon: "https://amzn.to/4q1MwmQ",
     blurb:
       "Strips masculinity down to strength, courage, mastery, and honor. You don’t have to agree with every angle, but you can’t read it and stay soft.",
   },
@@ -45,8 +41,7 @@ const books = [
     title: "Can’t Hurt Me",
     author: "David Goggins",
     image: "/images/library/cant-hurt-me.jpg",
-    amazon:
-      "https://amzn.to/3KPEWg9",
+    amazon: "https://amzn.to/3KPEWg9",
     blurb:
       "This is what it looks like when a man refuses to stay the product of his past. It’s brutal, repetitive, and exactly what some men need to hear.",
   },
@@ -54,8 +49,7 @@ const books = [
     title: "Discipline Is Destiny",
     author: "Ryan Holiday",
     image: "/images/library/discipline-is-destiny.jpg",
-    amazon:
-      "https://amzn.to/3XPGN7D",
+    amazon: "https://amzn.to/3XPGN7D",
     blurb:
       "Holiday takes the stoic lens and locks it onto self-control. Not just saying 'be disciplined,' but showing why it’s the hinge all other virtues swing on.",
   },
@@ -63,8 +57,7 @@ const books = [
     title: "Grit",
     author: "Angela Duckworth",
     image: "/images/library/grit.jpg",
-    amazon:
-      "https://amzn.to/44QW77M",
+    amazon: "https://amzn.to/44QW77M",
     blurb:
       "Talent is cheap. Grit — sustained effort over years — is not. Good lens for understanding why some men quietly outlast everyone else.",
   },
@@ -72,8 +65,7 @@ const books = [
     title: "12 Rules for Life",
     author: "Jordan B. Peterson",
     image: "/images/library/12-rules-for-life.jpg",
-    amazon:
-      "https://amzn.to/4pBI7Hq",
+    amazon: "https://amzn.to/4pBI7Hq",
     blurb:
       "Hard-won rules for dragging order out of chaos. Helps frame responsibility, burden, and meaning in a way that hits home for men carrying real weight.",
   },
@@ -81,8 +73,7 @@ const books = [
     title: "The Obstacle Is the Way",
     author: "Ryan Holiday",
     image: "/images/library/obstacle-is-the-way.jpg",
-    amazon:
-      "https://amzn.to/3XN8Ogc",
+    amazon: "https://amzn.to/3XN8Ogc",
     blurb:
       "The stoic lesson in one line: the obstacle *is* the way. You either break against resistance or let it shape you into something sharper.",
   },
@@ -90,8 +81,7 @@ const books = [
     title: "Man’s Search for Meaning",
     author: "Viktor E. Frankl",
     image: "/images/library/mans-search-for-meaning.jpg",
-    amazon:
-      "https://amzn.to/4oGK3gp",
+    amazon: "https://amzn.to/4oGK3gp",
     blurb:
       "A man walks through hell and still finds meaning. Not theory — testimony. It’ll recalibrate what you call 'hard.'",
   },
@@ -100,7 +90,7 @@ const books = [
 export default function LibraryPage() {
   return (
     <main className="max-w-6xl mx-auto px-6 py-16 text-gray-100">
-      
+
       {/* HEADER */}
       <section className="mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -125,7 +115,9 @@ export default function LibraryPage() {
           href="/library/martial-arts"
           className="block bg-neutral-900/60 border border-neutral-800 rounded-2xl p-6 shadow-lg hover:bg-neutral-800 transition"
         >
-          <h2 className="text-2xl font-semibold mb-2">Martial Arts & Combatives</h2>
+          <h2 className="text-2xl font-semibold mb-2">
+            Martial Arts & Combatives
+          </h2>
           <p className="text-gray-300">
             Combat manuals, warrior philosophy, self-defense psychology, and tactical fighting guides.
           </p>
@@ -135,9 +127,24 @@ export default function LibraryPage() {
           href="/library/stoic-discipline"
           className="block bg-neutral-900/60 border border-neutral-800 rounded-2xl p-6 shadow-lg hover:bg-neutral-800 transition"
         >
-          <h2 className="text-2xl font-semibold mb-2">Stoic Reflections & Discipline Guides</h2>
+          <h2 className="text-2xl font-semibold mb-2">
+            Stoic Reflections & Discipline Guides
+          </h2>
           <p className="text-gray-300">
             The philosophy and mindset frameworks that define inner strength — stillness, responsibility, order, and the discipline that builds legacy.
+          </p>
+        </a>
+
+        {/* ✅ NEW DIY / HOMESTEAD / SKILLS CATEGORY */}
+        <a
+          href="/library/diy-homestead-skills"
+          className="block bg-neutral-900/60 border border-neutral-800 rounded-2xl p-6 shadow-lg hover:bg-neutral-800 transition"
+        >
+          <h2 className="text-2xl font-semibold mb-2">
+            DIY / Homestead / Skills
+          </h2>
+          <p className="text-gray-300">
+            Practical knowledge for building, fixing, maintaining land and tools, and developing real-world self-reliance.
           </p>
         </a>
       </section>
