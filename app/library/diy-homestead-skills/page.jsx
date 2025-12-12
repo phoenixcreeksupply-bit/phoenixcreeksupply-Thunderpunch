@@ -29,20 +29,6 @@ const books = [
     amazon: "https://amzn.to/48Om215",
     bookshop: "#",
   },
-  {
-    title: "Fix It! How to Repair Automotive Dents, Scratches, Tears and Holes",
-    author: "Editors of Cool Springs Press",
-    image: "/images/library/diy-homestead-skills/fix-it.jpg",
-    amazon: "#",
-    bookshop: "#",
-  },
-  {
-    title: "Workshop Wisdom",
-    author: "Nick Engler",
-    image: "/images/library/diy-homestead-skills/workshop-wisdom.jpg",
-    amazon: "#",
-    bookshop: "#",
-  },
 ];
 
 export default function DIYHomesteadSkillsLibrary() {
