@@ -6,6 +6,8 @@ export const metadata = {
     "A curated selection of the most respected hand-to-hand combat, self-defense, and warrior-strategy books — chosen to forge skill, mindset, and readiness.",
 };
 
+const BOOKSHOP_HERE = "https://bookshop.org/lists/martial-arts-combative";
+
 const combatBooks = [
   {
     title: "Get Tough!",
@@ -64,7 +66,7 @@ const combatBooks = [
       "A concise but powerful manual on mindset and readiness. Cooper outlines the mental traits required to survive violence.",
   },
   {
-    title: "GRACIE JIU-JITSU Revised Edition ",
+    title: "GRACIE JIU-JITSU Revised Edition",
     author: "Helio Gracie",
     image: "/images/library/bjj-theory-technique.jpg",
     amazon: "https://amzn.to/48Vs6Fk",
@@ -110,7 +112,7 @@ export default function MartialArtsPage() {
     <PCSPageLayout
       title="Martial Arts & Combatives"
       intro="A curated selection of combat manuals, warrior philosophy, and real-world self-defense guides chosen to sharpen skill, instinct, and tactical awareness."
-      note="As an Amazon Associate, PCS earns from qualifying purchases."
+      note="As an Amazon Associate and Bookshop affiliate, PCS earns from qualifying purchases."
     >
       <section className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {combatBooks.map((book) => (
@@ -131,17 +133,30 @@ export default function MartialArtsPage() {
 
             <p className="text-gray-200 mb-6 flex-1">{book.blurb}</p>
 
-            <a
-              href={book.amazon}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block w-full text-center px-4 py-2 rounded-lg bg-amber-500 text-black font-semibold hover:bg-amber-400 transition"
-            >
-              Buy on Amazon →
-            </a>
+            {/* BUY BUTTONS */}
+            <div className="space-y-3">
+              <a
+                href={book.amazon}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full text-center px-4 py-2 rounded-lg bg-amber-500 text-black font-semibold hover:bg-amber-400 transition"
+              >
+                Buy on Amazon →
+              </a>
+
+              <a
+                href={BOOKSHOP_HERE}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full text-center px-4 py-2 rounded-lg bg-neutral-800 text-gray-100 font-semibold hover:bg-neutral-700 transition"
+              >
+                View on Bookshop →
+              </a>
+            </div>
           </article>
         ))}
       </section>
     </PCSPageLayout>
   );
 }
+
