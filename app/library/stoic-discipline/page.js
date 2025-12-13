@@ -6,6 +6,10 @@ export const metadata = {
     "A curated selection of stoic texts, discipline frameworks, and mindset guides chosen to forge stillness, structure, and unwavering internal command.",
 };
 
+// ✅ Bookshop list (single source of truth)
+const BOOKSHOP_LIST =
+  "https://bookshop.org/lists/modern-stoic-foundations";
+
 const stoicBooks = [
   {
     title: "Meditations",
@@ -94,7 +98,7 @@ export default function StoicDisciplinePage() {
     <PCSPageLayout
       title="Stoic Reflections & Discipline Guides"
       intro="The mental architecture behind Monroe — stoicism, discipline, responsibility, and the steady fire of a man who chooses clarity over chaos."
-      note="As an Amazon Associate, Phoenix Creek Supply earns from qualifying purchases."
+      note="As an Amazon Associate and Bookshop affiliate, Phoenix Creek Supply earns from qualifying purchases."
     >
       <section className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {stoicBooks.map((book) => (
@@ -115,14 +119,26 @@ export default function StoicDisciplinePage() {
 
             <p className="text-gray-200 mb-6 flex-1">{book.blurb}</p>
 
-            <a
-              href={book.amazon}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block w-full text-center px-4 py-2 rounded-lg bg-amber-500 text-black font-semibold hover:bg-amber-400 transition"
-            >
-              Buy on Amazon →
-            </a>
+            {/* BUY BUTTONS */}
+            <div className="space-y-3">
+              <a
+                href={book.amazon}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full text-center px-4 py-2 rounded-lg bg-amber-500 text-black font-semibold hover:bg-amber-400 transition"
+              >
+                Buy on Amazon →
+              </a>
+
+              <a
+                href={BOOKSHOP_LIST}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full text-center px-4 py-2 rounded-lg bg-neutral-800 text-gray-100 font-semibold hover:bg-neutral-700 transition"
+              >
+                View on Bookshop →
+              </a>
+            </div>
           </article>
         ))}
       </section>
