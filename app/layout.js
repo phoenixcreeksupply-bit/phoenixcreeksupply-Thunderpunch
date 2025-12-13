@@ -82,9 +82,9 @@ export default function RootLayout({ children }) {
           </div>
 
           <nav className="flex flex-wrap items-center gap-3 lg:gap-4 text-sm">
-            <a href="/digital-kits" className="text-white hover:underline whitespace-nowrap">
+            {/* <a href="/digital-kits" className="text-white hover:underline whitespace-nowrap">
               Digital Kits
-            </a>
+            </a> */}
 
             {/* === Alternative Energy Dropdown === */}
             <div className="relative group inline-block">

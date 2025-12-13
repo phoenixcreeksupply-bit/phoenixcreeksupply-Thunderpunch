@@ -113,7 +113,7 @@ export default function Header() {
         <a href="/about" className="text-white hover:text-yellow-400">About</a>
         <a href="/digital-kits" className="text-white hover:text-yellow-400">Digital Kits</a>
         <a href="/gear" className="text-white hover:text-yellow-400">Gear</a>
-        <a href="/guides" className="text-white hover:text-yellow-400">Guides</a>
+        {/* <a href="/guides" className="text-white hover:text-yellow-400">Guides</a> */}
         <a href="/monroes-specials" className="text-white hover:text-yellow-400">Monroe's Specials</a>
         <MonroeMenu />
         {/* Winter Drop (NEW) */}
