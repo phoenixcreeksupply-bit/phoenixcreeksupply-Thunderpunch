@@ -7,27 +7,28 @@ export const metadata = {
     "A curated library of practical knowledge — building, fixing, homesteading, and self-reliance. Skills that create independence, resilience, and long-term capability.",
 };
 
+// ✅ Bookshop list (single source of truth)
+const BOOKSHOP_LIST =
+  "https://bookshop.org/lists/diy-homestead-practical-skills";
+
 const books = [
   {
     title: "The Encyclopedia of Country Living",
     author: "Carla Emery",
     image: "/images/library/diy-homestead-skills/country-living.jpg",
     amazon: "https://amzn.to/496HZK1",
-    bookshop: "#",
   },
   {
     title: "Back to Basics",
     author: "Abigail Gehring",
     image: "/images/library/diy-homestead-skills/back-to-basics.jpg",
     amazon: "https://amzn.to/4q10ULX",
-    bookshop: "#",
   },
   {
     title: "The Self-Sufficient Life and How to Live It",
     author: "John Seymour",
     image: "/images/library/diy-homestead-skills/self-sufficient-life.jpg",
     amazon: "https://amzn.to/48Om215",
-    bookshop: "#",
   },
 ];
 
@@ -63,15 +64,20 @@ export default function DIYHomesteadSkillsLibrary() {
             <h2 className="text-lg font-semibold">{book.title}</h2>
             <p className="text-sm text-neutral-400 mb-4">{book.author}</p>
 
+            {/* BUY LINKS */}
             <div className="mt-auto flex gap-3">
               <Link
                 href={book.amazon}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm px-3 py-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 transition"
               >
                 Amazon
               </Link>
               <Link
-                href={book.bookshop}
+                href={BOOKSHOP_LIST}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm px-3 py-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 transition"
               >
                 Bookshop
